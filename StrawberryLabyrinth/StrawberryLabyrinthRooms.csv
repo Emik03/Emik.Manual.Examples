@@ -1,0 +1,100 @@
+A01,Deserted City (Top) Start,null,A02,A05
+A02,Deserted City (Top) West Start,Zip Movers,A01,A04
+A03,Deserted City (Top) Above Start from Underground Azure,null,B16
+A04,Deserted City (Top) Above Start,Zip Movers,A02,A06
+A05,Deserted City (Top) East Start,null,A01,A06
+A06,Deserted City (Top) Outside Map Room,Dash Refills&Dash Switches&Springs,A04,A05,A07,A09,A11,A17,A32
+A07,Deserted City (Top) Outside East Entrance to Electric Citadel,Moving Platforms,A06,A08,A15,A18
+A08,Deserted City (Top) Crumbling Block Room,null,A07
+A09,Deserted City (East) Outside East Entrance to Underground Azure,null,A06,A10
+A10,Deserted City (East) East Entrance to Underground Azure,Secrets of the Deep,A09,B25
+A11,Deserted City (East) Outside Teleporter,Red Bubbles&Zip Movers,A06,A12
+A12,Deserted City (East) Teleporter,null,A11,A13
+A13,Deserted City (East) Above Teleporter,null,A12
+A14,Deserted City (East) Multiple Touch Switch Sets Strawberry Room,null,A17
+A15,Deserted City (East) East Entrance to Electric Citadel,Breach the Electric Tower,A07,C01
+A16,Deserted City (Top) West Entrance to Electric Citadel,Breach the Electric Tower,A18,C01
+A17,Deserted City (East) Spring Floor Room,Springs&Touch Switches,A06,A14
+A18,Deserted City (Top) Outside Teleporter and West Entrance to Electric Citadel,Moving Platforms,A07,A16,A22,A23,A24
+A19,Deserted City (Top) Strawberry Requires Double Dash Refill Room,null,A20
+A20,Deserted City (Top) Dashless Room,null,A19,A22
+A21,Deserted City (Top) Toggleable Touch Switches Strawberry Room,null,A22
+A22,Deserted City (Top) Double Dash Refills Room,Dash Refills&Double Dash Refills,A18,A20,A21,A25,A26
+A23,Deserted City (Top) Teleporter,null,A18
+A24,Deserted City (Top) Sideways Moving Platforms Room,Dash Refills&Sideways Moving Platforms,A18,A26
+A25,Deserted City (Top) Strawberry Room Above Double Dash Refills,null,A22
+A26,Deserted City (West) Long Vertical Room,Circular Moving Platforms&Dash Refills&Falling Blocks&Springs,A22,A24,A27,A28
+A27,Deserted City (West) Outside Teleporter,Circular Moving Platforms,A26,A29,A30,A33
+A28,Deserted City (West) Above West Entrance to Underground Azure,null,A26,A31
+A29,Deserted City (West) Below Teleporter,Falling Blocks&Zip Movers,A27
+A30,Deserted City (West) Above Teleporter,null,A27
+A31,Deserted City (West) West Entrance to Underground Azure,Secrets of the Deep,A28,B01
+A32,Deserted City (Top) Map,null,A06
+A33,Deserted City (West),null,A27
+B01,Underground Azure (West) West Exit to Deserted City,Dream Blocks,A31,B02
+B02,Underground Azure (West) Outside Teleporter and West Exit to Deserted City,Dream Blocks,B01,B03,B06,B09,B10H,B13
+B03,Underground Azure (Top) Outside Teleporter,Dash Refills&Dream Blocks,B02,B15,B16,B18,B29
+B04,Underground Azure (Top) Secret Strawberry Room in Secret Strawberry Room above Dream Spinners,null,B05
+B05,Underground Azure (Top) Secret Strawberry Room above Dream Spinners,Dream Spinners,B04,B06
+B06,Underground Azure (Top) Outside Secret Strawberry Room above Dream Spinners,Dream Spinners,B02,B05,B14
+B07,Underground Azure (West) Strawberry Seed Room,Dream Blocks,B10V,B14
+B08,Underground Azure (West) Secret Room in the Plus-Shaped Dream Block Room,null,B10V
+B09,Underground Azure (West) Teleporter,null,B02
+B10H,Underground Azure (West) Plus-Shaped Dream Block Room,Dream Blocks,B02,B22
+B10V,Underground Azure (West) Plus-Shaped Dream Block Room,Dream Blocks,B07,B08,B11
+B11,Underground Azure (West) Outside Map Room,null,B10V,B12
+B12,Underground Azure (West) Map Room,null,B11
+B13,Underground Azure (West) Strawberry Room near Teleporter,null,B02
+B14,Underground Azure (East) Very Large Room with Many Exits,Dream Blocks,B06,B07,B15,B17,B18,B21,B22,B26
+B15,Underground Azure (Top) Below Outside Teleporter,Dream Spinners,B03,B14
+B16,Underground Azure (Top) Red Bubble Exit to Deserted City,Red Bubbles,A03,B03
+B17,Underground Azure (East) Toggleable Touch Switches Strawberry Room,null,B14
+B18,Underground Azure (Top) Horizontally Long Dream Block Room,Dream Blocks&Dream Spinners,B03,B14,B19
+B19,Underground Azure (Top) Tiny Room of Thin Dream Blocks,Dream Blocks,B18,B20
+B20,Underground Azure (Top) East of Tiny Room of Thin Dream Blocks,Dream Spinners,B19,B23,B25,B27
+B21,Underground Azure (East) Strawberry Seed Room Outside Teleporter,null,B14,B28
+B22,Underground Azure (West) Many Dream Blocks and Dream Spinners Room,Dream Blocks&Dream Spinners,B10H,B14
+B23,Underground Azure (Top) Strawberry Room with Precise Dash Refills,null,B20
+B24,Underground Azure (Top) Backtracking Strawberry Room with Circular Dream Spinners,null,B25
+B25,Underground Azure (Top) East Exit to Deserted City,Dream Blocks&Dream Spinners,A10,B20,B24
+B26,Underground Azure (East) Long Dream Spinner Strawberry Room,null,B14
+B27,Underground Azure (Top) Big Dream Block in Tiny Strawberry Room,null,B20
+B28,Underground Azure (East) Teleporter,null,B21
+B29,Underground Azure (Top) Teleporter,null,B03
+C01,Voltic Citadel (West) West and East Exit to Deserted City,Dash Fuse Boxes&Zip Lines,A15,A16,C02
+C02,Voltic Citadel (West) Largest Room,Dash Refills&Zip Lines,C01,C03,C06
+C03,Voltic Citadel (West) First Lazer Room,Moving Platforms,C02,C04,C05,C15
+C04,Voltic Citadel (West) Above First Lazer Room,Dash Refills&Springs&Touch Switches&Zip Lines,C03,C07
+C05,Voltic Citadel (West) Outside Red Bubble Exit to Deserted City,Zip Lines,C03,C23
+C06,Voltic Citadel (West) Slow Zip Line Strawberry Room,null,C02
+C07,Voltic Citadel (West) West of Teleporter,Dash Fuse Boxes&Dash Refills&Springs&Zip Lines,C04,C25,C27
+C08,Voltic Citadel (Top) Room with Touch Switch Shortcut,Dash Fuse Boxes&Dash Refills&Zip Lines,C10,C24,C28
+C09,Voltic Citadel (Top) Strawberry Room with Hidden Strawberry Room,Dash Fuse Boxes&Dash Refills&Double Dash Refills&Springs&Zip Lines,C10,C12
+C10,Voltic Citadel (Top) Tiny Maze,Dash Fuse Boxes,C08,C09,C11
+C11,Voltic Citadel (Top) Outside Teleporter,Circular Moving Platforms&Dash Refills,C10,C19
+C12,Voltic Citadel (Top) Double Alternating Lazer Strawberry Room,null,C09
+C13,Voltic Citadel (Top) Hidden Location Map Room,Reveal the Unseen,C14,C19
+C14,Voltic Citadel (Top) Strawberry Seed Room,null,C13
+C15,Voltic Citadel (East) West of Long Room Before Entrance to Destructive Distortion,null,C03,C16
+C16,Voltic Citadel (East) Long Room Before Entrance to Destructive Distortion,Moving Platforms,C15,C17,C21,D01
+C17,Voltic Citadel (East) Below Map Room,Dash Switches,C16,C18
+C18,Voltic Citadel (East) Map Room,null,C17
+C19,Voltic Citadel (Top) Teleporter,null,C11,C13,C26
+C20,Voltic Citadel (Top) Normal Ending,null,C26
+C21,Voltic Citadel (East) Winged Strawberry Outside Teleporter,Dash Refills,C16,C22
+C22,Voltic Citadel (East) Teleporter,null,C21
+C23,Voltic Citadel (West) Red Bubble Exit to Deserted City,null,C05
+C24,Voltic Citadel (West) One-Way Room,Dash Refills,C08,C27
+C25,Voltic Citadel (West) Strawberry Room Above Room West of Teleporter,null,C07
+C26,Voltic Citadel (Top) Room Below Normal Ending and Above Teleporter,Calling for Help,C19,C20
+C27,Voltic Citadel (West) Teleporter,null,C07,C24
+C28,Voltic Citadel (West) Shortcut,null,C08
+D01,Voltic Citadel (East) Entrance to Destructive Distortion,Walk the Path of Destruction,C16,D02
+D02,Destructive Distortion Exit to Voltic Citadel,null,D01,D03
+D03,Destructive Distortion Triple Alternating Lazers,null,D02,D04
+D04,Destructive Distortion Zip Mover Room,Touch Switches&Zip Movers,D03,D05
+D05,Destructive Distortion Dash Fuse Box Room,Dash Fuse Boxes&Dream Spinners,D04,D06
+D06,Destructive Distortion Spring Room,Dash Refills&Springs&Zip Movers,D05,D07
+D07,Destructive Distortion Touch Switches Room,Dream Spinners&Touch Switches,D06,D08
+D08,Destructive Distortion Teleporter,null,D07,D09
+D09,Destructive Distortion Good Ending,null,D08

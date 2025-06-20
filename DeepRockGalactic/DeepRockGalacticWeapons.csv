@@ -1,0 +1,40 @@
+Driller,Primary,CRSPR Flamethrower,Lighter Tanks,Sticky Additive,Compact Feed Valves,Fuel Stream Diffuser,Face Melter,Sticky Fuel,Scorching Tide
+Driller,Primary,Cryo Cannon,Improved Thermal Efficiency,Tuned Cooler,Flow Rate Expansion,Ice Spear,Crystal Nucleation,Ice Storm,Snowball
+Driller,Primary,Corrosive Sludge Pump,Hydrogen Ion Additive,AG Mixture,Volatile Impact Mixture,Disperser Compound,Combustive Goo Mix,Goo Bomber Special,Sludge Blast
+Driller,Secondary,Subata 120,Chain Hit,Homebrew Powder,Oversized Magazine,Automatic Fire,Explosive Reload,Tranquilizer Rounds
+Driller,Secondary,Experimental Plasma Charger,Energy Rerouting,Magnetic Cooling Unit,Heat Pipe,Heavy Hitter,Overcharger,Persistent Plasma
+Driller,Secondary,Colette Wave Cooker,Liquid Cooling System,Super Focus Lens,Diffusion Ray,Mega Power Supply,Blistering Necrosis,Gamma Contamination
+Driller,Throwables,Impact Axe
+Driller,Throwables,High Explosive Grenade
+Driller,Throwables,Neurotoxin Grenade
+Driller,Throwables,Springloaded Ripper
+Engineer,Primary,"Warthog" Auto 210,Stunner,Light-Weight Magazines,Magnetic Pellet Alignment,Cycle Overload,Mini Shells,Pump Action
+Engineer,Primary,"Stubby" Voltaic SMG,Super-Slim Rounds,Well Oiled Machine,EM Refire Booster,Light-Weight Rounds,Hyperalloy Assembly,Micro-Conductor Add-On,Turret EM Discharge
+Engineer,Primary,LOK-1 Smart Rifle,Eraser,Armor Break Module,Explosive Chemical Rounds,Neuro-Lasso,Seeker Rounds,Executioner,Smяt Trigger OS™
+Engineer,Secondary,Deepcore 40mm PGL,Clean Sweep,Pack Rat,Compact Rounds,RJ250 Compound,Fat Boy,Hyper Propellant
+Engineer,Secondary,Breach Cutter,Light-Weight Cases,Roll Control,Stronger Plasma Current,Return to Sender,High Voltage Crossover,Spinning Death,Inferno
+Engineer,Secondary,Shard Diffractor,Efficiency Tweaks,Automated Beam Controller,Feedback Loop,Volatile Impact Reactor,Plastcrete Catalyst,Overdrive Booster
+Engineer,Throwables,L.U.R.E.
+Engineer,Throwables,Plasma Burster
+Engineer,Throwables,Proximity Mine
+Engineer,Throwables,Shredder Swarm
+Gunner,Primary,"Lead Storm" Powered Minigun,A Little More Oomph!,Thinned Drum Walls,Burning Hell,Compact Feed Mechanism,Exhaust Vectoring,Rotary Overdrive,Bullet Hell,Lead Storm
+Gunner,Primary,"Thunderhead" Heavy Autocannon,Composite Drums,Splintering Shells,Carpet Bomber,Combat Mobility,Big Bertha,Neurotoxin Payload,Mortar Rounds
+Gunner,Primary,"Hurricane" Guided Rocket System,Overtuned Feed Mechanism,Fragmentation Missiles,Plasma Burster Missiles,Minelayer System,Rocket Barrage,Jet Fuel Homebrew,Salvo Module,Cluster Charges
+Gunner,Secondary,"Bulldog" Heavy Revolver,Chain Hit,Homebrew Powder,Volatile Bullets,Six Shooter,Elephant Rounds,Magic Bullets
+Gunner,Secondary,BRT7 Burst Fire Gun,Composite Casings,Full Chamber Seal,Compact Mags,Experimental Rounds,Electro Minelets,Micro Flechettes,Lead Spray
+Gunner,Secondary,ArmsKore Coil Gun,Re-atomizer,Ultra-Magnetic Coils,Backfeeding Module,The Mole,Hellfire,Triple-Tech Chambers
+Gunner,Throwables,Sticky Grenade
+Gunner,Throwables,Incendiary Grenade
+Gunner,Throwables,Cluster Grenade
+Gunner,Throwables,Tactical Leadburster
+Scout,Primary,Deepcore GK2,Compact Ammo,Gas Rerouting,Homebrew Powder,Overclocked Firing Mechanism,Bullets of Mercy,Burst Fire,AI Stability Engine,Electrifying Reload
+Scout,Primary,M1000 Classic,Hoverclock,Minimal Clips,Active Stability System,Hipster,Electrocuting Focus Shots,Supercooling Chamber,Marked for Death
+Scout,Primary,DRAK-25 Plasma Carbine,Aggressive Venting,Thermal Liquid Coolant,Impact Deflection,Conductive Thermals,Rewiring Mod,Overtuned Particle Accelerator,Shield Battery Booster,Thermal Exhaust Feedback
+Scout,Secondary,Jury-Rigged Boomstick,Compact Shells,Special Powder,Stuffed Shells,Shaped Shells,Jumbo Shells,Double Barrel
+Scout,Secondary,Zhukov NUK17,Minimal Magazines,Custom Casings,Cryo Minelets,Embedded Detonators,Gas Recycling
+Scout,Secondary,Nishanka Boltshark X-80,Quick Fire,The Specialist,Cryo Bolt,Fire Bolt,Bodkin Points,Trifork Volley
+Scout,Throwables,Inhibitor-Field Generator
+Scout,Throwables,Cryo Grenade
+Scout,Throwables,Pheromone Canister
+Scout,Throwables,Voltaic Stun Sweeper

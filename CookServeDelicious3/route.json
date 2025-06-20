@@ -1,0 +1,3614 @@
+[
+  {
+    "routes": [
+      {
+        "days": [
+          {
+            "a": 69,
+            "b": null,
+            "c": null,
+            "chef": null,
+            "slot": "3003",
+            "minprep": 0
+          },
+          {
+            "a": 44,
+            "b": null,
+            "c": null,
+            "chef": -501,
+            "slot": "3003",
+            "minprep": 0
+          },
+          {
+            "a": -103,
+            "b": 44,
+            "c": 45,
+            "chef": -502,
+            "slot": "3003",
+            "minprep": 0
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": -103,
+            "b": 53,
+            "c": null,
+            "chef": -503,
+            "slot": "2003",
+            "minprep": 0
+          },
+          {
+            "a": 35,
+            "b": null,
+            "c": null,
+            "chef": -505,
+            "slot": "3002",
+            "minprep": 0
+          },
+          {
+            "a": 38,
+            "b": 45,
+            "c": null,
+            "chef": -603,
+            "slot": "3004",
+            "minprep": 0
+          },
+          {
+            "a": 73,
+            "b": null,
+            "c": null,
+            "chef": -710,
+            "slot": "3003",
+            "minprep": 0
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": -103,
+            "b": 9,
+            "c": null,
+            "chef": -503,
+            "slot": "3003",
+            "minprep": 0
+          },
+          {
+            "a": 14,
+            "b": 11,
+            "c": null,
+            "chef": -504,
+            "slot": "2004",
+            "minprep": 0
+          },
+          {
+            "a": -105,
+            "b": 45,
+            "c": 16,
+            "chef": -506,
+            "slot": "3003",
+            "minprep": 0
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": -105,
+            "b": 53,
+            "c": 27,
+            "chef": -505,
+            "slot": "3004",
+            "minprep": 0
+          },
+          {
+            "a": -105,
+            "b": 38,
+            "c": 9,
+            "chef": -507,
+            "slot": "4004",
+            "minprep": 0
+          },
+          {
+            "a": 73,
+            "b": null,
+            "c": null,
+            "chef": -712,
+            "slot": "3003",
+            "minprep": 0
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": -105,
+            "b": 35,
+            "c": 27,
+            "chef": -605,
+            "slot": "3004",
+            "minprep": 0
+          },
+          {
+            "a": 14,
+            "b": null,
+            "c": null,
+            "chef": -608,
+            "slot": "3004",
+            "minprep": 0
+          },
+          {
+            "a": -107,
+            "b": 2,
+            "c": 16,
+            "chef": -610,
+            "slot": "3004",
+            "minprep": 0
+          }
+        ]
+      },
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "shortname": "Boise, ID",
+    "name": "Boise, Idaho",
+    "county": "Buttermilk County"
+  },
+  {
+    "routes": [
+      {
+        "days": [
+          {
+            "a": -105,
+            "b": 12,
+            "c": null,
+            "chef": null,
+            "slot": "3003",
+            "minprep": 0
+          },
+          {
+            "a": 2,
+            "b": 27,
+            "c": 47,
+            "chef": -501,
+            "slot": "2002",
+            "minprep": 0
+          },
+          {
+            "a": -107,
+            "b": 35,
+            "c": 19,
+            "chef": -504,
+            "slot": "2003",
+            "minprep": 0
+          },
+          {
+            "a": -110,
+            "b": 29,
+            "c": 38,
+            "chef": -505,
+            "slot": "3004",
+            "minprep": 0
+          },
+          {
+            "a": 73,
+            "b": null,
+            "c": null,
+            "chef": -704,
+            "slot": "3003",
+            "minprep": 0
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": 4,
+            "b": null,
+            "c": null,
+            "chef": -502,
+            "slot": "3004",
+            "minprep": 0
+          },
+          {
+            "a": 10,
+            "b": null,
+            "c": null,
+            "chef": -507,
+            "slot": "2003",
+            "minprep": 0
+          },
+          {
+            "a": -105,
+            "b": 53,
+            "c": null,
+            "chef": -512,
+            "slot": "2002",
+            "minprep": 0
+          },
+          {
+            "a": -107,
+            "b": 29,
+            "c": null,
+            "chef": -522,
+            "slot": "2002",
+            "minprep": 0
+          },
+          {
+            "a": -110,
+            "b": 25,
+            "c": null,
+            "chef": -607,
+            "slot": "3003",
+            "minprep": 0
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": -103,
+            "b": 27,
+            "c": null,
+            "chef": -502,
+            "slot": "1002",
+            "minprep": 0
+          },
+          {
+            "a": -107,
+            "b": 25,
+            "c": null,
+            "chef": -507,
+            "slot": "2002",
+            "minprep": 0
+          },
+          {
+            "a": 45,
+            "b": null,
+            "c": null,
+            "chef": -508,
+            "slot": "4005",
+            "minprep": 0
+          },
+          {
+            "a": 14,
+            "b": null,
+            "c": null,
+            "chef": -512,
+            "slot": "3001",
+            "minprep": 0
+          },
+          {
+            "a": 2,
+            "b": null,
+            "c": null,
+            "chef": -520,
+            "slot": "1002",
+            "minprep": 0
+          },
+          {
+            "a": -110,
+            "b": 5,
+            "c": null,
+            "chef": -525,
+            "slot": "2002",
+            "minprep": 0
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": -110,
+            "b": 16,
+            "c": 2,
+            "chef": -501,
+            "slot": "3004",
+            "minprep": 0
+          },
+          {
+            "a": 11,
+            "b": 29,
+            "c": 27,
+            "chef": -506,
+            "slot": "3005",
+            "minprep": 0
+          },
+          {
+            "a": -110,
+            "b": 9,
+            "c": 35,
+            "chef": -512,
+            "slot": "3005",
+            "minprep": 0
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": 24,
+            "b": null,
+            "c": null,
+            "chef": -503,
+            "slot": "3004",
+            "minprep": 0
+          },
+          {
+            "a": 38,
+            "b": null,
+            "c": null,
+            "chef": -509,
+            "slot": "2302",
+            "minprep": 0
+          },
+          {
+            "a": 5,
+            "b": null,
+            "c": null,
+            "chef": -605,
+            "slot": "2302",
+            "minprep": 0
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": 73,
+            "b": null,
+            "c": null,
+            "chef": -508,
+            "slot": "3002",
+            "minprep": 0
+          },
+          {
+            "a": 45,
+            "b": null,
+            "c": null,
+            "chef": -516,
+            "slot": "2003",
+            "minprep": 0
+          },
+          {
+            "a": -110,
+            "b": 14,
+            "c": 4,
+            "chef": -610,
+            "slot": "3004",
+            "minprep": 0
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": -110,
+            "b": 19,
+            "c": null,
+            "chef": -510,
+            "slot": "2002",
+            "minprep": 0
+          },
+          {
+            "a": -110,
+            "b": 25,
+            "c": null,
+            "chef": -515,
+            "slot": "2003",
+            "minprep": 0
+          },
+          {
+            "a": -110,
+            "b": 24,
+            "c": null,
+            "chef": -526,
+            "slot": "3003",
+            "minprep": 0
+          },
+          {
+            "a": -110,
+            "b": 4,
+            "c": 5,
+            "chef": -610,
+            "slot": "4002",
+            "minprep": 0
+          },
+          {
+            "a": -110,
+            "b": 6,
+            "c": null,
+            "chef": -615,
+            "slot": "3003",
+            "minprep": 0
+          },
+          {
+            "a": -115,
+            "b": 12,
+            "c": 10,
+            "chef": -618,
+            "slot": "3006",
+            "minprep": 0
+          }
+        ]
+      },
+      null,
+      null,
+      null
+    ],
+    "shortname": "Moab, UT",
+    "name": "Moab, Utah",
+    "county": "Evergreen Meadows"
+  },
+  {
+    "routes": [
+      {
+        "days": [
+          {
+            "a": 46,
+            "b": null,
+            "c": null,
+            "chef": null,
+            "slot": "3003",
+            "minprep": 0
+          },
+          {
+            "a": -110,
+            "b": 41,
+            "c": null,
+            "chef": -1,
+            "slot": "2003",
+            "minprep": 0
+          },
+          {
+            "a": 28,
+            "b": null,
+            "c": null,
+            "chef": -508,
+            "slot": "1004",
+            "minprep": 0
+          },
+          {
+            "a": 73,
+            "b": null,
+            "c": null,
+            "chef": -708,
+            "slot": "4004",
+            "minprep": 0
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": -110,
+            "b": 22,
+            "c": null,
+            "chef": -501,
+            "slot": "3003",
+            "minprep": 0
+          },
+          {
+            "a": -112,
+            "b": 30,
+            "c": null,
+            "chef": -510,
+            "slot": "2003",
+            "minprep": 0
+          },
+          {
+            "a": 52,
+            "b": 27,
+            "c": null,
+            "chef": -516,
+            "slot": "2003",
+            "minprep": 0
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": -110,
+            "b": 35,
+            "c": null,
+            "chef": -501,
+            "slot": "3003",
+            "minprep": 0
+          },
+          {
+            "a": -112,
+            "b": 5,
+            "c": null,
+            "chef": -504,
+            "slot": "3002",
+            "minprep": 0
+          },
+          {
+            "a": -112,
+            "b": 2,
+            "c": 12,
+            "chef": -507,
+            "slot": "3002",
+            "minprep": 0
+          },
+          {
+            "a": -112,
+            "b": 29,
+            "c": null,
+            "chef": -605,
+            "slot": "3003",
+            "minprep": 0
+          },
+          {
+            "a": -115,
+            "b": 73,
+            "c": null,
+            "chef": -714,
+            "slot": "4004",
+            "minprep": 0
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": 44,
+            "b": null,
+            "c": null,
+            "chef": -502,
+            "slot": "4005",
+            "minprep": 0
+          },
+          {
+            "a": 45,
+            "b": null,
+            "c": null,
+            "chef": -503,
+            "slot": "4005",
+            "minprep": 0
+          },
+          {
+            "a": 46,
+            "b": null,
+            "c": null,
+            "chef": -505,
+            "slot": "4005",
+            "minprep": 0
+          },
+          {
+            "a": -110,
+            "b": 73,
+            "c": null,
+            "chef": -507,
+            "slot": "4005",
+            "minprep": 0
+          },
+          {
+            "a": -110,
+            "b": 73,
+            "c": null,
+            "chef": -610,
+            "slot": "1002",
+            "minprep": 0
+          },
+          {
+            "a": -112,
+            "b": 73,
+            "c": null,
+            "chef": -618,
+            "slot": "1002",
+            "minprep": 0
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": -110,
+            "b": 11,
+            "c": null,
+            "chef": -502,
+            "slot": "3003",
+            "minprep": 0
+          },
+          {
+            "a": -112,
+            "b": 16,
+            "c": null,
+            "chef": -504,
+            "slot": "3003",
+            "minprep": 0
+          },
+          {
+            "a": 9,
+            "b": null,
+            "c": null,
+            "chef": -512,
+            "slot": "1008",
+            "minprep": 0
+          },
+          {
+            "a": -112,
+            "b": 24,
+            "c": null,
+            "chef": -608,
+            "slot": "2002",
+            "minprep": 0
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": -112,
+            "b": 28,
+            "c": 29,
+            "chef": -501,
+            "slot": "3006",
+            "minprep": 0
+          },
+          {
+            "a": 54,
+            "b": null,
+            "c": null,
+            "chef": -503,
+            "slot": "3003",
+            "minprep": 0
+          },
+          {
+            "a": 52,
+            "b": null,
+            "c": null,
+            "chef": -507,
+            "slot": "2002",
+            "minprep": 0
+          },
+          {
+            "a": -115,
+            "b": 10,
+            "c": 53,
+            "chef": -510,
+            "slot": "2007",
+            "minprep": 0
+          },
+          {
+            "a": -115,
+            "b": 14,
+            "c": 4,
+            "chef": -622,
+            "slot": "2005",
+            "minprep": 0
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": 46,
+            "b": null,
+            "c": null,
+            "chef": -720,
+            "slot": "2302",
+            "minprep": 0
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": 47,
+            "b": null,
+            "c": null,
+            "chef": -510,
+            "slot": "2002",
+            "minprep": 0
+          },
+          {
+            "a": -115,
+            "b": 52,
+            "c": 54,
+            "chef": -514,
+            "slot": "3004",
+            "minprep": 0
+          },
+          {
+            "a": -115,
+            "b": 55,
+            "c": null,
+            "chef": -522,
+            "slot": "3002",
+            "minprep": 0
+          },
+          {
+            "a": 1,
+            "b": null,
+            "c": null,
+            "chef": -612,
+            "slot": "2006",
+            "minprep": 0
+          },
+          {
+            "a": -118,
+            "b": 2,
+            "c": 38,
+            "chef": -620,
+            "slot": "4004",
+            "minprep": 0
+          },
+          {
+            "a": -118,
+            "b": 19,
+            "c": null,
+            "chef": -625,
+            "slot": "4005",
+            "minprep": 0
+          }
+        ]
+      },
+      null,
+      null
+    ],
+    "shortname": "Wall, SD",
+    "name": "Wall, South Dakota",
+    "county": "Halcyon County"
+  },
+  {
+    "routes": [
+      {
+        "days": [
+          {
+            "a": 59,
+            "b": null,
+            "c": null,
+            "chef": null,
+            "slot": "3003",
+            "minprep": 0
+          },
+          {
+            "a": -110,
+            "b": 63,
+            "c": null,
+            "chef": -504,
+            "slot": "4003",
+            "minprep": 0
+          },
+          {
+            "a": 39,
+            "b": null,
+            "c": null,
+            "chef": -508,
+            "slot": "3004",
+            "minprep": 0
+          },
+          {
+            "a": -112,
+            "b": 61,
+            "c": null,
+            "chef": -605,
+            "slot": "2004",
+            "minprep": 0
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": -110,
+            "b": 47,
+            "c": 28,
+            "chef": -501,
+            "slot": "3003",
+            "minprep": 0
+          },
+          {
+            "a": 23,
+            "b": null,
+            "c": null,
+            "chef": -507,
+            "slot": "5003",
+            "minprep": 0
+          },
+          {
+            "a": -105,
+            "b": 52,
+            "c": null,
+            "chef": -509,
+            "slot": "1001",
+            "minprep": 0
+          },
+          {
+            "a": -112,
+            "b": 7,
+            "c": null,
+            "chef": -603,
+            "slot": "2003",
+            "minprep": 0
+          },
+          {
+            "a": -115,
+            "b": 2,
+            "c": 4,
+            "chef": -608,
+            "slot": "3003",
+            "minprep": 0
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": -112,
+            "b": 45,
+            "c": 30,
+            "chef": -502,
+            "slot": "5004",
+            "minprep": 0
+          },
+          {
+            "a": -115,
+            "b": 45,
+            "c": 39,
+            "chef": -505,
+            "slot": "4005",
+            "minprep": 0
+          },
+          {
+            "a": -115,
+            "b": 45,
+            "c": 19,
+            "chef": -606,
+            "slot": "4005",
+            "minprep": 0
+          },
+          {
+            "a": 73,
+            "b": null,
+            "c": null,
+            "chef": -705,
+            "slot": "4005",
+            "minprep": 0
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": -110,
+            "b": 11,
+            "c": null,
+            "chef": -501,
+            "slot": "2005",
+            "minprep": 0
+          },
+          {
+            "a": -112,
+            "b": 25,
+            "c": null,
+            "chef": -504,
+            "slot": "3002",
+            "minprep": 0
+          },
+          {
+            "a": -112,
+            "b": 37,
+            "c": null,
+            "chef": -607,
+            "slot": "3002",
+            "minprep": 0
+          },
+          {
+            "a": -115,
+            "b": 21,
+            "c": null,
+            "chef": -612,
+            "slot": "5004",
+            "minprep": 0
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": 57,
+            "b": null,
+            "c": null,
+            "chef": -503,
+            "slot": "3003",
+            "minprep": 0
+          },
+          {
+            "a": -115,
+            "b": 59,
+            "c": 54,
+            "chef": -507,
+            "slot": "3003",
+            "minprep": 0
+          },
+          {
+            "a": -115,
+            "b": 55,
+            "c": 63,
+            "chef": -518,
+            "slot": "3003",
+            "minprep": 0
+          },
+          {
+            "a": -118,
+            "b": 31,
+            "c": null,
+            "chef": -607,
+            "slot": "4003",
+            "minprep": 0
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": -120,
+            "b": 66,
+            "c": 37,
+            "chef": -502,
+            "slot": "4005",
+            "minprep": 0
+          },
+          {
+            "a": -118,
+            "b": 35,
+            "c": 22,
+            "chef": -505,
+            "slot": "3004",
+            "minprep": 0
+          },
+          {
+            "a": -115,
+            "b": 10,
+            "c": 47,
+            "chef": -514,
+            "slot": "2003",
+            "minprep": 0
+          },
+          {
+            "a": -110,
+            "b": 5,
+            "c": null,
+            "chef": -609,
+            "slot": "1002",
+            "minprep": 0
+          },
+          {
+            "a": -107,
+            "b": 31,
+            "c": null,
+            "chef": -612,
+            "slot": "1001",
+            "minprep": 0
+          },
+          {
+            "a": 73,
+            "b": null,
+            "c": null,
+            "chef": -618,
+            "slot": "5004",
+            "minprep": 0
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": -115,
+            "b": 21,
+            "c": 38,
+            "chef": -520,
+            "slot": "3003",
+            "minprep": 0
+          },
+          {
+            "a": 73,
+            "b": null,
+            "c": null,
+            "chef": -715,
+            "slot": "4004",
+            "minprep": 0
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": -112,
+            "b": 49,
+            "c": null,
+            "chef": -510,
+            "slot": "2002",
+            "minprep": 0
+          },
+          {
+            "a": -112,
+            "b": 19,
+            "c": null,
+            "chef": -514,
+            "slot": "3002",
+            "minprep": 0
+          },
+          {
+            "a": 29,
+            "b": null,
+            "c": null,
+            "chef": -518,
+            "slot": "5003",
+            "minprep": 0
+          },
+          {
+            "a": -118,
+            "b": 12,
+            "c": 6,
+            "chef": -610,
+            "slot": "8001",
+            "minprep": 0
+          },
+          {
+            "a": -120,
+            "b": 46,
+            "c": 30,
+            "chef": -616,
+            "slot": "4004",
+            "minprep": 0
+          },
+          {
+            "a": -118,
+            "b": 73,
+            "c": null,
+            "chef": -710,
+            "slot": "2002",
+            "minprep": 0
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": -120,
+            "b": 53,
+            "c": 57,
+            "chef": -624,
+            "slot": "4004",
+            "minprep": 0
+          }
+        ]
+      },
+      null
+    ],
+    "shortname": "Wichita, KS",
+    "name": "Wichita, Kansas",
+    "county": "Tyrell County"
+  },
+  {
+    "routes": [
+      {
+        "days": [
+          {
+            "a": 56,
+            "b": null,
+            "c": null,
+            "chef": null,
+            "slot": "3003",
+            "minprep": 0
+          },
+          {
+            "a": 40,
+            "b": null,
+            "c": null,
+            "chef": -504,
+            "slot": "3003",
+            "minprep": 0
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": -112,
+            "b": 31,
+            "c": null,
+            "chef": -501,
+            "slot": "2003",
+            "minprep": 0
+          },
+          {
+            "a": 7,
+            "b": null,
+            "c": null,
+            "chef": -507,
+            "slot": "3004",
+            "minprep": 0
+          },
+          {
+            "a": -118,
+            "b": 39,
+            "c": 41,
+            "chef": -605,
+            "slot": "3004",
+            "minprep": 0
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": -112,
+            "b": 46,
+            "c": 70,
+            "chef": -502,
+            "slot": "2003",
+            "minprep": 0
+          },
+          {
+            "a": 70,
+            "b": null,
+            "c": null,
+            "chef": -505,
+            "slot": "3003",
+            "minprep": 0
+          },
+          {
+            "a": 3,
+            "b": null,
+            "c": null,
+            "chef": -508,
+            "slot": "3002",
+            "minprep": 0
+          },
+          {
+            "a": 26,
+            "b": null,
+            "c": null,
+            "chef": -607,
+            "slot": "3003",
+            "minprep": 0
+          },
+          {
+            "a": -118,
+            "b": 52,
+            "c": 21,
+            "chef": -705,
+            "slot": "5004",
+            "minprep": 0
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": -112,
+            "b": 61,
+            "c": 66,
+            "chef": -501,
+            "slot": "4004",
+            "minprep": 0
+          },
+          {
+            "a": -115,
+            "b": 48,
+            "c": 54,
+            "chef": -505,
+            "slot": "3004",
+            "minprep": 0
+          },
+          {
+            "a": -118,
+            "b": 40,
+            "c": 6,
+            "chef": -602,
+            "slot": "2005",
+            "minprep": 0
+          },
+          {
+            "a": -118,
+            "b": 35,
+            "c": 37,
+            "chef": -608,
+            "slot": "3003",
+            "minprep": 0
+          },
+          {
+            "a": 15,
+            "b": null,
+            "c": null,
+            "chef": -611,
+            "slot": "4003",
+            "minprep": 0
+          },
+          {
+            "a": 47,
+            "b": 48,
+            "c": null,
+            "chef": -708,
+            "slot": "4003",
+            "minprep": 0
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": -112,
+            "b": 38,
+            "c": 5,
+            "chef": -504,
+            "slot": "4004",
+            "minprep": 0
+          },
+          {
+            "a": -115,
+            "b": 19,
+            "c": null,
+            "chef": -511,
+            "slot": "4004",
+            "minprep": 0
+          },
+          {
+            "a": -112,
+            "b": 30,
+            "c": null,
+            "chef": -608,
+            "slot": "2001",
+            "minprep": 0
+          },
+          {
+            "a": -118,
+            "b": 22,
+            "c": null,
+            "chef": -705,
+            "slot": "4005",
+            "minprep": 0
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": 62,
+            "b": null,
+            "c": null,
+            "chef": -503,
+            "slot": "4004",
+            "minprep": 0
+          },
+          {
+            "a": -115,
+            "b": 56,
+            "c": null,
+            "chef": -507,
+            "slot": "2002",
+            "minprep": 0
+          },
+          {
+            "a": -118,
+            "b": 51,
+            "c": 57,
+            "chef": -517,
+            "slot": "4004",
+            "minprep": 0
+          },
+          {
+            "a": -118,
+            "b": 32,
+            "c": 63,
+            "chef": -610,
+            "slot": "4002",
+            "minprep": 0
+          },
+          {
+            "a": -120,
+            "b": 18,
+            "c": null,
+            "chef": -615,
+            "slot": "5004",
+            "minprep": 0
+          },
+          {
+            "a": -120,
+            "b": 73,
+            "c": null,
+            "chef": -710,
+            "slot": "4003",
+            "minprep": 0
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": 73,
+            "b": null,
+            "c": null,
+            "chef": -520,
+            "slot": "4004",
+            "minprep": 0
+          },
+          {
+            "a": 1,
+            "b": 32,
+            "c": null,
+            "chef": -618,
+            "slot": "4005",
+            "minprep": 0
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": -112,
+            "b": 36,
+            "c": null,
+            "chef": -505,
+            "slot": "2002",
+            "minprep": 0
+          },
+          {
+            "a": -110,
+            "b": 12,
+            "c": 61,
+            "chef": -509,
+            "slot": "1001",
+            "minprep": 0
+          },
+          {
+            "a": -118,
+            "b": 11,
+            "c": 70,
+            "chef": -515,
+            "slot": "1005",
+            "minprep": 0
+          },
+          {
+            "a": -118,
+            "b": 28,
+            "c": null,
+            "chef": -611,
+            "slot": "2005",
+            "minprep": 0
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": 70,
+            "b": null,
+            "c": null,
+            "chef": -508,
+            "slot": "3003",
+            "minprep": 0
+          },
+          {
+            "a": 39,
+            "b": null,
+            "c": null,
+            "chef": -511,
+            "slot": "8001",
+            "minprep": 0
+          },
+          {
+            "a": 60,
+            "b": null,
+            "c": null,
+            "chef": -514,
+            "slot": "1008",
+            "minprep": 0
+          },
+          {
+            "a": 24,
+            "b": null,
+            "c": null,
+            "chef": -614,
+            "slot": "4004",
+            "minprep": 0
+          },
+          {
+            "a": 49,
+            "b": 3,
+            "c": null,
+            "chef": -706,
+            "slot": "5003",
+            "minprep": 0
+          },
+          {
+            "a": -110,
+            "b": 15,
+            "c": 32,
+            "chef": -712,
+            "slot": "2001",
+            "minprep": 0
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": -118,
+            "b": 58,
+            "c": 52,
+            "chef": -620,
+            "slot": "4004",
+            "minprep": 0
+          }
+        ]
+      }
+    ],
+    "shortname": "Marietta, OK",
+    "name": "Marietta, Oklahoma",
+    "county": "Love County"
+  },
+  {
+    "routes": [
+      {
+        "days": [
+          {
+            "a": 13,
+            "b": null,
+            "c": null,
+            "chef": null,
+            "slot": "4004",
+            "minprep": 0
+          },
+          {
+            "a": -118,
+            "b": 67,
+            "c": null,
+            "chef": -505,
+            "slot": "3003",
+            "minprep": 0
+          },
+          {
+            "a": -120,
+            "b": 17,
+            "c": null,
+            "chef": -509,
+            "slot": "4005",
+            "minprep": 3
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": 68,
+            "b": null,
+            "c": null,
+            "chef": -502,
+            "slot": "3004",
+            "minprep": 2
+          },
+          {
+            "a": 65,
+            "b": null,
+            "c": null,
+            "chef": -506,
+            "slot": "3005",
+            "minprep": 3
+          },
+          {
+            "a": -118,
+            "b": 32,
+            "c": 23,
+            "chef": -514,
+            "slot": "3005",
+            "minprep": 0
+          },
+          {
+            "a": -120,
+            "b": 59,
+            "c": 36,
+            "chef": -606,
+            "slot": "4004",
+            "minprep": 4
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": -118,
+            "b": 20,
+            "c": 32,
+            "chef": -501,
+            "slot": "3003",
+            "minprep": 0
+          },
+          {
+            "a": 30,
+            "b": null,
+            "c": null,
+            "chef": -507,
+            "slot": "4004",
+            "minprep": 3
+          },
+          {
+            "a": -120,
+            "b": 40,
+            "c": 7,
+            "chef": -610,
+            "slot": "2004",
+            "minprep": 0
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": 33,
+            "b": null,
+            "c": null,
+            "chef": -502,
+            "slot": "2003",
+            "minprep": 0
+          },
+          {
+            "a": -115,
+            "b": 50,
+            "c": 13,
+            "chef": -511,
+            "slot": "4003",
+            "minprep": 2
+          },
+          {
+            "a": -115,
+            "b": 60,
+            "c": 22,
+            "chef": -605,
+            "slot": "2003",
+            "minprep": 3
+          },
+          {
+            "a": -115,
+            "b": 46,
+            "c": 71,
+            "chef": -706,
+            "slot": "3003",
+            "minprep": 3
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": -112,
+            "b": 25,
+            "c": null,
+            "chef": -502,
+            "slot": "2002",
+            "minprep": 2
+          },
+          {
+            "a": -115,
+            "b": 24,
+            "c": null,
+            "chef": -505,
+            "slot": "2003",
+            "minprep": 0
+          },
+          {
+            "a": -120,
+            "b": 23,
+            "c": null,
+            "chef": -605,
+            "slot": "3003",
+            "minprep": 3
+          },
+          {
+            "a": -122,
+            "b": 73,
+            "c": null,
+            "chef": -612,
+            "slot": "4004",
+            "minprep": 0
+          },
+          {
+            "a": 73,
+            "b": null,
+            "c": null,
+            "chef": -710,
+            "slot": "4005",
+            "minprep": 4
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": 58,
+            "b": 65,
+            "c": null,
+            "chef": -504,
+            "slot": "2007",
+            "minprep": 0
+          },
+          {
+            "a": 8,
+            "b": 37,
+            "c": null,
+            "chef": -509,
+            "slot": "3003",
+            "minprep": 2
+          },
+          {
+            "a": 18,
+            "b": 33,
+            "c": null,
+            "chef": -610,
+            "slot": "3005",
+            "minprep": 0
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": 34,
+            "b": null,
+            "c": null,
+            "chef": -516,
+            "slot": "4004",
+            "minprep": 2
+          },
+          {
+            "a": 60,
+            "b": 8,
+            "c": 32,
+            "chef": -616,
+            "slot": "4004",
+            "minprep": 3
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": -120,
+            "b": 29,
+            "c": 19,
+            "chef": -505,
+            "slot": "2007",
+            "minprep": 2
+          },
+          {
+            "a": -122,
+            "b": 20,
+            "c": 51,
+            "chef": -618,
+            "slot": "3006",
+            "minprep": 3
+          }
+        ]
+      },
+      null,
+      null
+    ],
+    "shortname": "Midland, TX",
+    "name": "Midland, Texas",
+    "county": "Glint Plains"
+  },
+  {
+    "routes": [
+      {
+        "days": [
+          {
+            "a": 82,
+            "b": null,
+            "c": null,
+            "chef": null,
+            "slot": "3004",
+            "minprep": 0
+          },
+          {
+            "a": -115,
+            "b": 48,
+            "c": 26,
+            "chef": -503,
+            "slot": "2002",
+            "minprep": 0
+          },
+          {
+            "a": 42,
+            "b": null,
+            "c": null,
+            "chef": -512,
+            "slot": "4004",
+            "minprep": 2
+          },
+          {
+            "a": 70,
+            "b": 71,
+            "c": null,
+            "chef": -604,
+            "slot": "3004",
+            "minprep": 3
+          },
+          {
+            "a": -118,
+            "b": 64,
+            "c": null,
+            "chef": -608,
+            "slot": "2002",
+            "minprep": 3
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": 63,
+            "b": 56,
+            "c": null,
+            "chef": -501,
+            "slot": "3004",
+            "minprep": 0
+          },
+          {
+            "a": -118,
+            "b": 23,
+            "c": null,
+            "chef": -510,
+            "slot": "4004",
+            "minprep": 0
+          },
+          {
+            "a": -118,
+            "b": 77,
+            "c": null,
+            "chef": -605,
+            "slot": "4003",
+            "minprep": 3
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": -118,
+            "b": 86,
+            "c": null,
+            "chef": -501,
+            "slot": "3002",
+            "minprep": 0
+          },
+          {
+            "a": -120,
+            "b": 79,
+            "c": null,
+            "chef": -508,
+            "slot": "3003",
+            "minprep": 0
+          },
+          {
+            "a": -120,
+            "b": 42,
+            "c": null,
+            "chef": -514,
+            "slot": "3002",
+            "minprep": 2
+          },
+          {
+            "a": -122,
+            "b": 30,
+            "c": 51,
+            "chef": -606,
+            "slot": "3003",
+            "minprep": 3
+          },
+          {
+            "a": -122,
+            "b": 50,
+            "c": 8,
+            "chef": -612,
+            "slot": "2003",
+            "minprep": 3
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": -110,
+            "b": 17,
+            "c": null,
+            "chef": -502,
+            "slot": "1001",
+            "minprep": 0
+          },
+          {
+            "a": -112,
+            "b": 34,
+            "c": null,
+            "chef": -508,
+            "slot": "1002",
+            "minprep": 0
+          },
+          {
+            "a": -115,
+            "b": 18,
+            "c": 36,
+            "chef": -514,
+            "slot": "1002",
+            "minprep": 2
+          },
+          {
+            "a": -115,
+            "b": 33,
+            "c": null,
+            "chef": -607,
+            "slot": "2001",
+            "minprep": 0
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": 88,
+            "b": null,
+            "c": null,
+            "chef": -503,
+            "slot": "2002",
+            "minprep": 0
+          },
+          {
+            "a": 80,
+            "b": null,
+            "c": null,
+            "chef": -507,
+            "slot": "3004",
+            "minprep": 2
+          },
+          {
+            "a": 42,
+            "b": null,
+            "c": null,
+            "chef": -514,
+            "slot": "7002",
+            "minprep": 0
+          },
+          {
+            "a": 20,
+            "b": null,
+            "c": null,
+            "chef": -602,
+            "slot": "2007",
+            "minprep": 0
+          },
+          {
+            "a": 21,
+            "b": null,
+            "c": null,
+            "chef": -605,
+            "slot": "6003",
+            "minprep": 2
+          },
+          {
+            "a": 15,
+            "b": null,
+            "c": null,
+            "chef": -610,
+            "slot": "3006",
+            "minprep": 0
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": -115,
+            "b": 88,
+            "c": null,
+            "chef": -502,
+            "slot": "2003",
+            "minprep": 0
+          },
+          {
+            "a": -118,
+            "b": 88,
+            "c": null,
+            "chef": -506,
+            "slot": "3003",
+            "minprep": 0
+          },
+          {
+            "a": -120,
+            "b": 88,
+            "c": null,
+            "chef": -515,
+            "slot": "3004",
+            "minprep": 0
+          },
+          {
+            "a": -122,
+            "b": 88,
+            "c": null,
+            "chef": -705,
+            "slot": "4004",
+            "minprep": 2
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": 88,
+            "b": null,
+            "c": null,
+            "chef": -608,
+            "slot": "4004",
+            "minprep": 0
+          },
+          {
+            "a": 73,
+            "b": null,
+            "c": null,
+            "chef": -612,
+            "slot": "3003",
+            "minprep": 0
+          },
+          {
+            "a": 49,
+            "b": 32,
+            "c": 50,
+            "chef": -704,
+            "slot": "3003",
+            "minprep": 0
+          },
+          {
+            "a": 79,
+            "b": 86,
+            "c": 76,
+            "chef": -712,
+            "slot": "3003",
+            "minprep": 2
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": -120,
+            "b": 70,
+            "c": 74,
+            "chef": -504,
+            "slot": "5004",
+            "minprep": 0
+          },
+          {
+            "a": -122,
+            "b": 71,
+            "c": 31,
+            "chef": -710,
+            "slot": "4005",
+            "minprep": 3
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": 73,
+            "b": null,
+            "c": null,
+            "chef": -507,
+            "slot": "3004",
+            "minprep": 0
+          },
+          {
+            "a": -118,
+            "b": 27,
+            "c": 13,
+            "chef": -516,
+            "slot": "5002",
+            "minprep": 2
+          },
+          {
+            "a": -122,
+            "b": 16,
+            "c": 61,
+            "chef": -609,
+            "slot": "3006",
+            "minprep": 0
+          },
+          {
+            "a": -122,
+            "b": 88,
+            "c": null,
+            "chef": -612,
+            "slot": "6003",
+            "minprep": 0
+          },
+          {
+            "a": -122,
+            "b": 7,
+            "c": 65,
+            "chef": -704,
+            "slot": "5004",
+            "minprep": 3
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": -122,
+            "b": 25,
+            "c": null,
+            "chef": -614,
+            "slot": "5004",
+            "minprep": 0
+          },
+          {
+            "a": -125,
+            "b": 42,
+            "c": 29,
+            "chef": -620,
+            "slot": "4004",
+            "minprep": 3
+          }
+        ]
+      }
+    ],
+    "shortname": "Houston, TX",
+    "name": "Houston, Texas",
+    "county": "Grandview County"
+  },
+  {
+    "routes": [
+      {
+        "days": [
+          {
+            "a": 43,
+            "b": null,
+            "c": null,
+            "chef": null,
+            "slot": "2004",
+            "minprep": 0
+          },
+          {
+            "a": 75,
+            "b": null,
+            "c": null,
+            "chef": -509,
+            "slot": "3004",
+            "minprep": 0
+          },
+          {
+            "a": -120,
+            "b": 88,
+            "c": null,
+            "chef": -514,
+            "slot": "3003",
+            "minprep": 0
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": 78,
+            "b": null,
+            "c": null,
+            "chef": -502,
+            "slot": "5004",
+            "minprep": 0
+          },
+          {
+            "a": -118,
+            "b": 76,
+            "c": null,
+            "chef": -604,
+            "slot": "4004",
+            "minprep": 2
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": -118,
+            "b": 43,
+            "c": 13,
+            "chef": -501,
+            "slot": "3003",
+            "minprep": 0
+          },
+          {
+            "a": -120,
+            "b": 21,
+            "c": 7,
+            "chef": -507,
+            "slot": "3003",
+            "minprep": 0
+          },
+          {
+            "a": -120,
+            "b": 17,
+            "c": null,
+            "chef": -511,
+            "slot": "3003",
+            "minprep": 2
+          },
+          {
+            "a": -122,
+            "b": 32,
+            "c": 64,
+            "chef": -602,
+            "slot": "3003",
+            "minprep": 3
+          },
+          {
+            "a": -122,
+            "b": 42,
+            "c": 1,
+            "chef": -606,
+            "slot": "3003",
+            "minprep": 0
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": 70,
+            "b": null,
+            "c": null,
+            "chef": -501,
+            "slot": "1002",
+            "minprep": 0
+          },
+          {
+            "a": -115,
+            "b": 87,
+            "c": null,
+            "chef": -506,
+            "slot": "2002",
+            "minprep": 2
+          },
+          {
+            "a": -115,
+            "b": 88,
+            "c": null,
+            "chef": -604,
+            "slot": "1002",
+            "minprep": 3
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": 3,
+            "b": 27,
+            "c": null,
+            "chef": -503,
+            "slot": "2006",
+            "minprep": 0
+          },
+          {
+            "a": -120,
+            "b": 60,
+            "c": 38,
+            "chef": -507,
+            "slot": "2007",
+            "minprep": 0
+          },
+          {
+            "a": -120,
+            "b": 36,
+            "c": 50,
+            "chef": -514,
+            "slot": "3006",
+            "minprep": 2
+          },
+          {
+            "a": -122,
+            "b": 40,
+            "c": 18,
+            "chef": -605,
+            "slot": "4004",
+            "minprep": 3
+          },
+          {
+            "a": 73,
+            "b": null,
+            "c": null,
+            "chef": -705,
+            "slot": "3006",
+            "minprep": 3
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": -120,
+            "b": 20,
+            "c": 48,
+            "chef": -503,
+            "slot": "8001",
+            "minprep": 0
+          },
+          {
+            "a": -122,
+            "b": 15,
+            "c": 37,
+            "chef": -507,
+            "slot": "8001",
+            "minprep": 0
+          },
+          {
+            "a": -125,
+            "b": 8,
+            "c": 87,
+            "chef": -514,
+            "slot": "8001",
+            "minprep": 0
+          },
+          {
+            "a": -125,
+            "b": 88,
+            "c": null,
+            "chef": -612,
+            "slot": "8001",
+            "minprep": 0
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": 73,
+            "b": null,
+            "c": null,
+            "chef": -515,
+            "slot": "4004",
+            "minprep": 2
+          },
+          {
+            "a": 79,
+            "b": null,
+            "c": null,
+            "chef": -615,
+            "slot": "4004",
+            "minprep": 0
+          },
+          {
+            "a": 88,
+            "b": null,
+            "c": null,
+            "chef": -710,
+            "slot": "4004",
+            "minprep": 0
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": -125,
+            "b": 46,
+            "c": 71,
+            "chef": -503,
+            "slot": "4004",
+            "minprep": 0
+          },
+          {
+            "a": -122,
+            "b": 19,
+            "c": 39,
+            "chef": -508,
+            "slot": "3004",
+            "minprep": 3
+          },
+          {
+            "a": -120,
+            "b": 52,
+            "c": 55,
+            "chef": -514,
+            "slot": "3003",
+            "minprep": 0
+          },
+          {
+            "a": -118,
+            "b": 31,
+            "c": 30,
+            "chef": -605,
+            "slot": "3002",
+            "minprep": 0
+          },
+          {
+            "a": -118,
+            "b": 22,
+            "c": 6,
+            "chef": -611,
+            "slot": "2002",
+            "minprep": 3
+          },
+          {
+            "a": -118,
+            "b": 11,
+            "c": 5,
+            "chef": -615,
+            "slot": "2002",
+            "minprep": 0
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": -120,
+            "b": 37,
+            "c": 39,
+            "chef": -504,
+            "slot": "3003",
+            "minprep": 0
+          },
+          {
+            "a": -120,
+            "b": 40,
+            "c": null,
+            "chef": -510,
+            "slot": "3003",
+            "minprep": 2
+          },
+          {
+            "a": -120,
+            "b": 41,
+            "c": null,
+            "chef": -515,
+            "slot": "3003",
+            "minprep": 3
+          },
+          {
+            "a": -120,
+            "b": 36,
+            "c": null,
+            "chef": -605,
+            "slot": "3003",
+            "minprep": 0
+          },
+          {
+            "a": -120,
+            "b": 42,
+            "c": null,
+            "chef": -610,
+            "slot": "3003",
+            "minprep": 3
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": 84,
+            "b": 11,
+            "c": 5,
+            "chef": -525,
+            "slot": "3006",
+            "minprep": 3
+          }
+        ]
+      }
+    ],
+    "shortname": "N.Orleans, LA",
+    "name": "New Orleans, Louisiana",
+    "county": "Newer Orleans County"
+  },
+  {
+    "routes": [
+      {
+        "days": [
+          {
+            "a": 91,
+            "b": 96,
+            "c": null,
+            "chef": null,
+            "slot": "3004",
+            "minprep": 0
+          },
+          {
+            "a": 92,
+            "b": null,
+            "c": null,
+            "chef": -508,
+            "slot": "3003",
+            "minprep": 0
+          },
+          {
+            "a": 7,
+            "b": 98,
+            "c": null,
+            "chef": -514,
+            "slot": "2003",
+            "minprep": 0
+          },
+          {
+            "a": 94,
+            "b": null,
+            "c": null,
+            "chef": -605,
+            "slot": "4005",
+            "minprep": 0
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": -110,
+            "b": 74,
+            "c": null,
+            "chef": -501,
+            "slot": "1001",
+            "minprep": 0
+          },
+          {
+            "a": -112,
+            "b": 77,
+            "c": null,
+            "chef": -507,
+            "slot": "1001",
+            "minprep": 0
+          },
+          {
+            "a": -112,
+            "b": 17,
+            "c": null,
+            "chef": -606,
+            "slot": "1001",
+            "minprep": 3
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": 70,
+            "b": null,
+            "c": null,
+            "chef": -505,
+            "slot": "2002",
+            "minprep": 3
+          },
+          {
+            "a": -118,
+            "b": 40,
+            "c": 42,
+            "chef": -512,
+            "slot": "2003",
+            "minprep": 0
+          },
+          {
+            "a": -120,
+            "b": 97,
+            "c": 47,
+            "chef": -516,
+            "slot": "3003",
+            "minprep": 3
+          },
+          {
+            "a": -120,
+            "b": 81,
+            "c": null,
+            "chef": -603,
+            "slot": "2003",
+            "minprep": 0
+          },
+          {
+            "a": -122,
+            "b": 91,
+            "c": 87,
+            "chef": -610,
+            "slot": "3002",
+            "minprep": 0
+          },
+          {
+            "a": -122,
+            "b": 80,
+            "c": 76,
+            "chef": -614,
+            "slot": "2003",
+            "minprep": 3
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": -118,
+            "b": 88,
+            "c": null,
+            "chef": -501,
+            "slot": "4002",
+            "minprep": 3
+          },
+          {
+            "a": -122,
+            "b": 21,
+            "c": 15,
+            "chef": -508,
+            "slot": "6002",
+            "minprep": 0
+          },
+          {
+            "a": -122,
+            "b": 48,
+            "c": 18,
+            "chef": -604,
+            "slot": "4003",
+            "minprep": 3
+          },
+          {
+            "a": -125,
+            "b": 57,
+            "c": 60,
+            "chef": -608,
+            "slot": "5003",
+            "minprep": 0
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": -125,
+            "b": 88,
+            "c": null,
+            "chef": -505,
+            "slot": "8001",
+            "minprep": 2
+          },
+          {
+            "a": -125,
+            "b": 88,
+            "c": null,
+            "chef": -509,
+            "slot": "1008",
+            "minprep": 0
+          },
+          {
+            "a": 73,
+            "b": null,
+            "c": null,
+            "chef": -614,
+            "slot": "5004",
+            "minprep": 0
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": 83,
+            "b": null,
+            "c": null,
+            "chef": -502,
+            "slot": "4004",
+            "minprep": 2
+          },
+          {
+            "a": -118,
+            "b": 75,
+            "c": null,
+            "chef": -510,
+            "slot": "2003",
+            "minprep": 0
+          },
+          {
+            "a": -120,
+            "b": 78,
+            "c": null,
+            "chef": -516,
+            "slot": "3002",
+            "minprep": 3
+          },
+          {
+            "a": -128,
+            "b": 32,
+            "c": 15,
+            "chef": -609,
+            "slot": "4005",
+            "minprep": 0
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": 25,
+            "b": null,
+            "c": null,
+            "chef": -512,
+            "slot": "4005",
+            "minprep": 2
+          },
+          {
+            "a": 24,
+            "b": null,
+            "c": null,
+            "chef": -615,
+            "slot": "4005",
+            "minprep": 0
+          },
+          {
+            "a": 23,
+            "b": null,
+            "c": null,
+            "chef": -708,
+            "slot": "4005",
+            "minprep": 0
+          },
+          {
+            "a": 73,
+            "b": null,
+            "c": null,
+            "chef": -715,
+            "slot": "4005",
+            "minprep": 0
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": -115,
+            "b": 19,
+            "c": null,
+            "chef": -504,
+            "slot": "2002",
+            "minprep": 0
+          },
+          {
+            "a": -120,
+            "b": 31,
+            "c": null,
+            "chef": -509,
+            "slot": "4002",
+            "minprep": 3
+          },
+          {
+            "a": -120,
+            "b": 88,
+            "c": null,
+            "chef": -516,
+            "slot": "4004",
+            "minprep": 3
+          },
+          {
+            "a": -122,
+            "b": 88,
+            "c": null,
+            "chef": -520,
+            "slot": "4003",
+            "minprep": 0
+          },
+          {
+            "a": -125,
+            "b": 37,
+            "c": 8,
+            "chef": -610,
+            "slot": "3004",
+            "minprep": 0
+          },
+          {
+            "a": -128,
+            "b": 9,
+            "c": 29,
+            "chef": -615,
+            "slot": "4005",
+            "minprep": 3
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": -128,
+            "b": 93,
+            "c": null,
+            "chef": -622,
+            "slot": "6003",
+            "minprep": 3
+          }
+        ]
+      },
+      null
+    ],
+    "shortname": "Jackson, MS",
+    "name": "Jackson, Mississippi",
+    "county": "Metro Central"
+  },
+  {
+    "routes": [
+      {
+        "days": [
+          {
+            "a": 99,
+            "b": null,
+            "c": null,
+            "chef": null,
+            "slot": "4004",
+            "minprep": 0
+          },
+          {
+            "a": 100,
+            "b": null,
+            "c": null,
+            "chef": -501,
+            "slot": "3003",
+            "minprep": 0
+          },
+          {
+            "a": 73,
+            "b": null,
+            "c": null,
+            "chef": -509,
+            "slot": "4004",
+            "minprep": 0
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": -122,
+            "b": 73,
+            "c": null,
+            "chef": -502,
+            "slot": "4004",
+            "minprep": 0
+          },
+          {
+            "a": -122,
+            "b": 25,
+            "c": null,
+            "chef": -507,
+            "slot": "4004",
+            "minprep": 0
+          },
+          {
+            "a": -122,
+            "b": 24,
+            "c": null,
+            "chef": -609,
+            "slot": "4004",
+            "minprep": 2
+          },
+          {
+            "a": -122,
+            "b": 23,
+            "c": null,
+            "chef": -614,
+            "slot": "4004",
+            "minprep": 3
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": -122,
+            "b": 88,
+            "c": null,
+            "chef": -502,
+            "slot": "5004",
+            "minprep": 0
+          },
+          {
+            "a": -125,
+            "b": 88,
+            "c": null,
+            "chef": -510,
+            "slot": "4005",
+            "minprep": 0
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": -120,
+            "b": 99,
+            "c": null,
+            "chef": -505,
+            "slot": "5004",
+            "minprep": 0
+          },
+          {
+            "a": -115,
+            "b": 100,
+            "c": null,
+            "chef": -512,
+            "slot": "2002",
+            "minprep": 2
+          },
+          {
+            "a": -122,
+            "b": 100,
+            "c": null,
+            "chef": -607,
+            "slot": "3003",
+            "minprep": 2
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": -122,
+            "b": 99,
+            "c": null,
+            "chef": -503,
+            "slot": "5004",
+            "minprep": 0
+          },
+          {
+            "a": -125,
+            "b": 99,
+            "c": null,
+            "chef": -510,
+            "slot": "4005",
+            "minprep": 0
+          },
+          {
+            "a": -128,
+            "b": 99,
+            "c": null,
+            "chef": -602,
+            "slot": "3006",
+            "minprep": 0
+          },
+          {
+            "a": -130,
+            "b": 99,
+            "c": null,
+            "chef": -605,
+            "slot": "2007",
+            "minprep": 0
+          },
+          {
+            "a": -132,
+            "b": 99,
+            "c": null,
+            "chef": -705,
+            "slot": "1008",
+            "minprep": 0
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": -115,
+            "b": 100,
+            "c": null,
+            "chef": -504,
+            "slot": "2003",
+            "minprep": 0
+          },
+          {
+            "a": -120,
+            "b": 100,
+            "c": null,
+            "chef": -606,
+            "slot": "3003",
+            "minprep": 0
+          },
+          {
+            "a": -125,
+            "b": 100,
+            "c": null,
+            "chef": -610,
+            "slot": "3003",
+            "minprep": 0
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": 73,
+            "b": null,
+            "c": null,
+            "chef": -505,
+            "slot": "2003",
+            "minprep": 0
+          },
+          {
+            "a": -130,
+            "b": 73,
+            "c": null,
+            "chef": -710,
+            "slot": "4005",
+            "minprep": 2
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": -130,
+            "b": 73,
+            "c": null,
+            "chef": -512,
+            "slot": "5004",
+            "minprep": 3
+          }
+        ]
+      },
+      null,
+      null
+    ],
+    "shortname": "Mobile, AL",
+    "name": "Mobile, Alabama",
+    "county": "Drydock Harbor"
+  },
+  {
+    "routes": [
+      {
+        "days": [
+          {
+            "a": 89,
+            "b": null,
+            "c": null,
+            "chef": null,
+            "slot": "3003",
+            "minprep": 0
+          },
+          {
+            "a": 95,
+            "b": null,
+            "c": null,
+            "chef": -505,
+            "slot": "3003",
+            "minprep": 0
+          },
+          {
+            "a": 97,
+            "b": null,
+            "c": null,
+            "chef": -607,
+            "slot": "3003",
+            "minprep": 2
+          },
+          {
+            "a": -125,
+            "b": 77,
+            "c": 74,
+            "chef": -614,
+            "slot": "3003",
+            "minprep": 3
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": 83,
+            "b": null,
+            "c": null,
+            "chef": -504,
+            "slot": "4003",
+            "minprep": 0
+          },
+          {
+            "a": 10,
+            "b": 43,
+            "c": null,
+            "chef": -508,
+            "slot": "2003",
+            "minprep": 0
+          },
+          {
+            "a": 28,
+            "b": 9,
+            "c": null,
+            "chef": -603,
+            "slot": "4002",
+            "minprep": 3
+          },
+          {
+            "a": -122,
+            "b": 21,
+            "c": 47,
+            "chef": -606,
+            "slot": "3003",
+            "minprep": 3
+          },
+          {
+            "a": -125,
+            "b": 54,
+            "c": 56,
+            "chef": -710,
+            "slot": "2004",
+            "minprep": 3
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": 90,
+            "b": null,
+            "c": null,
+            "chef": -502,
+            "slot": "3002",
+            "minprep": 0
+          },
+          {
+            "a": 85,
+            "b": null,
+            "c": null,
+            "chef": -510,
+            "slot": "5004",
+            "minprep": 2
+          },
+          {
+            "a": 84,
+            "b": 81,
+            "c": null,
+            "chef": -605,
+            "slot": "7002",
+            "minprep": 3
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": 71,
+            "b": null,
+            "c": null,
+            "chef": -501,
+            "slot": "1001",
+            "minprep": 2
+          },
+          {
+            "a": 42,
+            "b": 50,
+            "c": null,
+            "chef": -508,
+            "slot": "2002",
+            "minprep": 0
+          },
+          {
+            "a": -125,
+            "b": 17,
+            "c": null,
+            "chef": -609,
+            "slot": "3003",
+            "minprep": 2
+          },
+          {
+            "a": -130,
+            "b": 34,
+            "c": null,
+            "chef": -614,
+            "slot": "4004",
+            "minprep": 0
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": 8,
+            "b": 33,
+            "c": null,
+            "chef": -501,
+            "slot": "8001",
+            "minprep": 0
+          },
+          {
+            "a": 32,
+            "b": 65,
+            "c": null,
+            "chef": -505,
+            "slot": "8001",
+            "minprep": 2
+          },
+          {
+            "a": 57,
+            "b": 49,
+            "c": null,
+            "chef": -515,
+            "slot": "6003",
+            "minprep": 0
+          },
+          {
+            "a": 18,
+            "b": 1,
+            "c": null,
+            "chef": -610,
+            "slot": "1008",
+            "minprep": 0
+          },
+          {
+            "a": 60,
+            "b": 66,
+            "c": null,
+            "chef": -615,
+            "slot": "4005",
+            "minprep": 2
+          },
+          {
+            "a": 59,
+            "b": 61,
+            "c": null,
+            "chef": -619,
+            "slot": "6003",
+            "minprep": 3
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": 25,
+            "b": null,
+            "c": null,
+            "chef": -503,
+            "slot": "4004",
+            "minprep": 2
+          },
+          {
+            "a": 24,
+            "b": null,
+            "c": null,
+            "chef": -509,
+            "slot": "4004",
+            "minprep": 2
+          },
+          {
+            "a": 23,
+            "b": null,
+            "c": null,
+            "chef": -610,
+            "slot": "4004",
+            "minprep": 2
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": 45,
+            "b": 46,
+            "c": null,
+            "chef": -505,
+            "slot": "5004",
+            "minprep": 0
+          },
+          {
+            "a": 46,
+            "b": 70,
+            "c": null,
+            "chef": -516,
+            "slot": "5004",
+            "minprep": 2
+          },
+          {
+            "a": 70,
+            "b": 71,
+            "c": null,
+            "chef": -620,
+            "slot": "5004",
+            "minprep": 0
+          },
+          {
+            "a": 99,
+            "b": null,
+            "c": null,
+            "chef": -710,
+            "slot": "5004",
+            "minprep": 2
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": 88,
+            "b": null,
+            "c": null,
+            "chef": -506,
+            "slot": "4003",
+            "minprep": 3
+          },
+          {
+            "a": 95,
+            "b": 89,
+            "c": null,
+            "chef": -516,
+            "slot": "7002",
+            "minprep": 0
+          },
+          {
+            "a": 78,
+            "b": null,
+            "c": null,
+            "chef": -604,
+            "slot": "2003",
+            "minprep": 0
+          },
+          {
+            "a": 87,
+            "b": null,
+            "c": null,
+            "chef": -612,
+            "slot": "5004",
+            "minprep": 3
+          },
+          {
+            "a": 93,
+            "b": 94,
+            "c": null,
+            "chef": -616,
+            "slot": "3006",
+            "minprep": 3
+          },
+          {
+            "a": 100,
+            "b": null,
+            "c": null,
+            "chef": -706,
+            "slot": "4004",
+            "minprep": 3
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": 99,
+            "b": null,
+            "c": null,
+            "chef": -514,
+            "slot": "2002",
+            "minprep": 0
+          },
+          {
+            "a": 76,
+            "b": 82,
+            "c": null,
+            "chef": -606,
+            "slot": "3003",
+            "minprep": 2
+          },
+          {
+            "a": 73,
+            "b": null,
+            "c": null,
+            "chef": -609,
+            "slot": "3006",
+            "minprep": 0
+          },
+          {
+            "a": 13,
+            "b": 12,
+            "c": null,
+            "chef": -616,
+            "slot": "1008",
+            "minprep": 3
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": 70,
+            "b": 71,
+            "c": 72,
+            "chef": -628,
+            "slot": "4005",
+            "minprep": 3
+          }
+        ]
+      }
+    ],
+    "shortname": "Nashville, TN",
+    "name": "Nashville, Tennessee",
+    "county": "Davidson County"
+  },
+  {
+    "routes": [
+      {
+        "days": [
+          {
+            "a": 103,
+            "b": 8,
+            "c": 96,
+            "chef": null,
+            "slot": "3003",
+            "minprep": 0
+          },
+          {
+            "a": -120,
+            "b": 87,
+            "c": 78,
+            "chef": -501,
+            "slot": "3003",
+            "minprep": 0
+          },
+          {
+            "a": -122,
+            "b": 34,
+            "c": 94,
+            "chef": -501,
+            "slot": "3003",
+            "minprep": 0
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": 104,
+            "b": null,
+            "c": null,
+            "chef": -502,
+            "slot": "4005",
+            "minprep": 0
+          },
+          {
+            "a": -128,
+            "b": 45,
+            "c": 71,
+            "chef": -502,
+            "slot": "4005",
+            "minprep": 0
+          },
+          {
+            "a": -132,
+            "b": 46,
+            "c": 72,
+            "chef": -502,
+            "slot": "4005",
+            "minprep": 0
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": -125,
+            "b": 106,
+            "c": null,
+            "chef": -504,
+            "slot": "6002",
+            "minprep": 0
+          },
+          {
+            "a": -128,
+            "b": 96,
+            "c": 89,
+            "chef": -504,
+            "slot": "3006",
+            "minprep": 0
+          },
+          {
+            "a": 105,
+            "b": 8,
+            "c": null,
+            "chef": -504,
+            "slot": "2007",
+            "minprep": 0
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": 88,
+            "b": null,
+            "c": null,
+            "chef": -506,
+            "slot": "2002",
+            "minprep": 0
+          },
+          {
+            "a": 88,
+            "b": null,
+            "c": null,
+            "chef": -506,
+            "slot": "3003",
+            "minprep": 0
+          },
+          {
+            "a": 88,
+            "b": null,
+            "c": null,
+            "chef": -506,
+            "slot": "4004",
+            "minprep": 0
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": -118,
+            "b": 7,
+            "c": null,
+            "chef": -508,
+            "slot": "3002",
+            "minprep": 0
+          },
+          {
+            "a": -128,
+            "b": 17,
+            "c": 64,
+            "chef": -508,
+            "slot": "3004",
+            "minprep": 0
+          },
+          {
+            "a": -130,
+            "b": 40,
+            "c": 32,
+            "chef": -508,
+            "slot": "3006",
+            "minprep": 0
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": 33,
+            "b": 18,
+            "c": null,
+            "chef": -510,
+            "slot": "4003",
+            "minprep": 0
+          },
+          {
+            "a": 101,
+            "b": null,
+            "c": null,
+            "chef": -510,
+            "slot": "3004",
+            "minprep": 0
+          },
+          {
+            "a": 102,
+            "b": null,
+            "c": null,
+            "chef": -510,
+            "slot": "5003",
+            "minprep": 0
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": -130,
+            "b": 25,
+            "c": null,
+            "chef": -512,
+            "slot": "4005",
+            "minprep": 0
+          },
+          {
+            "a": -130,
+            "b": 24,
+            "c": null,
+            "chef": -512,
+            "slot": "3004",
+            "minprep": 0
+          },
+          {
+            "a": -130,
+            "b": 23,
+            "c": null,
+            "chef": -512,
+            "slot": "4004",
+            "minprep": 0
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": 102,
+            "b": null,
+            "c": null,
+            "chef": -514,
+            "slot": "2001",
+            "minprep": 0
+          },
+          {
+            "a": 48,
+            "b": 20,
+            "c": null,
+            "chef": -514,
+            "slot": "6003",
+            "minprep": 0
+          },
+          {
+            "a": -122,
+            "b": 77,
+            "c": 75,
+            "chef": -514,
+            "slot": "2003",
+            "minprep": 0
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": -135,
+            "b": 99,
+            "c": 91,
+            "chef": -516,
+            "slot": "5004",
+            "minprep": 0
+          },
+          {
+            "a": -132,
+            "b": 100,
+            "c": null,
+            "chef": -516,
+            "slot": "4005",
+            "minprep": 0
+          },
+          {
+            "a": 106,
+            "b": 103,
+            "c": null,
+            "chef": -516,
+            "slot": "2002",
+            "minprep": 0
+          }
+        ]
+      },
+      {
+        "days": [
+          {
+            "a": -140,
+            "b": 34,
+            "c": 42,
+            "chef": -618,
+            "slot": "4005",
+            "minprep": 0
+          },
+          {
+            "a": -141,
+            "b": 102,
+            "c": 78,
+            "chef": -619,
+            "slot": "5004",
+            "minprep": 0
+          },
+          {
+            "a": -142,
+            "b": 71,
+            "c": 72,
+            "chef": -620,
+            "slot": "4005",
+            "minprep": 0
+          }
+        ]
+      }
+    ],
+    "shortname": "ICS, TN",
+    "name": "Iron Cook Speedway",
+    "county": "Iron Cook Speedway"
+  }
+]
