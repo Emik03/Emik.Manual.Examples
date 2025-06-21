@@ -33,8 +33,8 @@ var settings = world.Category("SETTINGS");
 world.Item("TOGGLE COMMENT", Priority.Filler, settings, 7);
 var autoShot = world.Item("AUTO SHOT", Priority.Progression, settings);
 var stocks = world.Item("PROGRESSIVE STOCKS (+1 LIFE)", null, settings, 8);
-var strongestArms = world.Item("LOCK-ON").All | world.Item("CLASSIC").All;
-var strongArms = world.Item("GRAVITY").All | strongestArms;
+var strongestArms = world.AllItemsWith("LOCK-ON").Single().All | world.AllItemsWith("CLASSIC").Single().All;
+var strongArms = world.AllItemsWith("GRAVITY").Single().All | strongestArms;
 
 await foreach (var (location, (categoryName, (hintEntrance, (meta, _)))) in Read("InfinityGeneChecks.csv"))
     world.Location(
