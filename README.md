@@ -6,6 +6,8 @@ List of projects that showcase usage of [Emik.Manual](https://github.com/Emik03/
 
 If you want to use any implementation here, you do not need to compile this yourself! You can download any of them through the [releases](https://github.com/Emik03/Emik.Manual.Examples/releases) tab, although bare in mind that some implementations may use randomness upon generation and would need to be regenerated for specific randomizations.
 
+For implementations more complicated than [**Medium**], it is highly encouraged to use [Remote](https://github.com/Emik03/Remote) to make tracking logic easier. Complexity is determined by how different each run plays out, and how many layers of logic are behind them.
+
 This project has a dependency to [Emik.Morsels](https://github.com/Emik03/Emik.Morsels), if you are building this project, refer to its [README](https://github.com/Emik03/Emik.Morsels/blob/main/README.md) first.
 
 ---
