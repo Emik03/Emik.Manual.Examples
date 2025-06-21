@@ -23,7 +23,7 @@ var starterArmCategory = world.Category("STARTER ARMS", true);
 
 foreach (var (name, count) in arms)
     world.Item(
-        $"PROGRESSIVE {name} ({count})",
+        count is 1 ? name : $"PROGRESSIVE {name} ({count})",
         count is 1 ? Priority.Useful : Priority.Progression,
         [world.Category(name), armCategory, ..count is 1 ? (ReadOnlySpan<Category>)[starterArmCategory] : []],
         count
