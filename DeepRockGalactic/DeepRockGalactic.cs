@@ -45,9 +45,10 @@ static async Task<World> CreateGame(int seed)
     var overclockCategory = world.Category("Overclocks");
     var biomes = world.Category("Biomes");
     var minerals = world.Category("Minerals");
+    ImmutableArray<string> explicitStartingItems = seed is 0 ? ["Deepcore GK2", "Jury-Rigged Boomstick"] : [];
 
     await foreach (var (line, _) in Read("DeepRockGalacticBiomes.csv"))
-        world.Item(line, categories: biomes);
+        world.Item(line, categories: biomes, early: seed is 0 ? 1 : 0);
 
     foreach (var (mineral, (amount, logic)) in Minerals.SplitLines().Select(x => x.SplitOn(',')))
     {
@@ -59,14 +60,17 @@ static async Task<World> CreateGame(int seed)
     {
         var dwarf = d.ToString();
         weaponDictionary.TryAdd(dwarf, []);
-        weaponDictionary[dwarf].AddRange(Enumerable.Repeat(name.ToString(), type.Span is "Throwables" ? 1 : 6));
 
-        overclockList.AddRange(
-            overclocks.Select(
-                overclock => ($"{overclock} ({name})",
-                    (ArchipelagoListBuilder<Category>)[world.Category(name), overclockCategory])
-            )
-        );
+        if (name.ToString() is var nameStr && !explicitStartingItems.Contains(nameStr, StringComparer.Ordinal))
+            weaponDictionary[dwarf].AddRange(Enumerable.Repeat(nameStr, type.Span is "Throwables" ? 1 : 6));
+
+        if (seed is not 0)
+            overclockList.AddRange(
+                overclocks.Select(
+                    overclock => ($"{overclock} ({name})",
+                        (ArchipelagoListBuilder<Category>)[world.Category(name), overclockCategory])
+                )
+            );
     }
 
     if (seed is not 0)
@@ -93,6 +97,17 @@ static async Task<World> CreateGame(int seed)
     var weaponStacks = weaponDictionary.Values.Select(x => new Stack<string>(x.Shuffle())).ToArray();
     var weaponCategory = world.Category("Weapons");
     var bundleNumber = 0;
+
+    ImmutableArray<StartingItemBlock> ExplicitStartingItems(ImmutableArray<string> explicitStartingItems) =>
+    [
+        ..explicitStartingItems.Select(
+            x => world.Item(
+                x,
+                Priority.Progression | Priority.Useful,
+                weaponCategory
+            )
+        ),
+    ];
 
     while (weaponStacks.Any(x => x.Count is not 0))
     {
@@ -131,7 +146,8 @@ static async Task<World> CreateGame(int seed)
                     ? Logic.OfCategoryPercent(weaponCategory, type.Span is "Eradications" ? 70 : 40)
                     : null) &
                 (type.Span is "Milestones"
-                    ? Logic.OfCategoryPercent(weaponCategory, 80) & Logic.OfCategoryPercent(overclockCategory, 50)
+                    ? Logic.OfCategoryPercent(weaponCategory, 80) &
+                    (seed is 0 ? null : Logic.OfCategoryPercent(overclockCategory, 50))
                     : null) &
                 (previousClear.Name.IsEmpty ? (Logic?)null : previousClear);
             // &
@@ -156,7 +172,8 @@ static async Task<World> CreateGame(int seed)
         {
             world.Location(
                 $"Beat {name} at a high hazard level",
-                Logic.OfCategoryPercent(weaponCategory, 60) & Logic.OfCategoryPercent(overclockCategory, 40)
+                Logic.OfCategoryPercent(weaponCategory, 60) &
+                (seed is 0 ? null : Logic.OfCategoryPercent(overclockCategory, 40))
             );
 
             // ReSharper disable once RedundantAssignment
@@ -166,7 +183,9 @@ static async Task<World> CreateGame(int seed)
         index++;
     }
 
-    await world.Game($"DeepRockGalactic{seed}", "RedsAndEmik", "Rock and Stone", [new(weaponCategory, 1)])
+    var startingItems = seed is 0 ? ExplicitStartingItems(explicitStartingItems) : [new(weaponCategory, 1)];
+
+    await world.Game($"DeepRockGalactic{seed}", "RedsAndEmik", "Rock and Stone", startingItems)
        .DisplayExported(Console.WriteLine)
        .ZipAsync(Path.GetTempPath(), listChecks: true);
 
