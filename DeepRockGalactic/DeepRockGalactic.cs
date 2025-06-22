@@ -94,6 +94,7 @@ static async Task<World> CreateGame(int seed)
     world.Location("Kick 4 Barrels inside the Launch Bay", categories: fun);
     world.Location("We're rich!", Logic.OfCategoryPercent(biomes, 50), fun);
     world.Location("Get 1500 Points in the Barrel Throw game", categories: fun);
+    world.Location("See a rare structure", world.AllItems["Fungus Bogs"] | world.AllItems["Azure Weald"], fun);
     var weaponStacks = weaponDictionary.Values.Select(x => new Stack<string>(x.Shuffle())).ToArray();
     var weaponCategory = world.Category("Weapons");
     var bundleNumber = 0;
@@ -192,5 +193,5 @@ static async Task<World> CreateGame(int seed)
     return world;
 }
 
-var worlds = await Task.WhenAll(CreateGame(0), CreateGame(1), CreateGame(2));
+var worlds = await Task.WhenAll(CreateGame(0), CreateGame(1));
 Console.WriteLine($"{worlds.Length} games created.");
