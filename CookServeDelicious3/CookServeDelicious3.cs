@@ -156,8 +156,7 @@ var game = world.Game(
     [..foods.Where(x => x.Difficulty is 0).Select(x => new StartingItemBlock(world.AllItems[x.Name]))]
 );
 
-await game.ZipAsync(Path.GetTempPath(), listChecks: true);
-Console.WriteLine($"{game.ExportedLocationCount()}/{game.ExportedItemCount()}");
+await game.DisplayExported(Console.WriteLine).ZipAsync(Path.GetTempPath(), listChecks: true);
 
 sealed record Food(string Name, int Difficulty, HoldingStation Station, int Id, string PriorGames, bool AutoServe)
 {
