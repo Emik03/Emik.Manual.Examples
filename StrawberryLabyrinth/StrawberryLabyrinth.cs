@@ -48,7 +48,7 @@ ImmutableArray<string> gates =
 ];
 
 foreach (var gate in gates)
-    world.Item($"{gate} ({MinimumGates})", categories: [world.Category(gate)], count: MaximumGates);
+    world.Item($"{gate} ({MinimumGates})", Priority.ProgressionUseful, [world.Category(gate)], MaximumGates);
 
 Logic? ParseSpan(ReadOnlyMemory<char> memory) =>
     memory.Span switch
@@ -66,7 +66,7 @@ Logic? ParseLogic(ReadOnlyMemory<char> memory) =>
 ArchipelagoDictionaryValues<string> hints = new([]);
 
 await foreach (var (line, _) in Read("StrawberryLabyrinthEntities.csv"))
-    world.Item(line, Priority.Progression | Priority.Useful, world.Category("Entities"));
+    world.Item(line, null, world.Category("Entities"));
 
 await foreach (var (room, (hint, (logic, rest))) in Read("StrawberryLabyrinthRooms.csv"))
 {
@@ -92,19 +92,19 @@ await foreach (var (room, (type, (logic, (effectiveRegion, _)))) in Read("Strawb
     world.Location($"{room} {type}", l, categories, region, hintEntrance: hintEntrance);
 }
 
-foreach (var b in (ImmutableArray<bool>)[true, false])
+foreach (var b in (ImmutableArray<bool>)[false, true])
 {
     var options = b ? LocationOptions.Victory : LocationOptions.None;
 
     world.Location(
         b ? "Normal End" : "Normal End (Extra)",
         new Logic("Dash Fuse Boxes") & "Dash Refills" & "Springs" & "Touch Switches" & "Zip Lines",
-        Category("C"),
+        Category("C20"),
         world.AllRegions["C20"],
         options
     );
 
-    world.Location(b ? "Good End" : "Good End (Extra)", null, Category("D"), world.AllRegions["D09"], options);
+    world.Location(b ? "Good End" : "Good End (Extra)", null, Category("D09"), world.AllRegions["D09"], options);
 }
 
 var startingRegion = world.AllRegions.Single(x => x.IsStarting);
@@ -112,7 +112,7 @@ world.Location("Perform a Screen Transition", categories: Category(startingRegio
 
 var startingItem = world.Item(
     $"Starting location is {startingRegion.Name} ({hints[startingRegion.Name]})",
-    Priority.Progression | Priority.Useful,
+    Priority.ProgressionUseful,
     world.Category("Start")
 );
 

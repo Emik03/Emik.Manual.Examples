@@ -104,7 +104,7 @@ static async Task<World> CreateGame(int seed)
         ..explicitStartingItems.Select(
             x => world.Item(
                 x,
-                Priority.Progression | Priority.Useful,
+                Priority.ProgressionUseful,
                 weaponCategory
             )
         ),
@@ -116,7 +116,7 @@ static async Task<World> CreateGame(int seed)
 
         world.Item(
             $"Progressive Weapon Bundle {++bundleNumber} - {weapons.Conjoin()}",
-            Priority.Progression | Priority.Useful,
+            Priority.ProgressionUseful,
             weaponCategory,
             giveItems: [..weapons.Select(x => ((Chars)x, 1))]
         );

@@ -39,7 +39,7 @@ await foreach (var line in Read("FTL-Ships.csv"))
     var (ship, (a, (b, (c, _)))) = line;
     ImmutableArray<ReadOnlyMemory<char>> ships = c.IsEmpty ? [a, b] : [a, b, c];
     var category = world.Category(ship);
-    var shipIt = world.Item($"Progressive {ship}", Priority.Progression | Priority.Useful, "Ships", ships.Length);
+    var shipIt = world.Item($"Progressive {ship}", Priority.ProgressionUseful, "Ships", ships.Length);
 
     for (var i = 2; i <= 8; i += 2)
         for (var j = 0; j < ships.Length; j++)

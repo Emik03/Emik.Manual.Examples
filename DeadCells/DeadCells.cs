@@ -37,7 +37,7 @@ void Connect(string regionName, params string[] connectsTo) =>
             ..connectsTo.Select(
                 x => new Passage(
                     world.AllRegions[x],
-                    Logic.OfItem(world.Item($"{regionName} → {x}", Priority.Progression | Priority.Useful, passages))
+                    Logic.OfItem(world.Item($"{regionName} → {x}", Priority.ProgressionUseful, passages))
                 )
             ),
         ],

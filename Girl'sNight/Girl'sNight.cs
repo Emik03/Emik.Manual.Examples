@@ -35,7 +35,7 @@ var challengeLogic = world.Item("Disable Long Nights", categories: challenges) &
 for (var i = 0; i < times.Length && times[i] is var time; i++)
     world.Location(
         $"Girlboss {time}",
-        world.Item("Girlboss", Priority.Progression | Priority.Useful, world.AllCategories["Levels"]) &
+        world.Item("Girlboss", Priority.ProgressionUseful, world.AllCategories["Levels"]) &
         (new Yaml("Girlboss") > i | challengeLogic) &
         world.Location($"Catfight Crashout {time}").Logic &
         world.Location($"Gatekeep Gaslight {time}").Logic,
@@ -151,7 +151,7 @@ readonly partial record struct Night(
             ret |= new Yaml(converter(night).SplitSpanOn(s_yamlRemoval).ToString()) > iteration &
                 Diff(night).LocalLogic(world);
 
-        return world.Item(DisplayName, Priority.Progression | Priority.Useful, world.Category("Levels")) & ret;
+        return world.Item(DisplayName, Priority.ProgressionUseful, world.Category("Levels")) & ret;
     }
 
     Logic? LocalLogic(World world)

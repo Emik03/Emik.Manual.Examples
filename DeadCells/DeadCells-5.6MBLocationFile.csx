@@ -32,7 +32,7 @@ var passages = world.Category("Passages");
 // ReSharper disable once UnusedLocalFunctionReturnValue
 Location Biome(string name, int i, int count, ImmutableArray<Chars> entries, Logic? logic = null, string? with = null)
 {
-    const Priority PassagePriority = Priority.Progression | Priority.Useful;
+    const Priority PassagePriority = Priority.ProgressionUseful;
     var item = world.Item(name, categories: world.Category("Completions"), count: count);
     logic &= item[i - 1];
 
