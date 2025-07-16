@@ -15,6 +15,18 @@ static IAsyncEnumerable<SplitMemory<char, char, MatchOne>> Read([Match("^[^<>:\"
 
 World world = new();
 
+ref readonly Category Category(Chars chars) =>
+    ref world.Category(
+        chars.Span[0] switch
+        {
+            'A' => "Deserted City",
+            'B' => "Underground Azure",
+            'C' => "Voltic Citadel",
+            'D' => "Destructive Distortion",
+            _ => throw new UnreachableException(chars.ToString()),
+        }
+    );
+
 const int MinimumGates = 4, MaximumGates = 8;
 
 // ReSharper disable UnusedVariable
@@ -75,12 +87,10 @@ await foreach (var (room, (type, (logic, (effectiveRegion, _)))) in Read("Strawb
     var l = ParseLogic(logic);
     var displayedRegion = room.SplitWhitespace().First;
     var region = world.AllRegions[effectiveRegion.IsEmpty ? displayedRegion : effectiveRegion];
-    ArchipelagoListBuilder<Category> categories = [world.Category(type), world.Category(displayedRegion)];
+    ArchipelagoListBuilder<Category> categories = [world.Category(type), Category(displayedRegion)];
     var hintEntrance = hints[displayedRegion];
     world.Location($"{room} {type}", l, categories, region, hintEntrance: hintEntrance);
 }
-
-var endings = world.Category("Endings");
 
 foreach (var b in (ImmutableArray<bool>)[true, false])
 {
@@ -89,20 +99,21 @@ foreach (var b in (ImmutableArray<bool>)[true, false])
     world.Location(
         b ? "Normal End" : "Normal End (Extra)",
         new Logic("Dash Fuse Boxes") & "Dash Refills" & "Springs" & "Touch Switches" & "Zip Lines",
-        endings,
+        Category("C"),
         world.AllRegions["C20"],
         options
     );
 
-    world.Location(b ? "Good End" : "Good End (Extra)", null, endings, world.AllRegions["D09"], options);
+    world.Location(b ? "Good End" : "Good End (Extra)", null, Category("D"), world.AllRegions["D09"], options);
 }
 
 var startingRegion = world.AllRegions.Single(x => x.IsStarting);
+world.Location("Perform a Screen Transition", categories: Category(startingRegion.Name));
 
 var startingItem = world.Item(
     $"Starting location is {startingRegion.Name} ({hints[startingRegion.Name]})",
     Priority.Progression | Priority.Useful,
-    world.Category("Starting Location")
+    world.Category("Start")
 );
 
 await world.Game("StrawberryLabyrinth", "Emik", "Strawberry", [new(startingItem, 1)])
