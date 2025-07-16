@@ -17,12 +17,12 @@ World world = new();
 
 ref readonly Category Category(Chars chars) =>
     ref world.Category(
-        chars.Span[0] switch
+        chars.Span switch
         {
-            'A' => "Deserted City",
-            'B' => "Underground Azure",
-            'C' => "Voltic Citadel",
-            'D' => "Destructive Distortion",
+            ['A', ..] => "Deserted City",
+            ['B', ..] => "Underground Azure",
+            ['C', ..] => "Voltic Citadel",
+            ['D', ..] => "Destructive Distortion",
             _ => throw new UnreachableException(chars.ToString()),
         }
     );
