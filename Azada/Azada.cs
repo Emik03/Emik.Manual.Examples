@@ -7,7 +7,7 @@ static string ItemName(int i) => $"Progressive Page for Chapter {i}";
 
 static string JigsawLocationName(int i) => $"Complete Chapter {i}'s Jigsaw Puzzle";
 
-static string LocationName(int i) => $"Complete {i % 10 + 1}/9 pages in Chapter {i / 10 + 1}";
+static string LocationName(int i) => $"Complete {i % 9 + 1}/9 pages in Chapter {i / 9 + 1}";
 
 static string MetaLocationName(int i) => $"Complete Chapter {i}'s Meta-Puzzle";
 
