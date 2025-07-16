@@ -63,8 +63,10 @@ await foreach (var (room, (hint, (logic, rest))) in Read("StrawberryLabyrinthRoo
     var isStartingCandidate = l is null && connectsTo.Length >= 2;
     var isStarting = l is null && connectsTo.Length >= 2 && startingLocationIndex-- is 0;
     Region region = new(room, l, connectsTo, isStarting);
-    var hasAdded = world.AllRegions.TryAdd(region);
-    Trace.Assert(hasAdded);
+
+    if (!world.AllRegions.TryAdd(region))
+        throw new UnreachableException($"Cannot add {region} in {world.AllRegions}");
+
     hints.TryAdd(room.ToString(), hint.ToString());
 }
 
