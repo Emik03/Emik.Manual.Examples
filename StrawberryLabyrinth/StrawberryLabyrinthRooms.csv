@@ -7,13 +7,13 @@ A06,Deserted City (Top) Outside Map Room,Dash Refills&Dash Switches&Springs,A04,
 A07,Deserted City (Top) Outside East Entrance to Electric Citadel,Moving Platforms,A06,A08,A15,A18
 A08,Deserted City (Top) Crumbling Block Room,null,A07
 A09,Deserted City (East) Outside East Entrance to Underground Azure,null,A06,A10
-A10,Deserted City (East) East Entrance to Underground Azure,Secrets of the Deep,A09,B25
+A10,Deserted City (East) East Entrance to Underground Azure,Secrets of the Deep (East),A09,B25
 A11,Deserted City (East) Outside Teleporter,Red Bubbles&Zip Movers,A06,A12
 A12,Deserted City (East) Teleporter,null,A11,A13
 A13,Deserted City (East) Above Teleporter,null,A12
 A14,Deserted City (East) Multiple Touch Switch Sets Strawberry Room,null,A17
-A15,Deserted City (East) East Entrance to Electric Citadel,Breach the Electric Tower,A07,C01
-A16,Deserted City (Top) West Entrance to Electric Citadel,Breach the Electric Tower,A18,C01
+A15,Deserted City (East) East Entrance to Electric Citadel,Breach the Electric Tower (East),A07,C01
+A16,Deserted City (Top) West Entrance to Electric Citadel,Breach the Electric Tower (West),A18,C01
 A17,Deserted City (East) Spring Floor Room,Springs&Touch Switches,A06,A14
 A18,Deserted City (Top) Outside Teleporter and West Entrance to Electric Citadel,Moving Platforms,A07,A16,A22,A23,A24
 A19,Deserted City (Top) Strawberry Requires Double Dash Refill Room,null,A20
@@ -28,7 +28,7 @@ A27,Deserted City (West) Outside Teleporter,Circular Moving Platforms,A26,A29,A3
 A28,Deserted City (West) Above West Entrance to Underground Azure,null,A26,A31
 A29,Deserted City (West) Below Teleporter,Falling Blocks&Zip Movers,A27
 A30,Deserted City (West) Above Teleporter,null,A27
-A31,Deserted City (West) West Entrance to Underground Azure,Secrets of the Deep,A28,B01
+A31,Deserted City (West) West Entrance to Underground Azure,Secrets of the Deep (West),A28,B01
 A32,Deserted City (Top) Map,null,A06
 A33,Deserted City (West),null,A27
 B01,Underground Azure (West) West Exit to Deserted City,Dream Blocks,A31,B02
