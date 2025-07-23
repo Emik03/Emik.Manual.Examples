@@ -41,9 +41,7 @@ await foreach (var (location, (categoryName, (hintEntrance, (meta, _)))) in Read
         location,
         categoryName.Span switch
         {
-            "LEVEL 0" => stocks[0],
-            "LEVEL 1" => stocks[0],
-            "LEVEL 2" => stocks[0],
+            "LEVEL 0" or "LEVEL 1" or "LEVEL 2" => stocks[0],
             "LEVEL 3" => strongArms & stocks[2],
             "EXTRA LEVEL 1" => strongArms & stocks[4],
             "EXTRA LEVEL 2" => strongestArms & stocks[6],

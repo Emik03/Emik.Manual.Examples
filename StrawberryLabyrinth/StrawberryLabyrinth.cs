@@ -63,7 +63,7 @@ Logic? ParseSpan(ReadOnlyMemory<char> memory) =>
 Logic? ParseLogic(ReadOnlyMemory<char> memory) =>
     memory.SplitOn('|').Select(x => x.SplitOn('&').Select(ParseSpan).And()).Or();
 
-ArchipelagoDictionaryValues<string> hints = new([]);
+ValueDictionary<string> hints = new([]);
 
 await foreach (var (line, _) in Read("StrawberryLabyrinthEntities.csv"))
     world.Item(line, null, world.Category("Entities"));
@@ -87,7 +87,7 @@ await foreach (var (room, (type, (logic, (effectiveRegion, _)))) in Read("Strawb
     var l = ParseLogic(logic);
     var displayedRegion = room.SplitWhitespace().First;
     var region = world.AllRegions[effectiveRegion.IsEmpty ? displayedRegion : effectiveRegion];
-    ArchipelagoListBuilder<Category> categories = [world.Category(type), Category(displayedRegion)];
+    ArchipelagoBuilder<Category> categories = [world.Category(type), Category(displayedRegion)];
     var hintEntrance = hints[displayedRegion];
     world.Location($"{room} {type}", l, categories, region, hintEntrance: hintEntrance);
 }

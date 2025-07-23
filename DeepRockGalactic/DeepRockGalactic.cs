@@ -41,7 +41,7 @@ static async Task<World> CreateGame(int seed)
     World world = new();
 
     Dictionary<string, List<string>> weaponDictionary = [];
-    List<(string Name, ArchipelagoListBuilder<Category> Categories)> overclockList = [];
+    List<(string Name, ArchipelagoBuilder<Category> Categories)> overclockList = [];
     var overclockCategory = world.Category("Overclocks");
     var biomes = world.Category("Biomes");
     var minerals = world.Category("Minerals");
@@ -68,7 +68,7 @@ static async Task<World> CreateGame(int seed)
             overclockList.AddRange(
                 overclocks.Select(
                     overclock => ($"{overclock} ({name})",
-                        (ArchipelagoListBuilder<Category>)[world.Category(name), overclockCategory])
+                        (ArchipelagoBuilder<Category>)[world.Category(name), overclockCategory])
                 )
             );
     }
@@ -92,7 +92,7 @@ static async Task<World> CreateGame(int seed)
     world.Location("Mushroom!", world.AllItems["Fungus Bogs"], fun);
     world.Location("Play soccer and get first to 10", categories: fun);
     world.Location("Kick 4 Barrels inside the Launch Bay", categories: fun);
-    world.Location("We're rich!", Logic.OfCategoryPercent(biomes, 50), fun);
+    world.Location("We're rich!", Logic.Percent(biomes, 50), fun);
     world.Location("Get 1500 Points in the Barrel Throw game", categories: fun);
     world.Location("See a rare structure", world.AllItems["Fungus Bogs"] | world.AllItems["Azure Weald"], fun);
     var weaponStacks = weaponDictionary.Values.Select(x => new Stack<string>(x.Shuffle())).ToArray();
@@ -142,13 +142,13 @@ static async Task<World> CreateGame(int seed)
         for (var i = 1; i <= times; i++)
         {
             // ReSharper disable once PossibleLossOfFraction
-            var logic = (type.Span is "Objectives" ? Logic.OfCategoryPercent(biomes, index / 2 * 20) : null) &
+            var logic = (type.Span is "Objectives" ? Logic.Percent(biomes, index / 2 * 20) : null) &
                 (type.Span is "Warnings" or "Eradications"
-                    ? Logic.OfCategoryPercent(weaponCategory, type.Span is "Eradications" ? 70 : 40)
+                    ? Logic.Percent(weaponCategory, type.Span is "Eradications" ? 70 : 40)
                     : null) &
                 (type.Span is "Milestones"
-                    ? Logic.OfCategoryPercent(weaponCategory, 80) &
-                    (seed is 0 ? null : Logic.OfCategoryPercent(overclockCategory, 50))
+                    ? Logic.Percent(weaponCategory, 80) &
+                    (seed is 0 ? null : Logic.Percent(overclockCategory, 50))
                     : null) &
                 (previousClear.Name.IsEmpty ? (Logic?)null : previousClear);
             // &
@@ -173,8 +173,8 @@ static async Task<World> CreateGame(int seed)
         {
             world.Location(
                 $"Beat {name} at a high hazard level",
-                Logic.OfCategoryPercent(weaponCategory, 60) &
-                (seed is 0 ? null : Logic.OfCategoryPercent(overclockCategory, 40))
+                Logic.Percent(weaponCategory, 60) &
+                (seed is 0 ? null : Logic.Percent(overclockCategory, 40))
             );
 
             // ReSharper disable once RedundantAssignment

@@ -37,7 +37,7 @@ void Connect(string regionName, params string[] connectsTo) =>
             ..connectsTo.Select(
                 x => new Passage(
                     world.AllRegions[x],
-                    Logic.OfItem(world.Item($"{regionName} → {x}", Priority.ProgressionUseful, passages))
+                    world.Item($"{regionName} → {x}", Priority.ProgressionUseful, passages)
                 )
             ),
         ],
@@ -166,7 +166,7 @@ Trap,1,Win a run with ADAPTATION
    .Enumerate();
 
 for (var i = 0; i < 56; i++)
-    world.Location($"Get {i * 10 + 50} Cells", Logic.OfItemValue("Weapon", i * 3), cells);
+    world.Location($"Get {i * 10 + 50} Cells", Logic.ItemValue("Weapon", i * 3), cells);
 
 const int PrisonersQuarters = 1,
     Bank = 13,
@@ -185,11 +185,11 @@ for (var i = 1; i <= PrisonersQuarters; i++)
     Biome("Prisoners' Quarters", i, PrisonersQuarters);
 
 for (var i = 1; i <= Bank; i++)
-    Biome("Bank", i, Bank, Logic.OfItemValue("Weapon", i * 3 + 65) & bossCell[3]);
+    Biome("Bank", i, Bank, Logic.ItemValue("Weapon", i * 3 + 65) & bossCell[3]);
 
 for (var i = 1; i <= DilapidatedArboretum; i++)
 {
-    var logic = Logic.OfItemValue("Weapon", i * 5) & (i > 6 ? bossCell[3] : null);
+    var logic = Logic.ItemValue("Weapon", i * 5) & (i > 6 ? bossCell[3] : null);
     Biome("Dilapidated Arboretum", i, DilapidatedArboretum, logic);
     Biome("Promenade of the Condemned", i, DilapidatedArboretum, logic);
     Biome("Toxic Sewers", i, DilapidatedArboretum, logic);
@@ -198,14 +198,14 @@ for (var i = 1; i <= DilapidatedArboretum; i++)
 
 for (var i = 1; i <= PrisonDepths; i++)
 {
-    var logic = Logic.OfItemValue("Weapon", i * 15);
+    var logic = Logic.ItemValue("Weapon", i * 15);
     Biome("Prison Depths", i, PrisonDepths, logic);
     Biome("Corrupted Prison", i, PrisonDepths, logic);
 }
 
 for (var i = 1; i <= MorassOfTheBanished; i++)
 {
-    var logic = Logic.OfItemValue("Weapon", i * 7) & (i > 5 ? bossCell[3] : null);
+    var logic = Logic.ItemValue("Weapon", i * 7) & (i > 5 ? bossCell[3] : null);
     Biome("Morass of the Banished", i, MorassOfTheBanished, logic);
     Biome("Ossuary", i, MorassOfTheBanished, logic);
     Biome("Ramparts", i, MorassOfTheBanished, logic);
@@ -215,7 +215,7 @@ for (var i = 1; i <= MorassOfTheBanished; i++)
 
 for (var i = 1; i <= Nest; i++)
 {
-    var logic = Logic.OfItemValue("Weapon", i * 10) & bossCell[i / 3 * 3];
+    var logic = Logic.ItemValue("Weapon", i * 10) & bossCell[i / 3 * 3];
     Biome("Nest", i, Nest, logic);
     Biome("Black Bridge", i, Nest, logic);
     Biome("Insufferable Crypt", i, Nest, logic);
@@ -224,7 +224,7 @@ for (var i = 1; i <= Nest; i++)
 
 for (var i = 1; i <= FracturedShrines; i++)
 {
-    var logic = Logic.OfItemValue("Weapon", i * 13) &
+    var logic = Logic.ItemValue("Weapon", i * 13) &
         i switch
         {
             1 or 2 => null,
@@ -241,7 +241,7 @@ for (var i = 1; i <= FracturedShrines; i++)
 
 for (var i = 1; i <= UndyingShores; i++)
 {
-    var logic = Logic.OfItemValue("Weapon", i * 17) &
+    var logic = Logic.ItemValue("Weapon", i * 17) &
         i switch
         {
             1 or 2 => null,
@@ -258,7 +258,7 @@ for (var i = 1; i <= UndyingShores; i++)
 
 for (var i = 1; i <= Mausoleum; i++)
 {
-    var logic = Logic.OfItemValue("Weapon", i * 25) &
+    var logic = Logic.ItemValue("Weapon", i * 25) &
         i switch
         {
             1 or 2 => null,
@@ -274,7 +274,7 @@ for (var i = 1; i <= Mausoleum; i++)
 
 for (var i = 1; i <= InfestedShipwreck; i++)
 {
-    var logic = Logic.OfItemValue("Weapon", i * 35) &
+    var logic = Logic.ItemValue("Weapon", i * 35) &
         i switch
         {
             1 => null,
@@ -291,7 +291,7 @@ for (var i = 1; i <= InfestedShipwreck; i++)
 
 for (var i = 1; i <= Lighthouse; i++)
 {
-    var logic = Logic.OfItemValue("Weapon", i * 55) &
+    var logic = Logic.ItemValue("Weapon", i * 55) &
         i switch
         {
             1 => null,
@@ -305,7 +305,7 @@ for (var i = 1; i <= Lighthouse; i++)
 
 foreach (var method in (ImmutableArray<string>)["Brutality", "Tactics", "Survival"])
 {
-    static Logic? RandomWeaponAmount() => Logic.OfItemValue("Weapon", Random.Shared.Next(90, 151));
+    static Logic? RandomWeaponAmount() => Logic.ItemValue("Weapon", Random.Shared.Next(90, 151));
 
     Biome("Crown", 1, Crown, RandomWeaponAmount(), method);
     Biome("Throne Room", 1, Crown, RandomWeaponAmount(), method);

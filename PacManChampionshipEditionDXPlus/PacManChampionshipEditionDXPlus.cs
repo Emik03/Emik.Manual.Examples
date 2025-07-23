@@ -19,7 +19,7 @@ static string Display(GameModes mode) =>
 
 World world = new();
 
-Dictionary<string, GameModes> locations = new()
+Dictionary<string, GameModes> locations = new(StringComparer.Ordinal)
 {
     ["Championship II"] = GameModes.All,
     ["Highway"] = GameModes.All,
@@ -94,5 +94,5 @@ enum GameModes : byte
     TimeTrial = 1 << 3,
     GhostCombo = 1 << 4,
     Darkness = 1 << 5,
-    All = (1 << 6) - 1,
+    All = ScoreAttack5Min | ScoreAttack10Min | TimeTrialShortTotal | TimeTrial | GhostCombo | Darkness,
 }
