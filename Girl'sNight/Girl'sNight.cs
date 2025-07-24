@@ -37,8 +37,8 @@ for (var i = 0; i < times.Length && times[i] is var time; i++)
         $"Girlboss {time}",
         world.Item("Girlboss", Priority.ProgressionUseful, world.AllCategories["Levels"]) &
         (new Yaml("Girlboss") > i | challengeLogic) &
-        world.Location($"Catfight Crashout {time}").Logic &
-        world.Location($"Gatekeep Gaslight {time}").Logic,
+        world.Location($"Catfight Crashout {time}").SelfLogic &
+        world.Location($"Gatekeep Gaslight {time}").SelfLogic,
         world.Category("Girlboss"),
         options: time == times[^1] ? LocationOptions.Victory : LocationOptions.None
     );

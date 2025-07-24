@@ -48,7 +48,7 @@ await foreach (var (location, (categoryName, (hintEntrance, (meta, _)))) in Read
             "EXTRA LEVEL 3" => strongestArms & stocks[8] & autoShot,
             _ => throw new UnreachableException(categoryName.ToString()),
         } &
-        (world.AllLocations.TryGetValue(meta, out var inheritedLogic) ? inheritedLogic.Logic : null) &
+        (world.AllLocations.TryGetValue(meta, out var inheritedLogic) ? inheritedLogic.SelfLogic : null) &
         world.Item(categoryName, Priority.ProgressionUseful, world.Category("LEVELS")),
         [world.Category(categoryName), world.Category(location)],
         null,

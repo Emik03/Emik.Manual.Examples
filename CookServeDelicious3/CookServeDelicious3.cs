@@ -138,7 +138,7 @@ for (var i = 0; i < territories.Count && territories[i] is var territory; i++)
             if (k + 1 == days.Count && j + 1 == routes.Count)
                 world.Location(
                     $"{name} LOGIC",
-                    world.AllLocations[name].Logic,
+                    world.AllLocations[name].SelfLogic,
                     [..world.AllLocations[name].Categories],
                     options: LocationOptions.Victory,
                     allowList: previous = world.Item(name, Priority.Progression, world.Category("Completion", true))

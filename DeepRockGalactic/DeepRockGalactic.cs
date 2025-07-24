@@ -41,7 +41,7 @@ static async Task<World> CreateGame(int seed)
     World world = new();
 
     Dictionary<string, List<string>> weaponDictionary = [];
-    List<(string Name, ArchipelagoBuilder<Category> Categories)> overclockList = [];
+    List<(string Name, ArchipelagoArrayBuilder<Category> Categories)> overclockList = [];
     var overclockCategory = world.Category("Overclocks");
     var biomes = world.Category("Biomes");
     var minerals = world.Category("Minerals");
@@ -68,7 +68,7 @@ static async Task<World> CreateGame(int seed)
             overclockList.AddRange(
                 overclocks.Select(
                     overclock => ($"{overclock} ({name})",
-                        (ArchipelagoBuilder<Category>)[world.Category(name), overclockCategory])
+                        (ArchipelagoArrayBuilder<Category>)[world.Category(name), overclockCategory])
                 )
             );
     }

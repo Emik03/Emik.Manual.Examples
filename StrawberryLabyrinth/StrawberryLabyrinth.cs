@@ -87,7 +87,7 @@ await foreach (var (room, (type, (logic, (effectiveRegion, _)))) in Read("Strawb
     var l = ParseLogic(logic);
     var displayedRegion = room.SplitWhitespace().First;
     var region = world.AllRegions[effectiveRegion.IsEmpty ? displayedRegion : effectiveRegion];
-    ArchipelagoBuilder<Category> categories = [world.Category(type), Category(displayedRegion)];
+    ArchipelagoArrayBuilder<Category> categories = [world.Category(type), Category(displayedRegion)];
     var hintEntrance = hints[displayedRegion];
     world.Location($"{room} {type}", l, categories, region, hintEntrance: hintEntrance);
 }

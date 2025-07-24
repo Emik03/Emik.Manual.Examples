@@ -157,7 +157,7 @@ void Achievement(
 Achievement(
     "The United Federation",
     "Kestrel",
-    world.Location("The Kestrel (Kestrel A) Reach Sector 6").Logic
+    world.Location("The Kestrel (Kestrel A) Reach Sector 6").SelfLogic
 );
 
 Achievement(
@@ -181,29 +181,29 @@ Achievement(
 );
 
 Achievement("Master of Patience", "Fed", ("Progressive Artillery Beam", 3));
-Achievement("Diplomatic Immunity", "Fed", world.Location("The Osprey (Fed A) Reach Sector 6").Logic);
+Achievement("Diplomatic Immunity", "Fed", world.Location("The Osprey (Fed A) Reach Sector 6").SelfLogic);
 
 Achievement(
     "Artillery Mastery",
     "Fed",
-    ("Progressive Artillery Beam", 3) & world.Location("The Osprey (Fed A) Reach Sector 6").Logic
+    ("Progressive Artillery Beam", 3) & world.Location("The Osprey (Fed A) Reach Sector 6").SelfLogic
 );
 
 Achievement("Shields Holding", "Zoltan", ("Progressive Cloaking", 1));
 Achievement("Givin' her all she's got, Captain!", "Zoltan", ("Progressive Reactor", 17));
-Achievement("Manpower", "Zoltan", world.Location("The Adjudicator (Zoltan A) Reach Sector 6").Logic);
-Achievement("Take no prisoners!", "Mantis", world.Location("The Gila Monster (Mantis A) Reach Sector 6").Logic);
+Achievement("Manpower", "Zoltan", world.Location("The Adjudicator (Zoltan A) Reach Sector 6").SelfLogic);
+Achievement("Take no prisoners!", "Mantis", world.Location("The Gila Monster (Mantis A) Reach Sector 6").SelfLogic);
 
 Achievement(
     "Avast, ye scurvy dogs!",
     "Mantis",
-    world.Location("The Gila Monster (Mantis A) Reach Sector 8").Logic & ("Progressive Shield", 3)
+    world.Location("The Gila Monster (Mantis A) Reach Sector 8").SelfLogic & ("Progressive Shield", 3)
 );
 
-Achievement("Battle Royale", "Mantis", world.Location("The Gila Monster (Mantis A) Reach Sector 6").Logic);
+Achievement("Battle Royale", "Mantis", world.Location("The Gila Monster (Mantis A) Reach Sector 6").SelfLogic);
 Achievement("We're in Position!", "Slug", ("Progressive Crew Teleporter", 1));
-Achievement("Home Sweet Home", "Slug", world.Location("Man of War (Slug A) Reach Sector 8").Logic);
-Achievement("Disintegration Ray", "Slug", world.Location("Man of War (Slug A) Reach Sector 8").Logic);
+Achievement("Home Sweet Home", "Slug", world.Location("Man of War (Slug A) Reach Sector 8").SelfLogic);
+Achievement("Disintegration Ray", "Slug", world.Location("Man of War (Slug A) Reach Sector 8").SelfLogic);
 
 Achievement(
     "Is it warm in here?",
@@ -226,7 +226,7 @@ Achievement(
 Achievement(
     "Ancestry",
     "Rock",
-    new Logic("Progressive Rock", 3) & world.Location("Tektite (Rock C) Reach Sector 8").Logic
+    new Logic("Progressive Rock", 3) & world.Location("Tektite (Rock C) Reach Sector 8").SelfLogic
 );
 
 Achievement(
@@ -238,13 +238,13 @@ Achievement(
 Achievement(
     "Phase Shift",
     "Stealth",
-    world.Location("The Nesasio (Stealth A) Reach Sector 8").Logic & ("Progressive Cloaking", 2)
+    world.Location("The Nesasio (Stealth A) Reach Sector 8").SelfLogic & ("Progressive Cloaking", 2)
 );
 
 Achievement(
     "Tactical Approach",
     "Stealth",
-    world.Location("The Nesasio (Stealth A) Reach Sector 8").Logic
+    world.Location("The Nesasio (Stealth A) Reach Sector 8").SelfLogic
 );
 
 Achievement(
@@ -256,18 +256,18 @@ Achievement(
 Achievement(
     "Scrap Hoarder",
     "Lanius",
-    world.Location("Kruos (Lanius A) Reach Sector 8").Logic & "Scrap Recovery Arm"
+    world.Location("Kruos (Lanius A) Reach Sector 8").SelfLogic & "Scrap Recovery Arm"
 );
 
 Achievement(
     "Loss of Cabin Pressure",
     "Lanius",
-    world.Location("Kruos (Lanius A) Reach Sector 8").Logic
+    world.Location("Kruos (Lanius A) Reach Sector 8").SelfLogic
 );
 
 Achievement("Sweet Revenge", "Crystal", null);
-Achievement("No Escape", "Crystal", world.Location("Bravais (Crystal A) Reach Sector 6").Logic);
-Achievement("Clash of the Titans", "Crystal", world.Location("Bravais (Crystal A) Reach Sector 8").Logic);
+Achievement("No Escape", "Crystal", world.Location("Bravais (Crystal A) Reach Sector 6").SelfLogic);
+Achievement("Clash of the Titans", "Crystal", world.Location("Bravais (Crystal A) Reach Sector 8").SelfLogic);
 
 await world.Game("FTL", "RedsAndEmik", "Free One-Time System Upgrade", [new(world.AllCategories["Ships"], 1)])
    .DisplayExported(Console.WriteLine)
