@@ -5,5 +5,4 @@ using Emik.Manual.Domains;
 
 World world = new();
 
-var game = world.Game("Template", "Emik", "(filler)", []);
-await game.DisplayExported(Console.WriteLine).ZipAsync(Path.GetTempPath());
+await world.Game("Template", "Emik", "(filler)", []).DisplayExported(Console.WriteLine).ZipAsync(Path.GetTempPath());
