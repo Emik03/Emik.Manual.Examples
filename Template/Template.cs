@@ -6,5 +6,4 @@ using Emik.Manual.Domains;
 World world = new();
 
 var game = world.Game("Template", "Emik", "(filler)", []);
-await game.ZipAsync(Path.GetTempPath());
-Console.WriteLine($"{game.ExportedLocationCount()}/{game.ExportedItemCount()}");
+await game.DisplayExported(Console.WriteLine).ZipAsync(Path.GetTempPath());
