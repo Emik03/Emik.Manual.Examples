@@ -1,0 +1,10 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net10.0</TargetFramework>
+    </PropertyGroup>
+    <ItemGroup>
+        <ProjectReference Include="../../Emik.Manual/*.csproj"/>
+        <Compile Include="../GlobalUsings.cs" Link="Source/GlobalUsings.cs"/>
+    </ItemGroup>
+</Project>
