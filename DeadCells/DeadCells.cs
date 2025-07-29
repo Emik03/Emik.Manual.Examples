@@ -4,17 +4,6 @@
 using Emik.Manual;
 using Emik.Manual.Domains;
 
-[Pure]
-static string Ordinal(int i) =>
-    $"{i}{(i % 10) switch
-    {
-        _ when i / 10 % 10 is 1 => "th",
-        1 => "st",
-        2 => "nd",
-        3 => "rd",
-        _ => "th",
-    }}";
-
 static IAsyncEnumerable<SplitMemory<char, char, MatchOne>> Read([Match("^[^<>:\"/\\\\|?*]+$")] string path)
 {
     var found = Path.Join(Environment.CurrentDirectory)
@@ -26,32 +15,50 @@ static IAsyncEnumerable<SplitMemory<char, char, MatchOne>> Read([Match("^[^<>:\"
 }
 
 World world = new();
-var bossCell = world.Item("Boss Cell", categories: world.Category("Boss Cell"), count: 9);
 var passages = world.Category("Passages");
 
-void Connect(string regionName, params string[] connectsTo) =>
-    world.Region(
+ref readonly Region Connect(string regionName, params string[] connectsTo) =>
+    ref world.Region(
         regionName,
         null,
         [
             ..connectsTo.Select(
                 x => new Passage(
                     world.AllRegions[x],
-                    world.Item($"{regionName} → {x}", Priority.ProgressionUseful, passages)
+                    world.Item($"{regionName} -> {x}", Priority.ProgressionUseful, passages)
                 )
             ),
         ],
         regionName is "Prisoners' Quarters" or "Bank"
     );
 
+var observatory = Connect("Observatory");
+var astrolab = Connect("Astrolab", "Observatory");
+
+ImmutableArray<Passage> throneRoomToAstrolab =
+[
+    (
+        astrolab,
+        ((Logic)"Mausoleum -> Infested Shipwreck" |
+            "Clock Room -> Infested Shipwreck" |
+            "Guardian's Haven -> Infested Shipwreck") &
+        ((Logic)"Mausoleum -> Dracula's Castle (Late)" |
+            "Clock Room -> Dracula's Castle (Late)" |
+            "Guardian's Haven -> Dracula's Castle (Late)") &
+        "Lighthouse -> Crown" &
+        "Infested Shipwreck -> Lighthouse" &
+        "Dracula's Castle (Late) -> Master's Keep"
+    ),
+];
+
+world.AllRegions.TryAdd(new Region("Throne Room", null, [astrolab], Exits: throneRoomToAstrolab));
 Connect("Crown");
-Connect("Throne Room");
 Connect("Master's Keep");
 Connect("Lighthouse", "Crown");
-Connect("Infested Shipwreck", "Lighthouse");
-Connect("Derelict Distillery", "Lighthouse", "Throne Room");
-Connect("High Peak Castle", "Throne Room", "Master's Keep");
-Connect("Dracula's Castle (Late)", "Master's Keep");
+var infestedShipwreck = Connect("Infested Shipwreck", "Lighthouse");
+var derelictDistillery = Connect("Derelict Distillery", "Lighthouse", "Throne Room");
+var highPeakCastle = Connect("High Peak Castle", "Throne Room", "Master's Keep");
+var draculasCastleLate = Connect("Dracula's Castle (Late)", "Master's Keep");
 Connect("Mausoleum", "Infested Shipwreck", "Derelict Distillery", "High Peak Castle", "Dracula's Castle (Late)");
 Connect("Clock Room", "Infested Shipwreck", "Derelict Distillery", "High Peak Castle", "Dracula's Castle (Late)");
 
@@ -64,31 +71,39 @@ Connect(
     "Throne Room"
 );
 
-Connect("Undying Shores", "Mausoleum");
-Connect("Clock Tower", "Clock Room");
-Connect("Forgotten Sepulcher", "Clock Room", "Guardian's Haven");
-Connect("Cavern", "Mausoleum", "Guardian's Haven");
-Connect("Fractured Shrines", "Undying Shores", "Clock Tower", "Forgotten Sepulcher");
-Connect("Stilt Village", "Undying Shores", "Clock Tower", "Forgotten Sepulcher");
-Connect("Slumbering Sanctuary", "Cavern", "Clock Tower", "Forgotten Sepulcher");
-Connect("Graveyard", "Cavern", "Undying Shores", "Forgotten Sepulcher");
+var undyingShores = Connect("Undying Shores", "Mausoleum");
+var clockTower = Connect("Clock Tower", "Clock Room");
+var forgottenSepulcher = Connect("Forgotten Sepulcher", "Clock Room", "Guardian's Haven");
+var cavern = Connect("Cavern", "Mausoleum", "Guardian's Haven");
+var fracturedShrines = Connect("Fractured Shrines", "Undying Shores", "Clock Tower", "Forgotten Sepulcher");
+var stiltVillage = Connect("Stilt Village", "Undying Shores", "Clock Tower", "Forgotten Sepulcher");
+var slumberingSanctuary = Connect("Slumbering Sanctuary", "Cavern", "Clock Tower", "Forgotten Sepulcher");
+var graveyard = Connect("Graveyard", "Cavern", "Undying Shores", "Forgotten Sepulcher");
 Connect("Nest", "Fractured Shrines", "Stilt Village", "Graveyard");
 Connect("Black Bridge", "Fractured Shrines", "Stilt Village", "Slumbering Sanctuary");
 Connect("Insufferable Crypt", "Graveyard", "Slumbering Sanctuary");
 Connect("Defiled Necropolis", "Stilt Village", "Slumbering Sanctuary", "Graveyard");
-Connect("Morass of the Banished", "Nest");
-Connect("Ossuary", "Black Bridge", "Defiled Necropolis");
-Connect("Ramparts", "Black Bridge");
-Connect("Ancient Sewers", "Insufferable Crypt");
-Connect("Dracula's Castle (Early)", "Black Bridge", "Defiled Necropolis");
-Connect("Prison Depths", "Morass of the Banished", "Ossuary", "Ancient Sewers");
-Connect("Corrupted Prison", "Ramparts", "Ancient Sewers", "Dracula's Castle (Early)");
-Connect("Dilapidated Arboretum", "Prison Depths", "Morass of the Banished", "Ramparts");
-Connect("Promenade of the Condemned", "Morass of the Banished", "Ossuary", "Ramparts", "Prison Depths");
-Connect("Toxic Sewers", "Corrupted Prison", "Ramparts", "Ancient Sewers", "Dracula's Castle (Early)");
-Connect("Castle Outskirts", "Ossuary", "Dracula's Castle (Early)", "Corrupted Prison");
+var morassOfTheBanished = Connect("Morass of the Banished", "Nest");
+var ossuary = Connect("Ossuary", "Black Bridge", "Defiled Necropolis");
+var ramparts = Connect("Ramparts", "Black Bridge");
+var ancientSewers = Connect("Ancient Sewers", "Insufferable Crypt");
+var draculasCastleEarly = Connect("Dracula's Castle (Early)", "Black Bridge", "Defiled Necropolis");
+var prisonDepths = Connect("Prison Depths", "Morass of the Banished", "Ossuary", "Ancient Sewers");
+var corruptedPrison = Connect("Corrupted Prison", "Ramparts", "Ancient Sewers", "Dracula's Castle (Early)");
+var dilapidatedArboretum = Connect("Dilapidated Arboretum", "Prison Depths", "Morass of the Banished", "Ramparts");
 
-Connect(
+var promenadeOfTheCondemned = Connect(
+    "Promenade of the Condemned",
+    "Morass of the Banished",
+    "Ossuary",
+    "Ramparts",
+    "Prison Depths"
+);
+
+var toxicSewers = Connect("Toxic Sewers", "Corrupted Prison", "Ramparts", "Ancient Sewers", "Dracula's Castle (Early)");
+var castleOutskirts = Connect("Castle Outskirts", "Ossuary", "Dracula's Castle (Early)", "Corrupted Prison");
+
+var prisonersQuarters = Connect(
     "Prisoners' Quarters",
     "Castle Outskirts",
     "Toxic Sewers",
@@ -98,222 +113,144 @@ Connect(
 
 Connect("Bank");
 
-// ReSharper disable once UnusedLocalFunctionReturnValue
-Location Biome(string name, int i, int count, Logic? logic = null, string? with = null)
+foreach (var biome in (ImmutableArray<Region>)
+[
+    prisonDepths, corruptedPrison, morassOfTheBanished, ossuary,
+    fracturedShrines, slumberingSanctuary, graveyard, forgottenSepulcher,
+])
+    world.Location($"Clear curse in {biome}", region: biome);
+
+foreach (var biome in (ImmutableArray<Region>)
+[
+    prisonersQuarters, dilapidatedArboretum, promenadeOfTheCondemned, toxicSewers, castleOutskirts, prisonDepths,
+    corruptedPrison, morassOfTheBanished, ossuary, ramparts, ancientSewers, draculasCastleEarly, fracturedShrines,
+    stiltVillage, slumberingSanctuary, graveyard, undyingShores, clockTower, forgottenSepulcher, cavern,
+    infestedShipwreck, derelictDistillery, highPeakCastle, draculasCastleLate,
+])
+    world.Location($"Purchase in {biome}", region: biome);
+
+void Biome(string name, Logic? logic = null)
 {
-    var item = world.Item(name, categories: world.Category("Completions"), count: count);
-    logic &= item[i - 1];
     var category = world.Category(name);
     var region = world.AllRegions[name];
-
-    if (with is null)
-    {
-        world.Location($"Beat {name} for the {Ordinal(i)} time - LOGIC", logic, category, region, allowList: item);
-        return world.Location($"Beat {name} for the {Ordinal(i)} time", logic, category, region);
-    }
-
-    world.Location($"Beat {name} with {with} - LOGIC LOGIC", logic, category, region, allowList: bossCell);
-    world.Location($"Beat {name} with {with} - LOGIC", logic, category, region, allowList: item);
-    return world.Location($"Beat {name} with {with}", logic, category, region);
+    world.Location($"Reach {name}", logic, category, region);
+    world.Location($"Beat {name}", logic, category, region);
 }
 
-foreach (var category in (ImmutableArray<string>)["Melee", "Ranged", "Shields", "Skills"])
+foreach (var category in (ImmutableArray<string>)["Melee", "Ranged", "Shields", "Deployable", "Grenades", "Powers"])
     world.Category(category, []);
 
 var startingItems = ImmutableArray.CreateBuilder<StartingItemBlock>();
 
 await foreach (var (itemName, (category, (starting, _))) in Read("DeadCellsItems.csv"))
-{
-    var item = world.Item(itemName, Priority.Progression, [category], giveItems: [("Weapon", 1)]);
-
     if (starting.Span is "Starting")
-        startingItems.Add(new(item));
+        startingItems.Add(new(world.Item(itemName, Priority.Progression, [category], giveItems: [("Weapon", 1)])));
+
+await foreach (var items in Read("DeadCellsItems.csv").Shuffle().GroupBy(x => x[1].ToString()).Select(x => x.Chunk(3)))
+    foreach (var bundle in items)
+        world.Item(
+            bundle.Select(x => x[0]).Conjoin(),
+            Priority.Progression,
+            [bundle[0][1]],
+            giveItems: [("Weapon", bundle.Length)]
+        );
+
+await foreach (var mutations in Read("DeadCellsMutations.csv").Shuffle().Chunk(3))
+    world.Item(mutations.Select(x => x[0]).Conjoin(), Priority.Useful, world.Category("Mutations"));
+
+Biome("Prisoners' Quarters");
+Biome("Bank", Logic.ItemValue("Weapon", 40));
+
+{
+    var logic = Logic.ItemValue("Weapon", 15);
+    Biome("Dilapidated Arboretum", logic);
+    Biome("Promenade of the Condemned", logic);
+    Biome("Toxic Sewers", logic);
+    Biome("Castle Outskirts", logic);
 }
 
-var mutations = world.Category("Mutations");
+{
+    var logic = Logic.ItemValue("Weapon", 45);
+    Biome("Prison Depths", logic);
+    Biome("Corrupted Prison", logic);
+}
 
-await foreach (var (mutation, _) in Read("DeadCellsMutations.csv"))
-    world.Item(mutation, Priority.Useful, mutations);
+{
+    var logic = Logic.ItemValue("Weapon", 25);
+    Biome("Morass of the Banished", logic);
+    Biome("Ossuary", logic);
+    Biome("Ramparts", logic);
+    Biome("Ancient Sewers", logic);
+    Biome("Dracula's Castle (Early)", logic);
+}
 
-var reduceCurses = world.Category("Reduce Curses");
-world.Item("Reduce Curse by 1", Priority.Useful, reduceCurses, 10);
+{
+    var logic = Logic.ItemValue("Weapon", 50);
+    Biome("Nest", logic);
+    Biome("Black Bridge", logic);
+    Biome("Insufferable Crypt", logic);
+    Biome("Defiled Necropolis", logic);
+}
+
+{
+    var logic = Logic.ItemValue("Weapon", 60);
+    Biome("Fractured Shrines", logic);
+    Biome("Stilt Village", logic);
+    Biome("Slumbering Sanctuary", logic);
+    Biome("Graveyard", logic);
+}
+
+{
+    var logic = Logic.ItemValue("Weapon", 75);
+    Biome("Undying Shores", logic);
+    Biome("Clock Tower", logic);
+    Biome("Forgotten Sepulcher", logic);
+    Biome("Cavern", logic);
+}
+
+{
+    var logic = Logic.ItemValue("Weapon", 100);
+    Biome("Mausoleum", logic);
+    Biome("Clock Room", logic);
+    Biome("Guardian's Haven", logic);
+}
+
+{
+    var logic = Logic.ItemValue("Weapon", 110);
+    Biome("Infested Shipwreck", logic);
+    Biome("Derelict Distillery", logic);
+    Biome("High Peak Castle", logic);
+    Biome("Dracula's Castle (Late)", logic);
+}
+
+{
+    var logic = Logic.ItemValue("Weapon", 130);
+    Biome("Lighthouse", logic);
+}
+
+{
+    var logic = Logic.ItemValue("Weapon", 130);
+    Biome("Crown", logic);
+    Biome("Throne Room", logic);
+    Biome("Master's Keep", logic);
+}
+
+{
+    var logic = Logic.ItemValue("Weapon", 150);
+    Biome("Astrolab", logic);
+    Biome("Observatory", logic);
+    world.Location("Beat the Collector", logic, region: observatory, options: LocationOptions.Victory);
+}
+
 var cells = world.Category("Cells");
+var canAccessSecondRegion = castleOutskirts | toxicSewers | dilapidatedArboretum | promenadeOfTheCondemned;
 
-/*
- * Trap,3,Next run must be Expert
- * Trap,2,Next run must be Nightmare
- * Trap,1,Next run must be Hell
- */
-// ReSharper disable once UseRawString
-@"
-Trap,10,Win a run with Enable Malaise
-Trap,1,Win a run with FOLLOW THE LIGHT
-Trap,1,Win a run with THE CHERRY ON THE CAKE
-Trap,1,Win a run with TRAPPED DOORS
-Trap,1,Win a run with BLOODLUST
-Trap,1,Win a run with VENOMOUS
-Trap,1,Win a run with HITCHCOCK
-Trap,1,Win a run with FOG
-Trap,1,Win a run with SHARP SHOOTERS
-Trap,1,Win a run with SPIKERS
-Trap,1,Win a run with ADAPTATION
-".SplitLines()
-   .Select(
-        x => x.SplitOn(',') is var (priority, (amount, (rest, _)))
-            ? world.Item(rest, Enum.Parse<Priority>(priority.Span), [], int.Parse(amount.Span))
-            : throw Unreachable
-    )
-   .Enumerate();
+for (var i = 0; i <= 60; i++)
+    world.Location(
+        $"Get {i * 5 + 50} Cells",
+        Logic.ItemValue("Weapon", i / 5 * 15) & (i >= 5 ? canAccessSecondRegion : null),
+        cells
+    );
 
-for (var i = 0; i < 56; i++)
-    world.Location($"Get {i * 10 + 50} Cells", Logic.ItemValue("Weapon", i * 3), cells);
-
-const int PrisonersQuarters = 1,
-    Bank = 13,
-    DilapidatedArboretum = 13,
-    PrisonDepths = 12,
-    MorassOfTheBanished = 11,
-    Nest = 9,
-    FracturedShrines = 8,
-    UndyingShores = 7,
-    Mausoleum = 6,
-    InfestedShipwreck = 5,
-    Lighthouse = 3,
-    Crown = 3;
-
-for (var i = 1; i <= PrisonersQuarters; i++)
-    Biome("Prisoners' Quarters", i, PrisonersQuarters);
-
-for (var i = 1; i <= Bank; i++)
-    Biome("Bank", i, Bank, Logic.ItemValue("Weapon", i * 3 + 65) & bossCell[3]);
-
-for (var i = 1; i <= DilapidatedArboretum; i++)
-{
-    var logic = Logic.ItemValue("Weapon", i * 5) & (i > 6 ? bossCell[3] : null);
-    Biome("Dilapidated Arboretum", i, DilapidatedArboretum, logic);
-    Biome("Promenade of the Condemned", i, DilapidatedArboretum, logic);
-    Biome("Toxic Sewers", i, DilapidatedArboretum, logic);
-    Biome("Castle Outskirts", i, DilapidatedArboretum, logic);
-}
-
-for (var i = 1; i <= PrisonDepths; i++)
-{
-    var logic = Logic.ItemValue("Weapon", i * 15);
-    Biome("Prison Depths", i, PrisonDepths, logic);
-    Biome("Corrupted Prison", i, PrisonDepths, logic);
-}
-
-for (var i = 1; i <= MorassOfTheBanished; i++)
-{
-    var logic = Logic.ItemValue("Weapon", i * 7) & (i > 5 ? bossCell[3] : null);
-    Biome("Morass of the Banished", i, MorassOfTheBanished, logic);
-    Biome("Ossuary", i, MorassOfTheBanished, logic);
-    Biome("Ramparts", i, MorassOfTheBanished, logic);
-    Biome("Ancient Sewers", i, MorassOfTheBanished, logic);
-    Biome("Dracula's Castle (Early)", i, MorassOfTheBanished, logic);
-}
-
-for (var i = 1; i <= Nest; i++)
-{
-    var logic = Logic.ItemValue("Weapon", i * 10) & bossCell[i / 3 * 3];
-    Biome("Nest", i, Nest, logic);
-    Biome("Black Bridge", i, Nest, logic);
-    Biome("Insufferable Crypt", i, Nest, logic);
-    Biome("Defiled Necropolis", i, Nest, logic);
-}
-
-for (var i = 1; i <= FracturedShrines; i++)
-{
-    var logic = Logic.ItemValue("Weapon", i * 13) &
-        i switch
-        {
-            1 or 2 => null,
-            3 or 4 or 5 => bossCell[3],
-            6 or 7 or 8 => bossCell[6],
-            _ => throw Unreachable,
-        };
-
-    Biome("Fractured Shrines", i, FracturedShrines, logic);
-    Biome("Stilt Village", i, FracturedShrines, logic);
-    Biome("Slumbering Sanctuary", i, FracturedShrines, logic);
-    Biome("Graveyard", i, FracturedShrines, logic);
-}
-
-for (var i = 1; i <= UndyingShores; i++)
-{
-    var logic = Logic.ItemValue("Weapon", i * 17) &
-        i switch
-        {
-            1 or 2 => null,
-            3 or 4 => bossCell[3],
-            5 or 6 or 7 => bossCell[6],
-            _ => throw Unreachable,
-        };
-
-    Biome("Undying Shores", i, UndyingShores, logic);
-    Biome("Clock Tower", i, UndyingShores, logic);
-    Biome("Forgotten Sepulcher", i, UndyingShores, logic);
-    Biome("Cavern", i, UndyingShores, logic);
-}
-
-for (var i = 1; i <= Mausoleum; i++)
-{
-    var logic = Logic.ItemValue("Weapon", i * 25) &
-        i switch
-        {
-            1 or 2 => null,
-            3 or 4 => bossCell[3],
-            5 or 6 => bossCell[6],
-            _ => throw Unreachable,
-        };
-
-    Biome("Mausoleum", i, Mausoleum, logic);
-    Biome("Clock Room", i, Mausoleum, logic);
-    Biome("Guardian's Haven", i, Mausoleum, logic);
-}
-
-for (var i = 1; i <= InfestedShipwreck; i++)
-{
-    var logic = Logic.ItemValue("Weapon", i * 35) &
-        i switch
-        {
-            1 => null,
-            2 or 3 => bossCell[3],
-            4 or 5 => bossCell[6],
-            _ => throw Unreachable,
-        };
-
-    Biome("Infested Shipwreck", i, InfestedShipwreck, logic);
-    Biome("Derelict Distillery", i, InfestedShipwreck, logic);
-    Biome("High Peak Castle", i, InfestedShipwreck, logic);
-    Biome("Dracula's Castle (Late)", i, InfestedShipwreck, logic);
-}
-
-for (var i = 1; i <= Lighthouse; i++)
-{
-    var logic = Logic.ItemValue("Weapon", i * 55) &
-        i switch
-        {
-            1 => null,
-            2 => bossCell[3],
-            3 => bossCell[6],
-            _ => throw Unreachable,
-        };
-
-    Biome("Lighthouse", i, Lighthouse, logic);
-}
-
-foreach (var method in (ImmutableArray<string>)["Brutality", "Tactics", "Survival"])
-{
-    static Logic? RandomWeaponAmount() => Logic.ItemValue("Weapon", Random.Shared.Next(90, 151));
-
-    Biome("Crown", 1, Crown, RandomWeaponAmount(), method);
-    Biome("Throne Room", 1, Crown, RandomWeaponAmount(), method);
-    Biome("Master's Keep", 1, Crown, RandomWeaponAmount(), method);
-}
-
-world.Location("Defeat all final bosses with all colors", bossCell[9], options: LocationOptions.Victory);
-
-await world.Game("DeadCells", "RedsAndEmik", "Increase starting gold by 1000", startingItems.DrainToImmutable())
-   .DisplayExported(Console.WriteLine)
-   .ZipAsync(Path.GetTempPath(), listChecks: true);
+var game = world.Game("DeadCells", "RedsAndEmik", "Use random outfit", startingItems.DrainToImmutable());
+await game.DisplayExported(Console.WriteLine).ZipAsync(Path.GetTempPath(), listChecks: true, expand: true);
