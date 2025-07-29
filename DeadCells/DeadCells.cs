@@ -252,5 +252,5 @@ for (var i = 0; i <= 60; i++)
         cells
     );
 
-var game = world.Game("DeadCells", "RedsAndEmik", "Use random outfit", startingItems.DrainToImmutable());
+var game = world.Game("DeadCells", "RedsAndEmik2", "Use random outfit", startingItems.DrainToImmutable());
 await game.DisplayExported(Console.WriteLine).ZipAsync(Path.GetTempPath(), listChecks: true, expand: true);
