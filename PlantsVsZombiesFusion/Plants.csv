@@ -7,6 +7,8 @@ Basic,Tools,Show Plant HP
 Basic,Tools,Show Zombie HP
 Basic,Tools,Hammer
 Basic,Tools,Shovel
+Basic,Traps,Temporary Difficulty Increase
+Basic,Traps,Temporary Game Speed Increase
 Basic,Pickups,Fertilizer
 Basic,Pickups,Bucket
 Basic,Pickups,Jack-in-the-box
@@ -324,7 +326,7 @@ Fusion,Advanced,Krakerberus,Squash,Kelp-spreader
 Fusion,Advanced,Stardrop,Plantern,Starfruit,Magnet-shroom
 Fusion,Advanced,Pump-karrier,Pumpkin,Cactus,Blover
 Fusion,Advanced,Salad-pult,Cabbage-pult,Kernel-pult,Melon-pult
-Fusion,Advanced,Alchemist Umbrella,Umbrella Leaf,Golden Garlic,Garlic,Golden Umbrella,Umbrella Leaf
+Fusion,Advanced,Alchemist Umbrella,Golden Garlic,Golden Umbrella
 Fusion,Advanced,Spruce Supershooter,Saw-me-not,Spruce Sharpshooter,Aloe Aqua
 Fusion,Advanced,Firnurse,Firnace,Aloe Alba
 Fusion,Titan,Melon Mortar,Kernel-pult,Melon-pult,Jicamagic

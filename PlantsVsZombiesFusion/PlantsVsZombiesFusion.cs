@@ -24,141 +24,99 @@ static IAsyncEnumerable<SplitMemory<char, char, MatchOne>> Read([Match("^[^<>:\"
     return File.ReadLinesAsync(found ?? throw new FileNotFoundException(null, path)).Select(x => x.SplitOn(','));
 }
 
-static (int Seeds, int Lawnmowers) Amounts(ReadOnlySpan<char> category, ReadOnlySpan<char> level, Terrain terrain) =>
-    category switch
+static int SeedSlots(Logic? l) =>
+    l switch
     {
-        "Adventure Mode (Classic)" => level switch
-        {
-            "Level 1" => (1, 0),
-            "Level 27" => (0, 2),
-            "Level 36" => (0, 3),
-            "Level 45" => (0, 4),
-            _ => (level.SplitWhitespace().Last.Into<int>().Min(9), (int)terrain),
-        },
-        "Adventure Mode (Snow)" => (level is "Level 9" ? 0 : level.SplitWhitespace().Last.Into<int>() / 2 + 9, 5),
-        "Odyssey Adventure" => level switch
-        {
-            "Level 4" => (4, 0),
-            _ => (level.SplitWhitespace().Last.Into<int>() / 3 + 8, (int)terrain / 3 + 4),
-        },
-        _ => (12, (int)terrain / 2 + 3),
+        { Type: Logic.Kind.Or } => SeedSlots(l.Left).Max(SeedSlots(l.Right)),
+        { Type: Logic.Kind.And } => SeedSlots(l.Left) + SeedSlots(l.Right),
+        { Type: Logic.Kind.Item } => 1,
+        _ => throw new UnreachableException(l?.ToString()),
     };
 #pragma warning disable MA0051
 static ImmutableArray<Chars> ToCounteringPlants(ReadOnlyMemory<char> zombie) =>
 #pragma warning restore MA0051
     zombie.Span switch
     {
-        "Armored Gargantuar" or "Kirov Zomppelin" => ["Cob-literation"],
-        "Balloon Zombie" => ["Blover", "Cactus", "Cob Cannon", "Cattail Girl", "Cattail", "Melon Mortar"],
-        "Bobsled Zomboni" or "Michael Zomboni" =>
-        [
-            "Chomper", "Gatling Pea", "Gloom-shroom", "Frenzy-shroom", "Scorched Threepeater", "Spikeweed",
-            "Lumos Cactus", "Doom Cactus", "Starfruit", "Cracked Melon", "Corn-pult", "Winter Melon", "Summer Melon",
-            "Cattail Girl", "Swordsage Starfruit/Swordmaster Starfruit", "Cattail", "Squash-nut", "Titan Pea Turret",
-            "Chomper Maw",
-        ],
-        "Buck-nut Zombie" or
-            "Cherry-nut Zombie" or
-            "Clown-in-the-Box Zombie" or
-            "Diamond-box Zombie" or
-            "Football Zombie" or
-            "Football-nut Zombie" or
-            "Frost Legion Blockhead Zombie" or
-            "Frost Legion Shieldbearer" or
-            "Frost-nut Zombie" or
-            "Grounded Sharkmarine" or
-            "Jack-in-the-Box Zombie" or
-            "Jalapeno Zombie" or
-            "Michael Zombie" or
-            "Peashooter Zombie" or
-            "Scholar Zombie" or
-            "Wall-nut Zombie" =>
-            [
-                "Gatling Pea", "Gloom-shroom", "Spike-ice", "Spike-hearth", "Cracked Melon", "Corn-pult",
-                "Winter Melon", "Summer Melon", "Cattail", "Titan Pea Turret", "Chomper Maw",
-            ],
-        "Buckethead Zombie" =>
-        [
-            "Magnet-shroom", "Gatling Pea", "Gloom-shroom", "Spike-ice", "Spike-hearth", "Starfruit",
-            "Cracked Melon", "Corn-pult", "Winter Melon", "Summer Melon", "Swordsage Starfruit/Swordmaster Starfruit",
-            "Cattail", "Titan Pea Turret", "Chomper Maw",
-        ],
-        "Buckshooter Zombie" or "Buckshooter Buckethead Zombie" =>
-        [
-            "Gatling Pea", "Gloom-shroom", "Spike-ice", "Spike-hearth", "Starfruit", "Cracked Melon", "Corn-pult",
-            "Winter Melon", "Summer Melon", "Swordsage Starfruit/Swordmaster Starfruit", "Cattail",
-            "Titan Pea Turret", "Chomper Maw",
-        ],
-        "Bucknut-copter Zombie" or "Buckshoot-copter Zombie" => ["Cob Cannon", "Melon Mortar"],
-        "Bungee Zombie" => ["Umbrella Leaf", "Chomper Maw"],
-        "Catapult Zombie" => ["Umbrella Leaf", "Titan Pea Turret", "Chomper Maw"],
-        "Cherryshooter Newspaper Zombie" or
-            "Cherryshooter Zombie" or
-            "Explod-o-shooter Zombie" or
-            "Gatling Cherry Newspaper Zombie" or
-            "Gatling Explod-o-rider Zombie" => ["Cherry-nut", "Cherry Pumpkin"],
+        // ReSharper disable DuplicatedSwitchExpressionArms
+        "Armored Gargantuar" => ["Cob-literation"],
+        "Balloon Zombie" => ["Blover", "Cactus"],
+        "Bobsled Zomboni" => ["Spikeweed"],
+        "Buck-nut Zombie" => ["Gatling Cherry", "Blazer Pea"],
+        "Buckethead Zombie" => ["Magnet-shroom", "Split Pea"],
+        "Bucknut-copter Zombie" => ["Cob Cannon", "Melon Mortar"],
+        "Buckshoot-copter Zombie" => ["Cob Cannon", "Melon Mortar"],
+        "Buckshooter Buckethead Zombie" => ["Chompzilla"],
+        "Buckshooter Zombie" => ["Chompzilla"],
+        "Bungee Zombie" => ["Umbrella Leaf"],
+        "Catapult Zombie" => ["Umbrella Leaf"],
+        "Cherry-nut Zombie" => ["Gatling Cherry", "Blazer Pea"],
+        "Cherryshooter Newspaper Zombie" => ["Cherry-nut", "Cherry Pumpkin"],
+        "Cherryshooter Zombie" => ["Cherry-nut", "Cherry Pumpkin"],
         "Chronoporter Zombie" => ["Chrono-nut"],
-        "Clown-in-the-Pogo Zombie" or "Giga Mecha-nut" =>
-        [
-            "Umbrella Kale", "Umbrella Husk", "Umbrella Rind", "Lumos Umbrella", "Umbrella Thorn", "Umbrella Shell",
-            "Bombrella", "Cherrizilla",
-        ],
-        "Conehead Zombie" or
-            "Zombie" or
-            "Frost Legion Trident Thrower" or
-            "Newspaper Zombie" or
-            "Pole Vaulting Zombie" or
-            "Trident Zombie" =>
-            [
-                "Peashooter", "Puff-shroom", "Fume-shroom", "Scaredy-shroom", "Threepeater", "Spikeweed", "Cactus",
-                "Starfruit", "Cabbage-pult", "Kernel-pult", "Melon-pult", "Saw-me-not", "Spruce Sharpshooter",
-                "Aloe Aqua", "Barley/Obsidian Barley", "Cattail Girl", "Swordsage Starfruit/Swordmaster Starfruit",
-                "Cattail", "Queen Endoflame", "Amp-nion", "Doubleblast Passionfruit", "Pearmafrost", "Icetip Lily",
-                "Squash-nut", "Bombrella", "Chomper Maw",
-            ],
-        "Digger Zombie" => ["Potato Mine", "Magnet-shroom", "Split Pea", "Starfruit", "Cattail Girl", "Cattail"],
-        "Dolphin Rider Zombie" or "Dolphinhead Football Zombie" =>
-            ["Tall-nut", "Kelp-spreader", "Leviathan-shroom", "Titan Pea Turret", "Chomper Maw"],
-        "Elder Snowfur" => ["Twin Saw-me-not", "Titan Pea Turret", "Chomper Maw"],
-        "Explod-o-pult Zombie" or "Mecha-nut Zombie" or "Pogo Melon Zombie" or "Trident Hwacha"
-            => ["Umbrella Leaf"],
-        "Frost Legion Snowball Launcher" => ["Snow Lotus", "Umbrella Rind", "Titan Pea Turret"],
-        "Furling" => [],
-        "Gargantuar" or
-            "Giga Football-nut Zombie" or
-            "Giga-gargantuar" or
-            "Undying Wraith" or
-            "Giga Trident-nut Zombie" =>
-            [
-                "Gatling Pea", "Cracked Melon", "Corn-pult", "Winter Melon", "Summer Melon", "Titan Pea Turret",
-                "Chomper Maw", "Cherrizilla",
-            ],
-        "Giga Buckshot Commando" or "Pea Commando Football" => ["Obsidian Tall-nut", "Cherrizilla"],
+        "Clown-in-the-Box Zombie" => ["Gatling Pea"],
+        "Clown-in-the-Pogo Zombie" => ["Umbrella Rind"],
+        "Conehead Zombie" => ["Repeater"],
+        "Diamond-box Zombie" => ["Gatling Pea"],
+        "Digger Zombie" => ["Split Pea", "Starfruit"],
+        "Dolphin Rider Zombie" => ["Tangle Kelp"],
+        "Dolphinhead Football Zombie" => ["Kelp-spreader", "Leviathan-shroom"],
+        "Elder Snowfur" => ["Twin Saw-me-not"],
+        "Explod-o-pult Zombie" => ["Umbrella Leaf"],
+        "Explod-o-shooter Zombie" => ["Cherry-nut", "Cherry Pumpkin"],
+        "Football Zombie" => ["Gatling Pea"],
+        "Football-nut Zombie" => ["Gatling Cherry", "Blazer Pea"],
+        "Frost Legion Blockhead Zombie" => ["Spruce Sharpshooter"],
+        "Frost Legion Shieldbearer" => ["Spruce Sharpshooter"],
+        "Frost Legion Snowball Launcher" => ["Snow Lotus", "Umbrella Rind"],
+        "Frost Legion Trident Thrower" => ["Chompzilla"],
+        "Frost-nut Zombie" => ["Gatling Cherry", "Blazer Pea"],
+        "Furling" => ["Saw-me-not"],
+        "Gargantuar" => ["Titan Pea Turret"],
+        "Gatling Cherry Newspaper Zombie" => ["Cherry-nut", "Cherry Pumpkin"],
+        "Gatling Explod-o-rider Zombie" => ["Cherry-nut", "Cherry Pumpkin"],
+        "Giga Buckshot Commando" => ["Obsidian Tall-nut", "Cherrizilla"],
+        "Giga Football-nut Zombie" => ["Gatling Cherry", "Blazer Pea"],
+        "Giga Mecha-nut" => ["Umbrella Rind"],
+        "Giga Trident-nut Zombie" => ["Gatling Cherry", "Blazer Pea"],
+        "Giga-gargantuar" => ["Titan Pea Turret"],
+        "Grounded Sharkmarine" => ["Gatling Cherry", "Blazer Pea"],
         "Ice-borg Executrix Mk. Alpha" => ["Spruce Supershooter"],
-        "Jackson Worldwide" =>
-        [
-            "Cherrizilla", "Cob-literation", "Titan Apeacalypse Minigun", "Helios Cabbage", "Quantum McCornics",
-            "Empress-shroom", "Boreal Lifereaver", "Tyrannoflora Lux",
-        ],
-        "Ladder Zombie" or "Screen Door Zombie" => ["Magnet-shroom"],
-        "Mecha Gargantuar" or "Mecha Giga-gargantuar" =>
-        [
-            "Magnet-shroom", "Gatling Pea", "Cracked Melon", "Corn-pult", "Winter Melon", "Summer Melon",
-            "Titan Pea Turret", "Chomper Maw",
-        ],
+        "Jack-in-the-Box Zombie" => ["Gatling Pea"],
+        "Jackson Worldwide" => ["Cob-literation"],
+        "Jalapeno Zombie" => ["Gatling Cherry", "Blazer Pea"],
+        "Kirov Zomppelin" => ["Cob-literation"],
+        "Ladder Zombie" => ["Magnet-shroom"],
+        "Mecha Gargantuar" => ["Magnet-shroom", "Titan Pea Turret"],
+        "Mecha Giga-gargantuar" => ["Magnet-shroom", "Titan Pea Turret"],
+        "Mecha-nut Zombie" => ["Umbrella Leaf"],
+        "Michael Zombie" => ["Gatling Cherry", "Blazer Pea"],
+        "Michael Zomboni" => ["Titan Pea Turret", "Chomper Maw"],
+        "Newspaper Zombie" => ["Split Pea"],
         "Nian Zombie" => ["Bamboom"],
+        "Pea Commando Football" => ["Obsidian Tall-nut", "Cherrizilla"],
+        "Peashooter Zombie" => ["Chompzilla"],
+        "Pogo Melon Zombie" => ["Umbrella Leaf"],
         "Pogo Zombie" => ["Magnet-shroom", "Umbrella Leaf"],
+        "Pole Vaulting Zombie" => ["Repeater"],
         "Professor Cherryz" => ["Obsidian Spike-nut"],
-        "Queen Jill-in-the-Box" or "Skystrider Mecha" or "Superstar Zombie" => ["Unstable Jalapeno"],
+        "Queen Jill-in-the-Box" => ["Unstable Jalapeno"],
+        "Scholar Zombie" => ["Gatling Pea"],
         "Screen Door Buckshooter Zombie" => ["Magnet Blover"],
+        "Screen Door Zombie" => ["Magnet-shroom"],
+        "Skystrider Mecha" => ["Unstable Jalapeno"],
         "Snorkel Zombie" => ["Squash", "Nyan Squash"],
         "Snowfur" => ["Saw-me-not"],
+        "Superstar Zombie" => ["Unstable Jalapeno"],
+        "Trident Hwacha" => ["Umbrella Leaf"],
+        "Trident Zombie" => ["Chompzilla"],
         "Ultra Mecha-nut" => ["Aegis Umbrella"],
-        "Whale Rider Yeti" =>
-            ["Kelp-spreader", "Leviathan-shroom", "Titan Pea Turret", "Chomper Maw"],
-        "Yeti Zombie" => ["Jalapeno", "Torchwood", "Ice-shroom"],
-        "Zombarine" => ["Kelp-spreader", "Leviathan-shroom", "Titan Pea Turret", "Chomper Maw"],
-        "Zomboni" => ["Gatling Pea", "Spikeweed", "Snow Pea", "Titan Pea Turret"],
+        "Undying Wraith" => ["Titan Pea Turret"],
+        "Wall-nut Zombie" => ["Gatling Cherry", "Blazer Pea"],
+        "Whale Rider Yeti" => ["Kelp-spreader", "Leviathan-shroom"],
+        "Yeti Zombie" => ["Jalapeno"],
+        "Zombarine" => ["Kelp-spreader", "Leviathan-shroom"],
+        "Zombie" => ["Peashooter"],
+        "Zomboni" => ["Spikeweed"],
         "Zomppelin" => ["Blover", "Cob-literation"],
         _ => throw new FormatException(zombie.ToString()),
     };
@@ -179,11 +137,22 @@ bool CanPlaceOn(ReadOnlyMemory<char> plant, Terrain terrain, bool isOdyssey) =>
             }
         );
 
-IEnumerable<Chars> Expand(ReadOnlyMemory<char> c) => itemRequirements[c.ToString()].SelectMany(Expand).Prepend(c);
+IEnumerable<Chars> Expand(Chars c) => itemRequirements[c.ToString()].SelectMany(x => Expand(x)).Prepend(c);
 
 World world = new();
-world.Location("Beat Vasebreaker", categories: world.Category("Vasebreaker"));
-world.Location("Beat Vasebreaker 2", categories: world.Category("Vasebreaker"));
+
+ImmutableArray<string> minigames =
+[
+    "Beat Vasebreaker", "Beat Vasebreaker 2",
+    "Beat I, Zombie", "Beat I, Zombie Too",
+    "Beat Squash Showdown!", "Beat Squash Showdown 2!",
+];
+
+foreach (var minigame in minigames)
+{
+    world.Location($"{minigame} - Clear", categories: world.Category("Mini-games"));
+    world.Location($"{minigame} - Trophy", categories: world.Category("Mini-games"));
+}
 
 await foreach (var (basic, (type, (name, requires))) in Read("Plants.csv"))
 {
@@ -191,6 +160,7 @@ await foreach (var (basic, (type, (name, requires))) in Read("Plants.csv"))
     {
         "Progressive Lawnmowers" => (6, Priority.ProgressionUseful),
         "Progressive Seed Slots" => (14, Priority.ProgressionUseful),
+        _ when type.Span is "Traps" => (7, Priority.Trap),
         _ when basic.Span is "Basic" && type.Span is not "Tools" and not "Pickups"
             => (2, Priority.ProgressionUseful),
         _ => (1, Priority.Progression),
@@ -205,45 +175,41 @@ await foreach (var (basic, (type, (name, requires))) in Read("Plants.csv"))
 
 await foreach (var (category, (level, (terrain, (waves, (zombies, (plants, _)))))) in Read("Levels.csv"))
 {
+    Console.WriteLine($"{category}, {level}");
     var count = int.Parse(waves.Span);
     var t = Enum.Parse<Terrain>(terrain.Span);
     var c = world.Category(category);
+    var isOdyssey = category.Span.Contains("Odyssey", StringComparison.Ordinal);
 
-    Logic? ToLogic(ImmutableArray<Chars> x) =>
-        x.Where(x => CanPlaceOn(x, t, category.Span.Contains("Odyssey", StringComparison.Ordinal)))
-           .Select(x => Expand(x).Select(x => world.AllItems[x]).And())
-           .Distinct()
-           .Or();
-
-    var (seeds, lawnmowers) = Amounts(category.Span, level.Span, t);
-
-    var logic = plants.SplitOn('&').SelectMany(Expand).Select(x => world.AllItems[x]).Distinct().And() &
-        (plants.Span.Contains('&')
-            ? null
-            : zombies.SplitOn('&')
-               .Select(ToCounteringPlants)
-               .Distinct(Equating<ImmutableArray<Chars>>((x, y) => x.SequenceEqual(y)))
-               .Select(ToLogic)
-               .And()) &
-        ("Progressive Seed Slots", seeds) &
-        ("Progressive Lawnmowers", lawnmowers) &
+    var plantLogic = (level.Span is "Level 10"
+            ? [["Alchemist Umbrella"]]
+            : plants.SplitOn('&').Select(x => ImmutableArray.Create<Chars>(x)))
+       .Concat(zombies.SplitOn('&').Select(ToCounteringPlants))
+       .Distinct(Equating<ImmutableArray<Chars>>((x, y) => x.SequenceEqual(y)))
+       .Where(x => x.All(x => CanPlaceOn(x, t, isOdyssey)))
+       .Select(x => x.Select(Expand).Select(x => x.Select(x => world.AllItems[x]).And()).Or())
+       .And() &
         (t is Terrain.Snow ? (Logic)"Firnace" : null) &
         (t is Terrain.Pool or Terrain.Fog ? (Logic)"Lily Pad" : null) &
-        (t is Terrain.Fog ? (Logic)"Show Plant HP" & "Show Zombie HP" : null) &
-        (category.Span is "Odyssey Adventure" ? (Logic)"Plant Gloves" : null) &
         (t is Terrain.Roof && level.Span is not "Level 37" ? (Logic)"Flower Pot" : null) &
         (category.Span is "Adventure Mode (Classic)" && level.Span is "Level 1" ? null : (Logic)"Sunflower");
 
-    for (var i = 1; i <= count; i++)
-        world.Location($"{category}, {level} - {Ordinal(i)} Flag", logic, c);
+    var logic = plantLogic &
+        (t is Terrain.Fog ? (Logic)"Show Plant HP" & "Show Zombie HP" : null) &
+        world.AllItems["Progressive Seed Slots"][SeedSlots(plantLogic).Min(14)] &
+        world.AllItems["Progressive Lawnmowers"][isOdyssey ? 5 : (int)t] &
+        (category.Span is "Odyssey Adventure" ? (Logic)"Plant Gloves" : null);
 
-    world.Location($"{category}, {level} - Clear", logic, c);
-    world.Location($"{category}, {level} - Trophy", logic, c);
+    var region = world.Region($"{category}, {level}", logic, true);
+
+    for (var i = 1; i <= count; i++)
+        world.Location($"{category}, {level} - {Ordinal(i)} Flag", null, c, region);
+
+    world.Location($"{category}, {level} - Trophy", null, c, region);
+    world.Location($"{category}, {level} - Clear", null, c, region);
 }
 
-world.Location(
-    "Beat Odyssey Survival",
-    odysseyPlants.Select(x => x.AsMemory()).SelectMany(Expand).Select(x => world.AllItems[x]).Distinct().And() &
+var goalLogic = odysseyPlants.Select(x => (Chars)x).SelectMany(Expand).Select(x => world.AllItems[x]).Distinct().And() &
     ("Progressive Seed Slots", 14) &
     ("Progressive Lawnmowers", 6) &
     "Plant Gloves" &
@@ -254,12 +220,14 @@ world.Location(
     "Hammer" &
     "Shovel" &
     "Fertilizer" &
-    "Coins",
-    world.Category("Odyssey Adventure"),
-    options: LocationOptions.Victory
-);
+    "Coins";
 
-await world.Game("PlantsVsZombiesFusion", "Emik", "Are You Sure?", [])
+var goalRegion = world.Region("Odyssey Survival", goalLogic, true);
+var goalCategory = world.Category("Odyssey Adventure");
+world.Location("Odyssey Survival - Trophy", null, goalCategory, goalRegion);
+world.Location("Odyssey Survival - Clear", null, goalCategory, goalRegion, LocationOptions.Victory);
+
+await world.Game("PlantsVsZombiesFusion", "Emik", "Take care of your Zen Garden!", [])
    .DisplayExported(Console.WriteLine)
    .ZipAsync(Path.GetTempPath(), listChecks: true);
 
