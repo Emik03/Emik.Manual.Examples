@@ -7,8 +7,10 @@ Basic,Tools,Show Plant HP
 Basic,Tools,Show Zombie HP
 Basic,Tools,Hammer
 Basic,Tools,Shovel
-Basic,Traps,Temporary Difficulty Increase
-Basic,Traps,Temporary Game Speed Increase
+Basic,Traps,Shovel 1 Plant
+Basic,Traps,Increase Difficulty for the rest of the level
+Basic,Traps,Increase Game Speed for the rest of the level
+Basic,Traps,Move the leftmost plant to the rightmost column
 Basic,Pickups,Fertilizer
 Basic,Pickups,Bucket
 Basic,Pickups,Jack-in-the-box

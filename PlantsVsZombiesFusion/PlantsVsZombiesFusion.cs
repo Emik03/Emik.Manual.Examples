@@ -141,12 +141,8 @@ IEnumerable<Chars> Expand(Chars c) => itemRequirements[c.ToString()].SelectMany(
 
 World world = new();
 
-ImmutableArray<string> minigames =
-[
-    "Beat Vasebreaker", "Beat Vasebreaker 2",
-    "Beat I, Zombie", "Beat I, Zombie Too",
-    "Beat Squash Showdown!", "Beat Squash Showdown 2!",
-];
+ImmutableArray<string> minigames = ["Beghouled", "I, Zombie", "Vasebreaker", "Vasebreaker 2"];
+world.Location("Take care of your Zen Garden!", categories: world.Category("Mini-games"));
 
 foreach (var minigame in minigames)
 {
@@ -154,23 +150,31 @@ foreach (var minigame in minigames)
     world.Location($"{minigame} - Trophy", categories: world.Category("Mini-games"));
 }
 
+HashSet<string> notStrictlyNecessary = new(StringComparer.Ordinal);
+
+await foreach (var element in Read("NotStrictlyNecessary.csv"))
+    notStrictlyNecessary.Add(element.ToString());
+
 await foreach (var (basic, (type, (name, requires))) in Read("Plants.csv"))
 {
-    var (count, priority) = name.Span switch
+    var nameStr = name.ToString();
+
+    var (count, priority) = nameStr switch
     {
-        "Progressive Lawnmowers" => (6, Priority.ProgressionUseful),
+        "Imitater" => (1, Priority.Progression),
+        "Progressive Lawnmowers" => (6, Priority.Useful),
         "Progressive Seed Slots" => (14, Priority.ProgressionUseful),
-        _ when type.Span is "Traps" => (7, Priority.Trap),
+        _ when type.Span is "Traps" => (8, Priority.Trap),
         _ when basic.Span is "Basic" && type.Span is not "Tools" and not "Pickups"
-            => (2, Priority.ProgressionUseful),
-        _ => (1, Priority.Progression),
+            => (2, notStrictlyNecessary.Contains(name.ToString()) ? Priority.Useful : Priority.ProgressionUseful),
+        _ => (1, notStrictlyNecessary.Contains(name.ToString()) ? Priority.Useful : Priority.Progression),
     };
 
     world.Item(name, priority, world.Category($"{basic} ({type})"), count);
-    itemRequirements[name.ToString()] = [..requires];
+    itemRequirements[nameStr] = [..requires];
 
     if (type.Span.Contains("Odyssey", StringComparison.Ordinal))
-        odysseyPlants.Add(name.Span.ToString());
+        odysseyPlants.Add(nameStr);
 }
 
 await foreach (var (category, (level, (terrain, (waves, (zombies, (plants, _)))))) in Read("Levels.csv"))
@@ -197,7 +201,6 @@ await foreach (var (category, (level, (terrain, (waves, (zombies, (plants, _))))
     var logic = plantLogic &
         (t is Terrain.Fog ? (Logic)"Show Plant HP" & "Show Zombie HP" : null) &
         world.AllItems["Progressive Seed Slots"][SeedSlots(plantLogic).Min(14)] &
-        world.AllItems["Progressive Lawnmowers"][isOdyssey ? 5 : (int)t] &
         (category.Span is "Odyssey Adventure" ? (Logic)"Plant Gloves" : null);
 
     var region = world.Region($"{category}, {level}", logic, true);
@@ -209,27 +212,48 @@ await foreach (var (category, (level, (terrain, (waves, (zombies, (plants, _))))
     world.Location($"{category}, {level} - Clear", null, c, region);
 }
 
-var goalLogic = odysseyPlants.Select(x => (Chars)x).SelectMany(Expand).Select(x => world.AllItems[x]).Distinct().And() &
-    ("Progressive Seed Slots", 14) &
-    ("Progressive Lawnmowers", 6) &
+Console.WriteLine("Odyssey Survival");
+
+ImmutableArray<string> goalPlants =
+[
+    "Twin Solar-nut", "Titan Apeacalypse Minigun", "Cob-literation",
+    "Obsidian Tall-nut", "Cherrizilla", "Laser Pumpkin",
+];
+
+ImmutableArray<Item> goalPlantItems =
+    [..goalPlants.Select(x => (Chars)x).SelectMany(Expand).Select(x => world.AllItems[x]).Distinct()];
+
+var goalRegion = world.Region(
+    "Odyssey Survival (Completion)",
+    (Logic)("Progressive Seed Slots", 14) &
     "Plant Gloves" &
-    "Zombie Gloves" &
-    "Slow Mode" &
     "Show Plant HP" &
     "Show Zombie HP" &
-    "Hammer" &
-    "Shovel" &
-    "Fertilizer" &
-    "Coins";
+    "Shovel",
+    true
+);
 
-var goalRegion = world.Region("Odyssey Survival", goalLogic, true);
-var goalCategory = world.Category("Odyssey Adventure");
-world.Location("Odyssey Survival - Trophy", null, goalCategory, goalRegion);
-world.Location("Odyssey Survival - Clear", null, goalCategory, goalRegion, LocationOptions.Victory);
+var goalCategory = world.Category("Odyssey Survival");
 
-await world.Game("PlantsVsZombiesFusion", "Emik", "Take care of your Zen Garden!", [])
+for (var i = 1; i <= 21; i++)
+    world.Location($"Odyssey Survival - {Ordinal(i)} Wave", goalPlantItems.Take(i / 3).And(), goalCategory, goalRegion);
+
+world.Location("Odyssey Survival - Trophy", goalPlantItems.And(), goalCategory, goalRegion);
+world.Location("Odyssey Survival - Clear", goalPlantItems.And(), goalCategory, goalRegion);
+world.Location("Odyssey Survival - Goal", goalPlantItems.And(), goalCategory, goalRegion, LocationOptions.Victory);
+
+await world.Game("PlantsVsZombiesFusion", "Emik", "Take care of your Zen Garden, again!", [])
    .DisplayExported(Console.WriteLine)
    .ZipAsync(Path.GetTempPath(), listChecks: true);
+
+// static bool Contains(Logic? logic, Item item) =>
+//     logic is not null && (logic.Name.Equals(item.Name) || Contains(logic.Left, item) || Contains(logic.Right, item));
+//
+// // ReSharper disable once LoopCanBePartlyConvertedToQuery
+// foreach (var item in world.AllItems)
+//     if (world.AllLocations.All(x => !Contains(x.SelfLogic, item)) &&
+//         world.AllRegions.All(x => !Contains(x.SelfLogic, item)))
+//         Console.WriteLine(item);
 
 enum Terrain
 {
