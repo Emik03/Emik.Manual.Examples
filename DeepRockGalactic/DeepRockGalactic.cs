@@ -16,7 +16,7 @@ static string Ordinal(int i) =>
 
 static IAsyncEnumerable<SplitMemory<char, char, MatchOne>> Read([Match("^[^<>:\"/\\\\|?*]+$")] string path)
 {
-    var found = Path.Join(Environment.CurrentDirectory)
+    var found = Environment.CurrentDirectory
        .FindPathToNull(Path.GetDirectoryName)
        .Select(x => Path.Join(x, path))
        .FirstOrDefault(File.Exists);
