@@ -1,6 +1,7 @@
 ﻿<Solution>
   <Project Path="../Emik.Manual/Emik.Manual.csproj" Type="Classic C#" />
   <Project Path="Azada/Azada.csproj" Type="Classic C#" />
+  <Project Path="BLUEREVOLVER\BLUEREVOLVER.csproj" Type="Classic C#" />
   <Project Path="Bombe/Bombe.csproj" Type="Classic C#" />
   <Project Path="CookServeDelicious3/CookServeDelicious3.csproj" Type="Classic C#" />
   <Project Path="DeadCells/DeadCells.csproj" Type="Classic C#" />
