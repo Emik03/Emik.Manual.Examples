@@ -4,7 +4,6 @@ using Emik.Manual;
 using Emik.Manual.Domains;
 
 // ReSharper disable HeuristicUnreachableCode RedundantLogicalConditionalExpressionOperand
-const bool IsShortVersion = true;
 #pragma warning disable CS0162
 [Pure]
 static string Ordinal(int i) =>
@@ -33,6 +32,7 @@ static int SeedSlots(Logic? l) =>
         { Type: Logic.Kind.Or } => SeedSlots(l.Left).Max(SeedSlots(l.Right)),
         { Type: Logic.Kind.And } => SeedSlots(l.Left) + SeedSlots(l.Right),
         { Type: Logic.Kind.Item } => 1,
+        { Type: Logic.Kind.OptOne or Logic.Kind.OptAll } => SeedSlots(l.Left),
         _ => throw new UnreachableException(l?.ToString()),
     };
 #pragma warning disable MA0051
@@ -124,6 +124,7 @@ static ImmutableArray<Chars> ToCounteringPlants(ReadOnlyMemory<char> zombie) =>
         _ => throw new FormatException(zombie.ToString()),
     };
 
+const string LongAdventure = "long_adventure";
 Dictionary<string, ImmutableArray<ReadOnlyMemory<char>>> itemRequirements = new(StringComparer.Ordinal);
 HashSet<string> odysseyPlants = new(StringComparer.Ordinal);
 
@@ -140,18 +141,16 @@ bool CanPlaceOn(ReadOnlyMemory<char> plant, Terrain terrain, bool isOdyssey) =>
             }
         );
 
-IEnumerable<Chars> Expand(Chars c) =>
-    IsShortVersion && !itemRequirements.ContainsKey(c.ToString())
-        ? []
-        : itemRequirements[c.ToString()].SelectMany(x => Expand(x)).Prepend(c);
+IEnumerable<Chars> Expand(Chars c) => itemRequirements[c.ToString()].SelectMany(x => Expand(x)).Prepend(c);
 
 World world = new();
 
-Logic? ToLogic(IEnumerable<Chars> x) =>
-    x.Where(x => !IsShortVersion || world.AllItems.ContainsKey(x)).Select(x => world.AllItems[x]).And();
+world.Location(
+    "Take care of your Zen Garden!",
+    categories: [world.Category("Mini-games"), world.Category("Start", [LongAdventure])]
+);
 
 ImmutableArray<string> minigames = ["Beghouled", "Vasebreaker", "Vasebreaker 2", "Chain Reaction"];
-world.Location("Take care of your Zen Garden!", categories: world.Category("Mini-games"));
 
 foreach (var minigame in minigames)
 {
@@ -166,12 +165,6 @@ await foreach (var element in Read("NotStrictlyNecessary.csv"))
 
 await foreach (var (basic, (type, (name, requires))) in Read("Plants.csv"))
 {
-    if (IsShortVersion &&
-        !type.Span.Contains("Odyssey", StringComparison.Ordinal) &&
-        (type.Span is not "Tools" and not "Traps" and not "Pickups" ||
-            name.Span is "Progressive Seed Slots" or "Move the leftmost plant to the rightmost column"))
-        continue;
-
     var nameStr = name.ToString();
 
     var (count, priority) = nameStr switch
@@ -179,42 +172,41 @@ await foreach (var (basic, (type, (name, requires))) in Read("Plants.csv"))
         "Imitater" => (1, Priority.Progression),
         "Progressive Lawnmowers" => (6, Priority.Useful),
         "Progressive Seed Slots" => (14, Priority.ProgressionUseful),
-        _ when type.Span is "Traps" => (8, Priority.Trap),
+        _ when type.Span is "Traps" or "Tough Traps" => (8, Priority.Trap),
         _ when basic.Span is "Basic" && type.Span is not "Tools" and not "Pickups"
             => (2, notStrictlyNecessary.Contains(name.ToString()) ? Priority.Useful : Priority.ProgressionUseful),
         _ => (1, notStrictlyNecessary.Contains(name.ToString()) ? Priority.Useful : Priority.Progression),
     };
 
-    world.Item(nameStr, priority, world.Category($"{basic} ({type})"), count);
+    ImmutableArray<Yaml> yaml = type.Span is not ("Tools" or "Traps" or "Pickups" or "Weak Odyssey" or "Strong Odyssey")
+        ? [LongAdventure]
+        : [];
+
+    world.Item(nameStr, priority, world.Category($"{basic} ({type})", yaml), count);
     itemRequirements[nameStr] = [..requires];
 
-    if (type.Span.Contains("Odyssey", StringComparison.Ordinal))
+    if (type.Span is "Weak Odyssey" or "Strong Odyssey")
         odysseyPlants.Add(nameStr);
 }
 
+world.Category("Odyssey Adventure");
+
 await foreach (var (category, (level, (terrain, (waves, (zombies, (plants, _)))))) in Read("Levels.csv"))
 {
-    var isOdyssey = category.Span.Contains("Odyssey", StringComparison.Ordinal);
-
-    if (IsShortVersion && !isOdyssey)
-        continue;
-
     Console.WriteLine($"{category}, {level}");
+    var c = world.Category(category, [LongAdventure]);
     var count = int.Parse(waves.Span);
     var t = Enum.Parse<Terrain>(terrain.Span);
-    var c = world.Category(category);
 
     var plantLogic = (level.Span is "Level 10"
             ? [["Alchemist Umbrella"]]
             : plants.SplitOn('&').Select(x => ImmutableArray.Create<Chars>(x)))
        .Concat(zombies.SplitOn('&').Select(ToCounteringPlants))
        .Distinct(Equating<ImmutableArray<Chars>>((x, y) => x.SequenceEqual(y)))
-       .Where(x => x.All(x => CanPlaceOn(x, t, isOdyssey)))
-       .Select(x => x.Select(Expand).Select(ToLogic).Or())
+       .Where(x => x.All(x => CanPlaceOn(x, t, category.Span is "Odyssey Adventure")))
+       .Select(x => x.Select(Expand).Select(x => x.Select(x => world.AllItems[x]).And()).Or())
        .And() &
-        (IsShortVersion
-            ? null
-            : (t is Terrain.Snow ? (Logic)"Firnace" : null) &
+        ((t is Terrain.Snow ? (Logic)"Firnace" : null) &
             (t is Terrain.Pool or Terrain.Fog ? (Logic)"Lily Pad" : null) &
             (t is Terrain.Roof && level.Span is not "Level 37" ? (Logic)"Flower Pot" : null) &
             (category.Span is "Adventure Mode (Classic)" && level.Span is "Level 1" ? null : (Logic)"Sunflower"));
@@ -222,9 +214,9 @@ await foreach (var (category, (level, (terrain, (waves, (zombies, (plants, _))))
     var logic = plantLogic &
         (t is Terrain.Fog ? (Logic)"Show Plant HP" & "Show Zombie HP" : null) &
         (category.Span is "Odyssey Adventure" ? (Logic)"Plant Gloves" : null) &
-        (IsShortVersion ? null : world.AllItems["Progressive Seed Slots"][SeedSlots(plantLogic).Min(14)]);
+        world.AllItems["Progressive Seed Slots"][SeedSlots(plantLogic).Min(14)];
 
-    var region = world.Region($"{category}, {level}", logic, true);
+    var region = world.Region($"{category}, {level}", logic.Opt(), true);
 
     for (var i = 1; i <= count; i++)
         world.Location($"{category}, {level} - {Ordinal(i)} Flag", null, c, region);
@@ -241,12 +233,12 @@ ImmutableArray<Chars> goalPlants =
     "Obsidian Tall-nut", "Cherrizilla", "Laser Pumpkin",
 ];
 
-ImmutableArray<Item> goalPlantItems =
-    [..goalPlants.SelectMany(Expand).Select(x => world.AllItems[x]).Distinct()];
+ImmutableArray<Logic?> goal =
+    [..goalPlants.Select(Expand).Select(x => x.Select(x => world.AllItems[x]).Distinct().And())];
 
 var goalRegion = world.Region(
     "Odyssey Survival (Completion)",
-    (IsShortVersion ? null : (Logic)("Progressive Seed Slots", 14)) &
+    ((Logic)("Progressive Seed Slots", 14)).Opt() &
     ((Logic)"Plant Gloves" & "Show Plant HP" & "Show Zombie HP" & "Shovel"),
     true
 );
@@ -254,11 +246,11 @@ var goalRegion = world.Region(
 var goalCategory = world.Category("Odyssey Survival");
 
 for (var i = 1; i <= 21; i++)
-    world.Location($"Odyssey Survival - {Ordinal(i)} Wave", goalPlantItems.Take(i / 3).And(), goalCategory, goalRegion);
+    world.Location($"Odyssey Survival - {Ordinal(i)} Wave", goal.Take(i / 3).And().Opt(), goalCategory, goalRegion);
 
-world.Location("Odyssey Survival - Trophy", goalPlantItems.And(), goalCategory, goalRegion);
-world.Location("Odyssey Survival - Clear", goalPlantItems.And(), goalCategory, goalRegion);
-world.Location("Odyssey Survival - Goal", goalPlantItems.And(), goalCategory, goalRegion, LocationOptions.Victory);
+world.Location("Odyssey Survival - Trophy", goal.And().Opt(), goalCategory, goalRegion);
+world.Location("Odyssey Survival - Clear", goal.And().Opt(), goalCategory, goalRegion);
+world.Location("Odyssey Survival - Goal", goal.And().Opt(), goalCategory, goalRegion, LocationOptions.Victory);
 
 // static bool Contains(Logic? logic, Item item) =>
 //     logic is not null && (logic.Name.Equals(item.Name) || Contains(logic.Left, item) || Contains(logic.Right, item));
@@ -269,9 +261,7 @@ world.Location("Odyssey Survival - Goal", goalPlantItems.And(), goalCategory, go
 //         world.AllRegions.All(x => !Contains(x.SelfLogic, item)))
 //         Console.WriteLine(item);
 
-const string Name = IsShortVersion ? "PlantsVsZombiesFusionOdyssey" : "PlantsVsZombiesFusion";
-
-await world.Game(Name, "Emik", "Take care of your Zen Garden, again!", [])
+await world.Game("PlantsVsZombiesFusion", "Emik", "Take care of your Zen Garden, again!", [])
    .DisplayExported(Console.WriteLine)
    .ZipAsync(Path.GetTempPath(), listChecks: true);
 

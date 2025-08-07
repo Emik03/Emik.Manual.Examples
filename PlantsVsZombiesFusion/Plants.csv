@@ -1,4 +1,4 @@
-Basic,Tools,Progressive Seed Slots
+Basic,Slots,Progressive Seed Slots
 Basic,Tools,Progressive Lawnmowers
 Basic,Tools,Plant Gloves
 Basic,Tools,Zombie Gloves
@@ -10,7 +10,7 @@ Basic,Tools,Shovel
 Basic,Traps,Shovel 1 Plant
 Basic,Traps,Increase Difficulty for the rest of the level
 Basic,Traps,Increase Game Speed for the rest of the level
-Basic,Traps,Move the leftmost plant to the rightmost column
+Basic,Tough Traps,Move the leftmost plant to the rightmost column
 Basic,Pickups,Fertilizer
 Basic,Pickups,Bucket
 Basic,Pickups,Jack-in-the-box
