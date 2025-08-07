@@ -1,7 +1,7 @@
 ﻿<Solution>
   <Project Path="../Emik.Manual/Emik.Manual.csproj" Type="Classic C#" />
   <Project Path="Azada/Azada.csproj" Type="Classic C#" />
-  <Project Path="BLUEREVOLVER\BLUEREVOLVER.csproj" Type="Classic C#" />
+  <Project Path="BLUEREVOLVER/BLUEREVOLVER.csproj" Type="Classic C#" />
   <Project Path="Bombe/Bombe.csproj" Type="Classic C#" />
   <Project Path="CookServeDelicious3/CookServeDelicious3.csproj" Type="Classic C#" />
   <Project Path="DeadCells/DeadCells.csproj" Type="Classic C#" />
@@ -11,6 +11,7 @@
   <Project Path="Girl'sNight/Girl'sNight.csproj" Type="Classic C#" />
   <Project Path="InfinityGene/InfinityGene.csproj" Type="Classic C#" />
   <Project Path="PacManChampionshipEditionDXPlus/PacManChampionshipEditionDXPlus.csproj" Type="Classic C#" />
-  <Project Path="PlantsVsZombiesFusion\PlantsVsZombiesFusion.csproj" Type="Classic C#" />
+  <Project Path="PlantsVsZombiesFusion/PlantsVsZombiesFusion.csproj" Type="Classic C#" />
   <Project Path="StrawberryLabyrinth/StrawberryLabyrinth.csproj" Type="Classic C#" />
+  <Project Path="WingsOfViSpeedrun/WingsOfViSpeedrun.csproj" Type="Classic C#" />
 </Solution>
