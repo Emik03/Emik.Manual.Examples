@@ -163,26 +163,26 @@ HashSet<string> notStrictlyNecessary = new(StringComparer.Ordinal);
 await foreach (var element in Read("NotStrictlyNecessary.csv"))
     notStrictlyNecessary.Add(element.ToString());
 
-await foreach (var (basic, (type, (name, requires))) in Read("Plants.csv"))
+await foreach (var (basic, (type, (count, (name, requires)))) in Read("Plants.csv"))
 {
     var nameStr = name.ToString();
 
-    var (count, priority) = nameStr switch
+    var priority = nameStr switch
     {
-        "Imitater" => (1, Priority.Progression),
-        "Progressive Lawnmowers" => (6, Priority.Useful),
-        "Progressive Seed Slots" => (14, Priority.ProgressionUseful),
-        _ when type.Span is "Traps" or "Tough Traps" => (8, Priority.Trap),
+        "Imitater" => Priority.Progression,
+        "Progressive Lawnmowers" => Priority.Useful,
+        "Progressive Seed Slots" => Priority.ProgressionUseful,
+        _ when type.Span is "Traps" or "Tough Traps" => Priority.Trap,
         _ when basic.Span is "Basic" && type.Span is not "Tools" and not "Pickups"
-            => (2, notStrictlyNecessary.Contains(name.ToString()) ? Priority.Useful : Priority.ProgressionUseful),
-        _ => (1, notStrictlyNecessary.Contains(name.ToString()) ? Priority.Useful : Priority.Progression),
+            => notStrictlyNecessary.Contains(name.ToString()) ? Priority.Useful : Priority.ProgressionUseful,
+        _ => notStrictlyNecessary.Contains(name.ToString()) ? Priority.Useful : Priority.Progression,
     };
 
     ImmutableArray<Yaml> yaml = type.Span is not ("Tools" or "Traps" or "Pickups" or "Weak Odyssey" or "Strong Odyssey")
         ? [LongAdventure]
         : [];
 
-    world.Item(nameStr, priority, world.Category($"{basic} ({type})", yaml), count);
+    world.Item(nameStr, priority, world.Category($"{basic} ({type})", yaml), int.Parse(count.Span));
     itemRequirements[nameStr] = [..requires];
 
     if (type.Span is "Weak Odyssey" or "Strong Odyssey")
@@ -245,8 +245,8 @@ var goalRegion = world.Region(
 
 var goalCategory = world.Category("Odyssey Survival");
 
-for (var i = 1; i <= 21; i++)
-    world.Location($"Odyssey Survival - {Ordinal(i)} Wave", goal.Take(i / 3).And().Opt(), goalCategory, goalRegion);
+for (var i = 0; i < 21; i++)
+    world.Location($"Odyssey Survival - {Ordinal(i + 1)} Wave", goal.Take(i / 3).And().Opt(), goalCategory, goalRegion);
 
 world.Location("Odyssey Survival - Trophy", goal.And().Opt(), goalCategory, goalRegion);
 world.Location("Odyssey Survival - Clear", goal.And().Opt(), goalCategory, goalRegion);
@@ -260,6 +260,10 @@ world.Location("Odyssey Survival - Goal", goal.And().Opt(), goalCategory, goalRe
 //     if (world.AllLocations.All(x => !Contains(x.SelfLogic, item)) &&
 //         world.AllRegions.All(x => !Contains(x.SelfLogic, item)))
 //         Console.WriteLine(item);
+
+var odysseyLocationCount = world.AllLocations.Count(x => x.Categories.All(x => x.Yaml.IsDefaultOrEmpty));
+var odysseyItemCount = world.AllItems.Sum(x => (x.Categories.All(x => x.Yaml.IsDefaultOrEmpty) ? 1 : 0) * x.Count);
+Console.WriteLine($"Odyssey only: {odysseyLocationCount}/{odysseyItemCount}");
 
 await world.Game("PlantsVsZombiesFusion", "Emik", "Take care of your Zen Garden, again!", [])
    .DisplayExported(Console.WriteLine)

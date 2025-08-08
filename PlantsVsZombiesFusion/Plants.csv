@@ -1,386 +1,388 @@
-Basic,Slots,Progressive Seed Slots
-Basic,Tools,Progressive Lawnmowers
-Basic,Tools,Plant Gloves
-Basic,Tools,Zombie Gloves
-Basic,Tools,Slow Mode
-Basic,Tools,Show Plant HP
-Basic,Tools,Show Zombie HP
-Basic,Tools,Hammer
-Basic,Tools,Shovel
-Basic,Traps,Shovel 1 Plant
-Basic,Traps,Increase Difficulty for the rest of the level
-Basic,Traps,Increase Game Speed for the rest of the level
-Basic,Tough Traps,Move the leftmost plant to the rightmost column
-Basic,Pickups,Fertilizer
-Basic,Pickups,Bucket
-Basic,Pickups,Jack-in-the-box
-Basic,Pickups,Pickaxe
-Basic,Pickups,Mecha Fragments
-Basic,Pickups,Football Helmet
-Basic,Pickups,Giga Mecha Fragments
-Basic,Pickups,Chrono Core
-Basic,Pickups,Coins
-Basic,Day,Peashooter
-Basic,Day,Sunflower
-Basic,Day,Cherry Bomb
-Basic,Day,Wall-nut
-Basic,Day,Potato Mine
-Basic,Day,Chomper
-Basic,Night,Puff-shroom
-Basic,Night,Fume-shroom
-Basic,Night,Hypno-shroom
-Basic,Night,Scaredy-shroom
-Basic,Night,Ice-shroom
-Basic,Night,Doom-shroom
-Basic,Pool,Lily Pad
-Basic,Pool,Squash
-Basic,Pool,Threepeater
-Basic,Pool,Tangle Kelp
-Basic,Pool,Jalapeno
-Basic,Pool,Spikeweed
-Basic,Pool,Torchwood
-Basic,Fog,Sea-shroom
-Basic,Fog,Plantern
-Basic,Fog,Cactus
-Basic,Fog,Blover
-Basic,Fog,Starfruit
-Basic,Fog,Pumpkin
-Basic,Fog,Magnet-shroom
-Basic,Roof,Cabbage-pult
-Basic,Roof,Flower Pot
-Basic,Roof,Kernel-pult
-Basic,Roof,Garlic
-Basic,Roof,Umbrella Leaf
-Basic,Roof,Marigold
-Basic,Roof,Melon-pult
-Basic,Snow,Firnace,
-Basic,Snow,Saw-me-not
-Basic,Snow,Spruce Sharpshooter
-Basic,Snow,Snow Lotus
-Basic,Snow,Aloe Aqua
-Basic,Snow,Bamblock
-Basic,Snow,Frozen Giftbox
-Basic,Extra,Endoflame
-Basic,Extra,Barley/Obsidian Barley
-Basic,Extra,Cattail Girl
-Basic,Extra,Nyan Squash
-Basic,Extra,Tall-nut,Wall-nut
-Basic,Extra,Gloom-shroom,Fume-shroom
-Basic,Extra,Spikerock,Spikeweed
-Basic,Extra,Cattail,Lily Pad
-Basic,Extra,Cob Cannon,Kernel-pult
-Basic,Extra,Plant Giftbox
-Basic,Extra,Zombie Giftbox
-Basic,Extra,Sniper Pea,Gatling Pea
-Basic,Extra,Jicamagic
-Basic,Extra,Queen Endoflame
-Basic,Extra,Burger Blaster
-Basic,Extra,Imitater
-Basic,Extra,Amp-nion
-Basic,Extra,Coldsnap Bean
-Basic,Extra,Grave Buster
-Basic,Extra,Swordsage Starfruit/Swordmaster Starfruit
-Basic,Extra,Doubleblast Passionfruit
-Basic,Extra,Pearmafrost
-Basic,Extra,Icetip Lily
-Basic,Extra,Chrysanctum
-Basic,Extra,Diamond-mine
-Basic,Extra,Spruce Ballista,Spruce Sharpshooter
-Fusion,Day,Pea Sunflower,Peashooter,Sunflower
-Fusion,Day,Cherryshooter,Peashooter,Cherry Bomb
-Fusion,Day,Pea-nut,Peashooter,Wall-nut
-Fusion,Day,Pea Mine,Peashooter,Potato Mine
-Fusion,Day,Chomp-shooter,Peashooter,Chomper
-Fusion,Day,Twin Sunflower,Sunflower
-Fusion,Day,Solar Bomb,Sunflower,Cherry Bomb
-Fusion,Day,Solar-nut,Sunflower,Wall-nut
-Fusion,Day,Solar Mine,Sunflower,Potato Mine
-Fusion,Day,Solar Chomper,Sunflower,Chomper
-Fusion,Day,Cherry-nut,Cherry Bomb,Wall-nut
-Fusion,Day,Cherry Chomper,Cherry Bomb,Chomper
-Fusion,Day,Giant wall-nut,Wall-nut
-Fusion,Day,Mine-nut,Wall-nut,Potato Mine
-Fusion,Day,Chomp-nut,Wall-nut,Chomper
-Fusion,Day,Chomp-mine,Potato Mine,Chomper
-Fusion,Day,Explod-o-tato Mine,Cherry Bomb,Potato Mine
-Fusion,Night,Pea-shroom,Peashooter,Puff-shroom
-Fusion,Night,Sun-shroom,Sunflower,Puff-shroom
-Fusion,Night,Gnome-shroom,Puff-shroom,Hypno-shroom
-Fusion,Night,Nut-shroom,Wall-nut,Puff-shroom
-Fusion,Night,Hail-shroom,Puff-shroom,Ice-shroom
-Fusion,Night,Boom-shroom,Puff-shroom,Doom-shroom
-Fusion,Night,Perfume-shroom,Fume-shroom,Hypno-shroom
-Fusion,Night,Gusty-shroom,Fume-shroom,Scaredy-shroom
-Fusion,Night,Frost-shroom,Fume-shroom,Ice-shroom
-Fusion,Night,Soot-shroom,Fume-shroom,Doom-shroom
-Fusion,Night,Trippy-shroom,Hypno-shroom,Scaredy-shroom
-Fusion,Night,Cryonic-shroom,Hypno-shroom,Ice-shroom
-Fusion,Night,Curse-shroom,Hypno-shroom,Doom-shroom
-Fusion,Night,Shivery-shroom,Scaredy-shroom,Ice-shroom
-Fusion,Night,Frenzy-shroom,Scaredy-shroom,Doom-shroom
-Fusion,Night,Doomise-shroom,Ice-shroom,Doom-shroom
-Fusion,Night,Snow Pea,Peashooter,Ice-shroom
-Fusion,Night,Hypno-nut,Wall-nut,Hypno-shroom
-Fusion,Night,Nugget-shroom,Potato Mine,Puff-shroom
-Fusion,Night,Spuddy-shroom,Potato Mine,Scaredy-shroom
-Fusion,Night,Doom Chomper,Chomper,Doom-shroom
-Fusion,Night,Frost Wall-nut,Wall-nut,Ice-shroom
-Fusion,Night,Doom Pea,Peashooter,Doom-shroom
-Fusion,Night,Frozen Cherry,Cherry Bomb,Ice-shroom
-Fusion,Night,Hypno Mine,Potato Mine,Hypno-shroom
-Fusion,Night,Doom-nut,Wall-nut,Doom-shroom
-Fusion,Night,Bright-shroom,Sunflower,Fume-shroom
-Fusion,Night,Sunny-shroom,Sunflower,Scaredy-shroom
-Fusion,Night,Doomflower,Sunflower,Doom-shroom
-Fusion,Pool,Squash-spreader,Squash,Threepeater
-Fusion,Pool,Strange Kelp,Squash,Tangle Kelp
-Fusion,Pool,Spicy Squash,Squash,Jalapeno
-Fusion,Pool,Squashweed,Squash,Spikeweed
-Fusion,Pool,Squashwood,Squash,Torchwood
-Fusion,Pool,Kelp-spreader,Threepeater,Tangle Kelp
-Fusion,Pool,Scorched Threepeater,Threepeater,Jalapeno
-Fusion,Pool,Weed-spreader,Threepeater,Spikeweed
-Fusion,Pool,Torchthree,Threepeater,Torchwood
-Fusion,Pool,Spicy Kelp,Tangle Kelp,Jalapeno
-Fusion,Pool,Torch-kelp,Tangle Kelp,Torchwood
-Fusion,Pool,Scorchweed,Jalapeno,Spikeweed
-Fusion,Pool,Frostweed,Ice-shroom,Spikeweed
-Fusion,Pool,Scorchwood,Jalapeno,Torchwood
-Fusion,Pool,Torchweed,Torchwood,Spikeweed
-Fusion,Pool,Boomwood,Cherry Bomb,Torchwood
-Fusion,Pool,Chili Mine,Potato Mine,Jalapeno
-Fusion,Pool,Unstable Jalapeno,Ice-shroom,Jalapeno
-Fusion,Pool,Bamboom,Cherry Bomb,Jalapeno
-Fusion,Pool,Spike-nut,Wall-nut,Spikeweed
-Fusion,Pool,Frostburn-wood,Ice-shroom,Torchwood
-Fusion,Pool,Flame-shroom,Fume-shroom,Jalapeno
-Fusion,Pool,Doomwood,Doom-shroom,Torchwood
-Fusion,Pool,Icy Squash,Ice-shroom,Squash
-Fusion,Pool,Hypno Squash,Hypno-shroom,Squash
-Fusion,Pool,Tangle Mine,Potato Mine,Tangle Kelp
-Fusion,Pool,Kelp Mine,Potato Mine,Tangle Kelp
-Fusion,Pool,Scorch Wall-nut,Wall-nut,Jalapeno
-Fusion,Pool,Spike-kelp,Tangle Kelp,Spikeweed
-Fusion,Pool,Tangle Weed,Tangle Kelp,Spikeweed
-Fusion,Pool,Potato Spreader,Potato Mine,Threepeater
-Fusion,Pool,Squash-nut,Wall-nut,Squash
-Fusion,Fog,Sunset-shroom,Sunflower,Sea-shroom
-Fusion,Fog,Beacon-shroom,Sea-shroom,Plantern
-Fusion,Fog,Sea Thorn-shroom,Sea-shroom,Cactus
-Fusion,Fog,Tide-shroom,Sea-shroom,Blover
-Fusion,Fog,Sea Star,Sea-shroom,Starfruit
-Fusion,Fog,Anchor-shroom,Sea-shroom,Magnet-shroom
-Fusion,Fog,Lumos Cactus,Plantern,Cactus
-Fusion,Fog,Glowver,Plantern,Blover
-Fusion,Fog,Starglow,Plantern,Starfruit
-Fusion,Fog,Jack O' Lantern,Plantern,Pumpkin
-Fusion,Fog,Lumos Magnet,Plantern,Magnet-shroom
-Fusion,Fog,Cactus Drone,Cactus,Blover
-Fusion,Fog,Starthorn,Cactus,Starfruit
-Fusion,Fog,Thorny Pumpkin,Cactus,Pumpkin
-Fusion,Fog,Magnethorn,Cactus,Magnet-shroom
-Fusion,Fog,Starblover,Starfruit,Blover
-Fusion,Fog,Windy Pumpkin,Blover,Pumpkin
-Fusion,Fog,Magnet Blover,Magnet-shroom,Blover
-Fusion,Fog,Starry Pumpkin,Starfruit,Pumpkin
-Fusion,Fog,Starmorph,Magnet-shroom,Starfruit
-Fusion,Fog,Pumpkin Morph,Magnet-shroom,Pumpkin
-Fusion,Fog,Solar Magnet,Sunflower,Magnet-shroom
-Fusion,Fog,Grenadier Magnet,Cherry Bomb,Magnet-shroom
-Fusion,Fog,Charm Magnet,Hypno-shroom,Magnet-shroom
-Fusion,Fog,Lure-shroom,Fume-shroom,Magnet-shroom
-Fusion,Fog,Cherry Pumpkin,Cherry Bomb,Pumpkin
-Fusion,Fog,Mind-blover,Hypno-shroom,Blover
-Fusion,Fog,Twinkle-shroom,Puff-shroom,Starfruit
-Fusion,Fog,Pumpkin Mine,Potato Mine,Pumpkin
-Fusion,Fog,Doom Cactus,Doom-shroom,Cactus
-Fusion,Fog,Sparkwood,Torchwood,Starfruit
-Fusion,Fog,Spicy Starfruit,Jalapeno,Starfruit
-Fusion,Fog,Scarless Pumpkin,Scaredy-shroom,Pumpkin
-Fusion,Fog,Starry-shroom,Scaredy-shroom,Starfruit
-Fusion,Fog,Squash Pumpkin,Squash,Pumpkin
-Fusion,Fog,Hypno Pumpkin,Hypno-shroom,Pumpkin
-Fusion,Fog,Dormant-shroom,Doom-shroom,Magnet-shroom
-Fusion,Fog,Pea Drone,Peashooter,Blover
-Fusion,Fog,Lumos Angler,Chomper,Plantern
-Fusion,Fog,Cherry Drone,Cherry Bomb,Blover
-Fusion,Fog,Drone-nut,Wall-nut,Blover
-Fusion,Fog,Thorn-nut,Wall-nut,Cactus
-Fusion,Fog,Star-nut,Wall-nut,Starfruit
-Fusion,Roof,Solar-pult,Sunflower,Cabbage-pult
-Fusion,Roof,Cabbage Pot,Flower Pot,Cabbage-pult
-Fusion,Roof,Taco-pult,Cabbage-pult,Kernel-pult
-Fusion,Roof,Garbage-pult,Cabbage-pult,Garlic
-Fusion,Roof,Umbrella Kale,Cabbage-pult,Umbrella Leaf
-Fusion,Roof,Silver Cabbage,Cabbage-pult,Marigold
-Fusion,Roof,Cracked Melon,Cabbage-pult,Melon-pult
-Fusion,Roof,Kernel Pot,Flower Pot,Kernel-pult
-Fusion,Roof,Garlic Pot,Flower Pot,Garlic
-Fusion,Roof,Umbrella Pot,Flower Pot,Umbrella Leaf
-Fusion,Roof,Silver Pot,Flower Pot,Marigold
-Fusion,Roof,Melon Pot,Flower Pot,Melon-pult
-Fusion,Roof,Clove-pult,Kernel-pult,Garlic
-Fusion,Roof,Umbrella Husk,Kernel-pult,Umbrella Leaf
-Fusion,Roof,Silver Kernel,Kernel-pult,Marigold
-Fusion,Roof,Corn-pult,Kernel-pult,Melon-pult
-Fusion,Roof,Umbrella Clove,Garlic,Umbrella Leaf
-Fusion,Roof,Silver Garlic,Garlic,Marigold
-Fusion,Roof,Garlic-pult,Melon-pult,Garlic
-Fusion,Roof,Silver Umbrella,Umbrella Leaf,Marigold
-Fusion,Roof,Umbrella Rind,Melon-pult,Umbrella Leaf
-Fusion,Roof,Twin Marigold,Marigold
-Fusion,Roof,Silver Sunflower,Sunflower,Marigold
-Fusion,Roof,Silver Melon,Melon-pult,Marigold
-Fusion,Roof,Winter Melon,Ice-shroom,Melon-pult
-Fusion,Roof,Foul-shroom,Fume-shroom,Garlic
-Fusion,Roof,Summer Melon,Jalapeno,Melon-pult
-Fusion,Roof,Gold Magnet,Magnet-shroom,Marigold
-Fusion,Roof,Disguster,Blover,Garlic
-Fusion,Roof,Sunflower Pot,Sunflower,Flower Pot
-Fusion,Roof,Lumos Umbrella,Plantern,Umbrella Leaf
-Fusion,Roof,Umbrella Thorn,Cactus,Umbrella Leaf
-Fusion,Roof,Lumos Pot,Plantern,Flower Pot
-Fusion,Roof,Spring Melon,Fume-shroom,Melon-pult
-Fusion,Roof,Popcorn-pult,Puff-shroom,Kernel-pult
-Fusion,Roof,Umbrella Hoverleaf,Blover,Umbrella Leaf
-Fusion,Roof,Umbrella Shell,Wall-nut,Umbrella Leaf
-Fusion,Roof,Bombrella,Cherry Bomb,Umbrella Leaf
-Fusion,Roof,Kernel Morph,Magnet-shroom,Kernel-pult
-Fusion,Roof,Hypno Garlic,Hypno-shroom,Garlic
-Fusion,Roof,Cherry Pot,Cherry Bomb,Flower Pot
-Fusion,Roof,Silver Doom-shroom,Doom-shroom,Marigold
-Fusion,Snow,Twin Saw-me-not,Saw-me-not
-Fusion,Snow,Spruce Sawshooter,Saw-me-not,Spruce Sharpshooter
-Fusion,Snow,Soak-me-not,Saw-me-not,Aloe Aqua
-Fusion,Snow,Spruce Sprayshooter,Spruce Sharpshooter,Aloe Aqua
-Fusion,Snow,Snowbloom Spruce,Spruce Sharpshooter,Snow Lotus
-Fusion,Snow,Shield Lotus,Saw-me-not,Snow Lotus
-Fusion,Snow,Aloe Alba,Snow Lotus,Aloe Aqua
-Fusion,Snow,Spruce Firnace,Firnace,Spruce Sharpshooter
-Fusion,Snow,Saw Firnace,Firnace,Saw-me-not
-Fusion,Snow,Lotus Firnace,Firnace,Snow Lotus
-Fusion,Snow,Aloe Firnace,Firnace,Aloe Aqua
-Fusion,Snow,Bamblotus,Snow Lotus,Bamblock
-Fusion,Snow,Bambloe,Aloe Aqua,Bamblock
-Fusion,Extra,Frost Tall-nut,Tall-nut,Ice-shroom
-Fusion,Extra,Frost Gloom-shroom,Ice-shroom,Gloom-shroom
-Fusion,Extra,Spike-ice,Ice-shroom,Spikerock
-Fusion,Extra,Frost Cattail,Ice-shroom,Cattail
-Fusion,Extra,Cryo Cannon,Ice-shroom,Cob Cannon
-Fusion,Extra,Scorch Tall-nut,Tall-nut,Jalapeno
-Fusion,Extra,Flame Gloom-shroom,Gloom-shroom,Jalapeno
-Fusion,Extra,Spike-hearth,Jalapeno,Spikerock
-Fusion,Extra,Flame Cattail,Jalapeno,Cattail
-Fusion,Extra,Pyro Cannon,Jalapeno,Cob Cannon
-Fusion,Extra,Blazer Pea,Jalapeno,Sniper Pea
-Fusion,Extra,Pea Commando,Sniper Pea,Peashooter
-Fusion,Extra,Blizzard Commando,Ice-shroom,Pea Commando
-Fusion,Extra,Atlantis Ballista,Aloe Aqua,Spruce Ballista
-Fusion,Peas,Repeater,Peashooter
-Fusion,Peas,Split Pea,Peashooter
-Fusion,Peas,Gatling Pea,Peashooter
-Fusion,Peas,Cherrypeater,Cherry Bomb,Repeater
-Fusion,Peas,Split Cherry,Cherry Bomb,Split Pea
-Fusion,Peas,Gatling Cherry,Cherry Bomb,Gatling Pea
-Fusion,Peas,Snow Repeater,Ice-shroom,Repeater
-Fusion,Peas,Split Snow,Ice-shroom,Split Pea
-Fusion,Peas,Gatling Snow,Ice-shroom,Gatling Pea
-Fusion,Peas,Icicle-shroom,Puff-shroom,Snow Pea
-Fusion,Peas,Repeat-shroom,Puff-shroom,Repeater
-Fusion,Peas,Split Pea-shroom,Puff-shroom,Split Pea
-Fusion,Peas,Gatling Pea-shroom,Puff-shroom,Gatling Pea
-Fusion,Enemy,Buckshooter,Peashooter,Bucket
-Fusion,Enemy,Starsteel,Starmorph,Bucket
-Fusion,Enemy,Starjoker,Starmorph,Jack-in-the-box
-Fusion,Enemy,Starpick,Starmorph,Pickaxe
-Fusion,Enemy,Back-nut,Wall-nut,Bucket
-Fusion,Enemy,Steel Pumpkin,Pumpkin Morph,Bucket
-Fusion,Enemy,Joker Pumpkin,Pumpkin Morph,Jack-in-the-box
-Fusion,Enemy,Miner Pumpkin,Pumpkin Morph,Pickaxe
-Fusion,Enemy,Mecha-nut,Wall-nut,Mecha Fragments
-Fusion,Enemy,Football-nut,Tall-nut,Football Helmet
-Fusion,Enemy,Rust-shroom,Lure-shroom,Bucket
-Fusion,Enemy,Football-shroom,Rust-shroom,Football Helmet
-Fusion,Enemy,Buck-shroom,Pea-shroom,Bucket
-Fusion,Enemy,Giga Mecha-nut,Wall-nut,Giga Mecha Fragments
-Fusion,Enemy,Chrono Pea,Peashooter,Chrono Core
-Fusion,Enemy,Portal-pult,Kernel Morph,Chrono Core
-Fusion,Enemy,Bolt-pult,Kernel Morph,Bucket
-Fusion,Enemy,Doomwarp-shroom,Dormant-shroom,Chrono Core
-Fusion,Enemy,Chrono-nut,Wall-nut,Chrono Core
-Fusion,Enemy,Doomplate-shroom,Dormant-shroom,Bucket
-Fusion,Enemy,Doombox-shroom,Dormant-shroom,Jack-in-the-box
-Fusion,Enemy,Iron Squash,Squash,Bucket
-Fusion,Gold,Golden Cabbage,Silver Cabbage,Coins
-Fusion,Gold,Golden Pot,Silver Pot,Coins
-Fusion,Gold,Golden Kernel,Silver Kernel,Coins
-Fusion,Gold,Golden Garlic,Silver Garlic,Coins
-Fusion,Gold,Golden Umbrella,Silver Umbrella,Coins
-Fusion,Gold,Golden Melon,Silver Melon,Coins
-Fusion,Gold,Golden Sunflower,Silver Sunflower,Coins
-Fusion,Gold,Golden Doom-shroom,Silver Doom-shroom,Coins
-Fusion,Advanced,Explod-o-shooter,Cherry Bomb,Cherryshooter
-Fusion,Advanced,Chompzilla,Peashooter,Wall-nut,Chomper
-Fusion,Advanced,Charm-shroom,Fume-shroom,Scaredy-shroom,Hypno-shroom
-Fusion,Advanced,Doomspike-shroom,Fume-shroom,Ice-shroom,Doom-shroom
-Fusion,Advanced,Infernowood,Jalapeno,Scorchwood
-Fusion,Advanced,Krakerberus,Squash,Kelp-spreader
-Fusion,Advanced,Stardrop,Plantern,Starfruit,Magnet-shroom
-Fusion,Advanced,Pump-karrier,Pumpkin,Cactus,Blover
-Fusion,Advanced,Salad-pult,Cabbage-pult,Kernel-pult,Melon-pult
-Fusion,Advanced,Alchemist Umbrella,Golden Garlic,Golden Umbrella
-Fusion,Advanced,Spruce Supershooter,Saw-me-not,Spruce Sharpshooter,Aloe Aqua
-Fusion,Advanced,Firnurse,Firnace,Aloe Alba
-Fusion,Titan,Melon Mortar,Kernel-pult,Melon-pult,Jicamagic
-Fusion,Titan,Pumpkin Bunker,Joker Pumpkin,Magnet-shroom,Cherry Pumpkin,Jicamagic
-Fusion,Titan,Chomper Maw,Chomper,Jicamagic
-Fusion,Titan,Titan Pea Turret,Repeater,Threepeater,Jicamagic
-Fusion,Titan,Leviathan-shroom,Tangle Kelp,Sea-shroom,Jicamagic
-Fusion,Weak Odyssey,Gatling Doom,Gatling Pea,Doom-shroom
-Fusion,Weak Odyssey,Gatling Frenzy-shroom,Scaredy-shroom,Gatling Doom
-Fusion,Weak Odyssey,Twin Solar-nut,Wall-nut,Solar-nut
-Fusion,Weak Odyssey,Gatling Icicle-shroom,Puff-shroom,Gatling Snow
-Fusion,Weak Odyssey,Gatling Sunburst-shroom,Sunflower,Gatling Icicle-shroom
-Fusion,Weak Odyssey,Empress-shroom,Hypno-shroom
-Fusion,Weak Odyssey,Enchantress-shroom,Cherry Bomb,Empress-shroom
-Fusion,Weak Odyssey,Calamity-shroom,Doom-shroom,Curse-shroom
-Fusion,Weak Odyssey,Avarice-shroom,Marigold,Calamity-shroom
-Fusion,Weak Odyssey,Ashen Threepeater,Jalapeno,Scorched Threepeater
-Fusion,Weak Odyssey,Pheonix Threepeater,Jalapeno,Ashen Threepeater
-Fusion,Weak Odyssey,Spike-rock,Spike-ice,Spike-hearth
-Fusion,Weak Odyssey,Obsidian Spike-nut,Wall-nut,Spike-rock
-Fusion,Weak Odyssey,Magicat Nettle,Cattail,Nyan Squash
-Fusion,Weak Odyssey,Pharos Umbrella,Lumos Cactus,Lumos Umbrella
-Fusion,Weak Odyssey,Mechanized Pumpkin,Magnet-shroom,Pumpkin Morph
-Fusion,Weak Odyssey,Radiant Pad/Radiant Pot,Sunflower,Golden Pot
-Fusion,Weak Odyssey,Midas Umbrella,Umbrella Kale,Alchemist Umbrella
-Fusion,Weak Odyssey,Aegis Umbrella,Melon-pult,Midas Umbrella
-Fusion,Weak Odyssey,Tycoonwood,Gold Magnet,Torchthree
-Fusion,Weak Odyssey,Buck-shroom Squad,Magnet-shroom,Buck-shroom
-Fusion,Weak Odyssey,Tesla Magnet,Lumos Magnet,Grenadier Magnet
-Fusion,Strong Odyssey,Laser Pumpkin,Magnet Blover,Pump-karrier
-Fusion,Strong Odyssey,Wither-pult,Salad-pult,Garlic-pult
-Fusion,Strong Odyssey,Gatling Cherrybomber,Gatling Cherry,Explod-o-shooter
-Fusion,Strong Odyssey,Cherrybomber Drone,Blover,Gatling Cherrybomber
-Fusion,Strong Odyssey,Infernal Squashwood,Infernowood,Spicy Squash
-Fusion,Strong Odyssey,Cherrizilla,Chompzilla,Cherry Chomper
-Fusion,Strong Odyssey,Garlizilla,Garlic,Cherrizilla
-Fusion,Strong Odyssey,Doominator-shroom,Doomspike-shroom,Cryonic-shroom
-Fusion,Strong Odyssey,Thornminator,Cactus,Doominator-shroom
-Fusion,Strong Odyssey,Magnetar,Stardrop,Magnethorn
-Fusion,Strong Odyssey,Gravitron,Blover,Magnetar
-Fusion,Strong Odyssey,Shroomageddon,Doomspike-shroom,Frost Gloom-shroom
-Fusion,Strong Odyssey,Atomheart Plantern,Plantern,Shroomageddon
-Fusion,Strong Odyssey,Obsidian Tall-nut,Frost Tall-nut,Scorch Tall-nut
-Fusion,Strong Odyssey,Obsidian-mine,Potato Mine,Obsidian Tall-nut
-Fusion,Strong Odyssey,Cob-literation,Cryo Cannon,Doomise-shroom
-Fusion,Strong Odyssey,Charmatron-shroom,Charm-shroom,Charm Magnet
-Fusion,Strong Odyssey,Titan Apeacalypse Minigun,Unstable Jalapeno,Titan Pea Turret
-Fusion,Strong Odyssey,Apeacalypse Railgun,Sniper Pea,Titan Apeacalypse Minigun
-Fusion,Strong Odyssey,Helios Cabbage,Solar-pult,Golden Cabbage
-Fusion,Strong Odyssey,Napalm-shroom,Summer Melon,Football-shroom
-Fusion,Strong Odyssey,Kelptain Dreadhart,Twin Marigold,Krakerberus
-Fusion,Strong Odyssey,Quantum McCornics,Portal-pult,Popcorn-pult
-Fusion,Strong Odyssey,Astro-nut,Wall-nut,Quantum McCornics
-Fusion,Strong Odyssey,Boreal Lifereaver,Spruce Supershooter,Snowbloom Spruce
-Fusion,Strong Odyssey,Tyrannoflora Lux,Lumos Angler,Chomper Maw
+Basic,Slots,14,Progressive Seed Slots
+Basic,Tools,6,Progressive Lawnmowers
+Basic,Tools,1,Plant Gloves
+Basic,Tools,1,Zombie Gloves
+Basic,Tools,1,Slow Mode
+Basic,Tools,1,Show Plant HP
+Basic,Tools,1,Show Zombie HP
+Basic,Tools,1,Hammer
+Basic,Tools,1,Shovel
+Basic,Traps,10,Shovel 1 Plant
+Basic,Traps,10,Increase Difficulty for the rest of the level
+Basic,Traps,10,Increase Game Speed for the rest of the level
+Basic,Tough Traps,16,Hammer the weakest zombie
+Basic,Tough Traps,10,Shovel 5 Plants
+Basic,Tough Traps,6,Move the leftmost plant to the rightmost column
+Basic,Pickups,1,Fertilizer
+Basic,Pickups,1,Bucket
+Basic,Pickups,1,Jack-in-the-box
+Basic,Pickups,1,Pickaxe
+Basic,Pickups,1,Mecha Fragments
+Basic,Pickups,1,Football Helmet
+Basic,Pickups,1,Giga Mecha Fragments
+Basic,Pickups,1,Chrono Core
+Basic,Pickups,1,Coins
+Basic,Day,2,Peashooter
+Basic,Day,2,Sunflower
+Basic,Day,2,Cherry Bomb
+Basic,Day,2,Wall-nut
+Basic,Day,2,Potato Mine
+Basic,Day,2,Chomper
+Basic,Day,1,Plant Giftbox
+Basic,Day,1,Tall-nut,Wall-nut
+Basic,Day,1,Endoflame
+Basic,Night,2,Puff-shroom
+Basic,Night,2,Fume-shroom
+Basic,Night,2,Hypno-shroom
+Basic,Night,2,Scaredy-shroom
+Basic,Night,2,Ice-shroom
+Basic,Night,1,Doom-shroom
+Basic,Night,1,Zombie Giftbox
+Basic,Night,1,Gloom-shroom,Fume-shroom
+Basic,Night,1,Grave Buster
+Basic,Pool,2,Lily Pad
+Basic,Pool,2,Squash
+Basic,Pool,2,Threepeater
+Basic,Pool,2,Tangle Kelp
+Basic,Pool,2,Jalapeno
+Basic,Pool,2,Spikeweed
+Basic,Pool,2,Torchwood
+Basic,Pool,1,Spikerock,Spikeweed
+Basic,Pool,1,Barley/Obsidian Barley
+Basic,Fog,2,Sea-shroom
+Basic,Fog,2,Plantern
+Basic,Fog,2,Cactus
+Basic,Fog,2,Blover
+Basic,Fog,2,Starfruit
+Basic,Fog,2,Pumpkin
+Basic,Fog,2,Magnet-shroom
+Basic,Fog,1,Cattail,Lily Pad
+Basic,Fog,1,Imitater
+Basic,Roof,2,Cabbage-pult
+Basic,Roof,2,Flower Pot
+Basic,Roof,2,Kernel-pult
+Basic,Roof,2,Garlic
+Basic,Roof,2,Umbrella Leaf
+Basic,Roof,2,Marigold
+Basic,Roof,2,Melon-pult
+Basic,Roof,1,Cob Cannon,Kernel-pult
+Basic,Roof,1,Jicamagic
+Basic,Snow,2,Firnace
+Basic,Snow,2,Spruce Sharpshooter
+Basic,Snow,2,Saw-me-not
+Basic,Snow,2,Snow Lotus
+Basic,Snow,2,Aloe Aqua
+Basic,Snow,2,Bamblock
+Basic,Snow,1,Frozen Giftbox
+Basic,Snow,1,Spruce Ballista,Spruce Sharpshooter
+Basic,Extra,1,Cattail Girl
+Basic,Extra,1,Swordsage Starfruit/Swordmaster Starfruit
+Basic,Extra,1,Nyan Squash
+Basic,Extra,1,Burger Blaster
+Basic,Extra,1,Queen Endoflame
+Basic,Extra,1,Coldsnap Bean
+Basic,Extra,1,Amp-nion
+Basic,Extra,1,Sniper Pea,Gatling Pea
+Basic,Extra,1,Chrysanctum
+Basic,Extra,1,Icetip Lily
+Basic,Extra,1,Pearmafrost
+Basic,Extra,1,Doubleblast Passionfruit
+Basic,Extra,1,Diamond-mine
+Fusion,Day,1,Pea Sunflower,Peashooter,Sunflower
+Fusion,Day,1,Cherryshooter,Peashooter,Cherry Bomb
+Fusion,Day,1,Pea-nut,Peashooter,Wall-nut
+Fusion,Day,1,Pea Mine,Peashooter,Potato Mine
+Fusion,Day,1,Chomp-shooter,Peashooter,Chomper
+Fusion,Day,1,Twin Sunflower,Sunflower
+Fusion,Day,1,Solar Bomb,Sunflower,Cherry Bomb
+Fusion,Day,1,Solar-nut,Sunflower,Wall-nut
+Fusion,Day,1,Solar Mine,Sunflower,Potato Mine
+Fusion,Day,1,Solar Chomper,Sunflower,Chomper
+Fusion,Day,1,Cherry-nut,Cherry Bomb,Wall-nut
+Fusion,Day,1,Cherry Chomper,Cherry Bomb,Chomper
+Fusion,Day,1,Giant wall-nut,Wall-nut
+Fusion,Day,1,Mine-nut,Wall-nut,Potato Mine
+Fusion,Day,1,Chomp-nut,Wall-nut,Chomper
+Fusion,Day,1,Chomp-mine,Potato Mine,Chomper
+Fusion,Day,1,Explod-o-tato Mine,Cherry Bomb,Potato Mine
+Fusion,Night,1,Pea-shroom,Peashooter,Puff-shroom
+Fusion,Night,1,Sun-shroom,Sunflower,Puff-shroom
+Fusion,Night,1,Gnome-shroom,Puff-shroom,Hypno-shroom
+Fusion,Night,1,Nut-shroom,Wall-nut,Puff-shroom
+Fusion,Night,1,Hail-shroom,Puff-shroom,Ice-shroom
+Fusion,Night,1,Boom-shroom,Puff-shroom,Doom-shroom
+Fusion,Night,1,Perfume-shroom,Fume-shroom,Hypno-shroom
+Fusion,Night,1,Gusty-shroom,Fume-shroom,Scaredy-shroom
+Fusion,Night,1,Frost-shroom,Fume-shroom,Ice-shroom
+Fusion,Night,1,Soot-shroom,Fume-shroom,Doom-shroom
+Fusion,Night,1,Trippy-shroom,Hypno-shroom,Scaredy-shroom
+Fusion,Night,1,Cryonic-shroom,Hypno-shroom,Ice-shroom
+Fusion,Night,1,Curse-shroom,Hypno-shroom,Doom-shroom
+Fusion,Night,1,Shivery-shroom,Scaredy-shroom,Ice-shroom
+Fusion,Night,1,Frenzy-shroom,Scaredy-shroom,Doom-shroom
+Fusion,Night,1,Doomise-shroom,Ice-shroom,Doom-shroom
+Fusion,Night,1,Snow Pea,Peashooter,Ice-shroom
+Fusion,Night,1,Hypno-nut,Wall-nut,Hypno-shroom
+Fusion,Night,1,Nugget-shroom,Potato Mine,Puff-shroom
+Fusion,Night,1,Spuddy-shroom,Potato Mine,Scaredy-shroom
+Fusion,Night,1,Doom Chomper,Chomper,Doom-shroom
+Fusion,Night,1,Frost Wall-nut,Wall-nut,Ice-shroom
+Fusion,Night,1,Doom Pea,Peashooter,Doom-shroom
+Fusion,Night,1,Frozen Cherry,Cherry Bomb,Ice-shroom
+Fusion,Night,1,Hypno Mine,Potato Mine,Hypno-shroom
+Fusion,Night,1,Doom-nut,Wall-nut,Doom-shroom
+Fusion,Night,1,Bright-shroom,Sunflower,Fume-shroom
+Fusion,Night,1,Sunny-shroom,Sunflower,Scaredy-shroom
+Fusion,Night,1,Doomflower,Sunflower,Doom-shroom
+Fusion,Night,1,Frost Tall-nut,Tall-nut,Ice-shroom
+Fusion,Night,1,Frost Gloom-shroom,Ice-shroom,Gloom-shroom
+Fusion,Pool,1,Squash-spreader,Squash,Threepeater
+Fusion,Pool,1,Strange Kelp,Squash,Tangle Kelp
+Fusion,Pool,1,Spicy Squash,Squash,Jalapeno
+Fusion,Pool,1,Squashweed,Squash,Spikeweed
+Fusion,Pool,1,Squashwood,Squash,Torchwood
+Fusion,Pool,1,Kelp-spreader,Threepeater,Tangle Kelp
+Fusion,Pool,1,Scorched Threepeater,Threepeater,Jalapeno
+Fusion,Pool,1,Weed-spreader,Threepeater,Spikeweed
+Fusion,Pool,1,Torchthree,Threepeater,Torchwood
+Fusion,Pool,1,Spicy Kelp,Tangle Kelp,Jalapeno
+Fusion,Pool,1,Torch-kelp,Tangle Kelp,Torchwood
+Fusion,Pool,1,Scorchweed,Jalapeno,Spikeweed
+Fusion,Pool,1,Frostweed,Ice-shroom,Spikeweed
+Fusion,Pool,1,Scorchwood,Jalapeno,Torchwood
+Fusion,Pool,1,Torchweed,Torchwood,Spikeweed
+Fusion,Pool,1,Boomwood,Cherry Bomb,Torchwood
+Fusion,Pool,1,Chili Mine,Potato Mine,Jalapeno
+Fusion,Pool,1,Unstable Jalapeno,Ice-shroom,Jalapeno
+Fusion,Pool,1,Bamboom,Cherry Bomb,Jalapeno
+Fusion,Pool,1,Spike-nut,Wall-nut,Spikeweed
+Fusion,Pool,1,Frostburn-wood,Ice-shroom,Torchwood
+Fusion,Pool,1,Flame-shroom,Fume-shroom,Jalapeno
+Fusion,Pool,1,Doomwood,Doom-shroom,Torchwood
+Fusion,Pool,1,Icy Squash,Ice-shroom,Squash
+Fusion,Pool,1,Hypno Squash,Hypno-shroom,Squash
+Fusion,Pool,1,Tangle Mine,Potato Mine,Tangle Kelp
+Fusion,Pool,1,Kelp Mine,Potato Mine,Tangle Kelp
+Fusion,Pool,1,Scorch Wall-nut,Wall-nut,Jalapeno
+Fusion,Pool,1,Spike-kelp,Tangle Kelp,Spikeweed
+Fusion,Pool,1,Tangle Weed,Tangle Kelp,Spikeweed
+Fusion,Pool,1,Potato Spreader,Potato Mine,Threepeater
+Fusion,Pool,1,Squash-nut,Wall-nut,Squash
+Fusion,Pool,1,Spike-ice,Ice-shroom,Spikerock
+Fusion,Pool,1,Scorch Tall-nut,Tall-nut,Jalapeno
+Fusion,Pool,1,Flame Gloom-shroom,Gloom-shroom,Jalapeno
+Fusion,Pool,1,Spike-hearth,Jalapeno,Spikerock
+Fusion,Fog,1,Sunset-shroom,Sunflower,Sea-shroom
+Fusion,Fog,1,Beacon-shroom,Sea-shroom,Plantern
+Fusion,Fog,1,Sea Thorn-shroom,Sea-shroom,Cactus
+Fusion,Fog,1,Tide-shroom,Sea-shroom,Blover
+Fusion,Fog,1,Sea Star,Sea-shroom,Starfruit
+Fusion,Fog,1,Anchor-shroom,Sea-shroom,Magnet-shroom
+Fusion,Fog,1,Lumos Cactus,Plantern,Cactus
+Fusion,Fog,1,Glowver,Plantern,Blover
+Fusion,Fog,1,Starglow,Plantern,Starfruit
+Fusion,Fog,1,Jack O' Lantern,Plantern,Pumpkin
+Fusion,Fog,1,Lumos Magnet,Plantern,Magnet-shroom
+Fusion,Fog,1,Cactus Drone,Cactus,Blover
+Fusion,Fog,1,Starthorn,Cactus,Starfruit
+Fusion,Fog,1,Thorny Pumpkin,Cactus,Pumpkin
+Fusion,Fog,1,Magnethorn,Cactus,Magnet-shroom
+Fusion,Fog,1,Starblover,Starfruit,Blover
+Fusion,Fog,1,Windy Pumpkin,Blover,Pumpkin
+Fusion,Fog,1,Magnet Blover,Magnet-shroom,Blover
+Fusion,Fog,1,Starry Pumpkin,Starfruit,Pumpkin
+Fusion,Fog,1,Starmorph,Magnet-shroom,Starfruit
+Fusion,Fog,1,Pumpkin Morph,Magnet-shroom,Pumpkin
+Fusion,Fog,1,Solar Magnet,Sunflower,Magnet-shroom
+Fusion,Fog,1,Grenadier Magnet,Cherry Bomb,Magnet-shroom
+Fusion,Fog,1,Charm Magnet,Hypno-shroom,Magnet-shroom
+Fusion,Fog,1,Lure-shroom,Fume-shroom,Magnet-shroom
+Fusion,Fog,1,Cherry Pumpkin,Cherry Bomb,Pumpkin
+Fusion,Fog,1,Mind-blover,Hypno-shroom,Blover
+Fusion,Fog,1,Twinkle-shroom,Puff-shroom,Starfruit
+Fusion,Fog,1,Pumpkin Mine,Potato Mine,Pumpkin
+Fusion,Fog,1,Doom Cactus,Doom-shroom,Cactus
+Fusion,Fog,1,Sparkwood,Torchwood,Starfruit
+Fusion,Fog,1,Spicy Starfruit,Jalapeno,Starfruit
+Fusion,Fog,1,Scarless Pumpkin,Scaredy-shroom,Pumpkin
+Fusion,Fog,1,Starry-shroom,Scaredy-shroom,Starfruit
+Fusion,Fog,1,Squash Pumpkin,Squash,Pumpkin
+Fusion,Fog,1,Hypno Pumpkin,Hypno-shroom,Pumpkin
+Fusion,Fog,1,Dormant-shroom,Doom-shroom,Magnet-shroom
+Fusion,Fog,1,Pea Drone,Peashooter,Blover
+Fusion,Fog,1,Lumos Angler,Chomper,Plantern
+Fusion,Fog,1,Cherry Drone,Cherry Bomb,Blover
+Fusion,Fog,1,Drone-nut,Wall-nut,Blover
+Fusion,Fog,1,Thorn-nut,Wall-nut,Cactus
+Fusion,Fog,1,Star-nut,Wall-nut,Starfruit
+Fusion,Fog,1,Frost Cattail,Ice-shroom,Cattail
+Fusion,Fog,1,Flame Cattail,Jalapeno,Cattail
+Fusion,Roof,1,Solar-pult,Sunflower,Cabbage-pult
+Fusion,Roof,1,Cabbage Pot,Flower Pot,Cabbage-pult
+Fusion,Roof,1,Taco-pult,Cabbage-pult,Kernel-pult
+Fusion,Roof,1,Garbage-pult,Cabbage-pult,Garlic
+Fusion,Roof,1,Umbrella Kale,Cabbage-pult,Umbrella Leaf
+Fusion,Roof,1,Silver Cabbage,Cabbage-pult,Marigold
+Fusion,Roof,1,Cracked Melon,Cabbage-pult,Melon-pult
+Fusion,Roof,1,Kernel Pot,Flower Pot,Kernel-pult
+Fusion,Roof,1,Garlic Pot,Flower Pot,Garlic
+Fusion,Roof,1,Umbrella Pot,Flower Pot,Umbrella Leaf
+Fusion,Roof,1,Silver Pot,Flower Pot,Marigold
+Fusion,Roof,1,Melon Pot,Flower Pot,Melon-pult
+Fusion,Roof,1,Clove-pult,Kernel-pult,Garlic
+Fusion,Roof,1,Umbrella Husk,Kernel-pult,Umbrella Leaf
+Fusion,Roof,1,Silver Kernel,Kernel-pult,Marigold
+Fusion,Roof,1,Corn-pult,Kernel-pult,Melon-pult
+Fusion,Roof,1,Umbrella Clove,Garlic,Umbrella Leaf
+Fusion,Roof,1,Silver Garlic,Garlic,Marigold
+Fusion,Roof,1,Garlic-pult,Melon-pult,Garlic
+Fusion,Roof,1,Silver Umbrella,Umbrella Leaf,Marigold
+Fusion,Roof,1,Umbrella Rind,Melon-pult,Umbrella Leaf
+Fusion,Roof,1,Twin Marigold,Marigold
+Fusion,Roof,1,Silver Sunflower,Sunflower,Marigold
+Fusion,Roof,1,Silver Melon,Melon-pult,Marigold
+Fusion,Roof,1,Winter Melon,Ice-shroom,Melon-pult
+Fusion,Roof,1,Foul-shroom,Fume-shroom,Garlic
+Fusion,Roof,1,Summer Melon,Jalapeno,Melon-pult
+Fusion,Roof,1,Gold Magnet,Magnet-shroom,Marigold
+Fusion,Roof,1,Disguster,Blover,Garlic
+Fusion,Roof,1,Sunflower Pot,Sunflower,Flower Pot
+Fusion,Roof,1,Lumos Umbrella,Plantern,Umbrella Leaf
+Fusion,Roof,1,Umbrella Thorn,Cactus,Umbrella Leaf
+Fusion,Roof,1,Lumos Pot,Plantern,Flower Pot
+Fusion,Roof,1,Spring Melon,Fume-shroom,Melon-pult
+Fusion,Roof,1,Popcorn-pult,Puff-shroom,Kernel-pult
+Fusion,Roof,1,Umbrella Hoverleaf,Blover,Umbrella Leaf
+Fusion,Roof,1,Umbrella Shell,Wall-nut,Umbrella Leaf
+Fusion,Roof,1,Bombrella,Cherry Bomb,Umbrella Leaf
+Fusion,Roof,1,Kernel Morph,Magnet-shroom,Kernel-pult
+Fusion,Roof,1,Hypno Garlic,Hypno-shroom,Garlic
+Fusion,Roof,1,Cherry Pot,Cherry Bomb,Flower Pot
+Fusion,Roof,1,Silver Doom-shroom,Doom-shroom,Marigold
+Fusion,Roof,1,Cryo Cannon,Ice-shroom,Cob Cannon
+Fusion,Roof,1,Pyro Cannon,Jalapeno,Cob Cannon
+Fusion,Snow,1,Twin Saw-me-not,Saw-me-not
+Fusion,Snow,1,Spruce Sawshooter,Saw-me-not,Spruce Sharpshooter
+Fusion,Snow,1,Soak-me-not,Saw-me-not,Aloe Aqua
+Fusion,Snow,1,Spruce Sprayshooter,Spruce Sharpshooter,Aloe Aqua
+Fusion,Snow,1,Snowbloom Spruce,Spruce Sharpshooter,Snow Lotus
+Fusion,Snow,1,Shield Lotus,Saw-me-not,Snow Lotus
+Fusion,Snow,1,Aloe Alba,Snow Lotus,Aloe Aqua
+Fusion,Snow,1,Spruce Firnace,Firnace,Spruce Sharpshooter
+Fusion,Snow,1,Saw Firnace,Firnace,Saw-me-not
+Fusion,Snow,1,Lotus Firnace,Firnace,Snow Lotus
+Fusion,Snow,1,Aloe Firnace,Firnace,Aloe Aqua
+Fusion,Snow,1,Bamblotus,Snow Lotus,Bamblock
+Fusion,Snow,1,Bambloe,Aloe Aqua,Bamblock
+Fusion,Snow,1,Atlantis Ballista,Aloe Aqua,Spruce Ballista
+Fusion,Extra,1,Blazer Pea,Jalapeno,Sniper Pea
+Fusion,Extra,1,Pea Commando,Sniper Pea,Peashooter
+Fusion,Extra,1,Blizzard Commando,Ice-shroom,Pea Commando
+Fusion,Peas,1,Repeater,Peashooter
+Fusion,Peas,1,Split Pea,Peashooter
+Fusion,Peas,1,Gatling Pea,Peashooter
+Fusion,Peas,1,Cherrypeater,Cherry Bomb,Repeater
+Fusion,Peas,1,Split Cherry,Cherry Bomb,Split Pea
+Fusion,Peas,1,Gatling Cherry,Cherry Bomb,Gatling Pea
+Fusion,Peas,1,Snow Repeater,Ice-shroom,Repeater
+Fusion,Peas,1,Split Snow,Ice-shroom,Split Pea
+Fusion,Peas,1,Gatling Snow,Ice-shroom,Gatling Pea
+Fusion,Peas,1,Icicle-shroom,Puff-shroom,Snow Pea
+Fusion,Peas,1,Repeat-shroom,Puff-shroom,Repeater
+Fusion,Peas,1,Split Pea-shroom,Puff-shroom,Split Pea
+Fusion,Peas,1,Gatling Pea-shroom,Puff-shroom,Gatling Pea
+Fusion,Enemy,1,Buckshooter,Peashooter,Bucket
+Fusion,Enemy,1,Starsteel,Starmorph,Bucket
+Fusion,Enemy,1,Starjoker,Starmorph,Jack-in-the-box
+Fusion,Enemy,1,Starpick,Starmorph,Pickaxe
+Fusion,Enemy,1,Back-nut,Wall-nut,Bucket
+Fusion,Enemy,1,Steel Pumpkin,Pumpkin Morph,Bucket
+Fusion,Enemy,1,Joker Pumpkin,Pumpkin Morph,Jack-in-the-box
+Fusion,Enemy,1,Miner Pumpkin,Pumpkin Morph,Pickaxe
+Fusion,Enemy,1,Mecha-nut,Wall-nut,Mecha Fragments
+Fusion,Enemy,1,Football-nut,Tall-nut,Football Helmet
+Fusion,Enemy,1,Rust-shroom,Lure-shroom,Bucket
+Fusion,Enemy,1,Football-shroom,Rust-shroom,Football Helmet
+Fusion,Enemy,1,Buck-shroom,Pea-shroom,Bucket
+Fusion,Enemy,1,Giga Mecha-nut,Wall-nut,Giga Mecha Fragments
+Fusion,Enemy,1,Chrono Pea,Peashooter,Chrono Core
+Fusion,Enemy,1,Portal-pult,Kernel Morph,Chrono Core
+Fusion,Enemy,1,Bolt-pult,Kernel Morph,Bucket
+Fusion,Enemy,1,Doomwarp-shroom,Dormant-shroom,Chrono Core
+Fusion,Enemy,1,Chrono-nut,Wall-nut,Chrono Core
+Fusion,Enemy,1,Doomplate-shroom,Dormant-shroom,Bucket
+Fusion,Enemy,1,Doombox-shroom,Dormant-shroom,Jack-in-the-box
+Fusion,Enemy,1,Iron Squash,Squash,Bucket
+Fusion,Gold,1,Golden Cabbage,Silver Cabbage,Coins
+Fusion,Gold,1,Golden Pot,Silver Pot,Coins
+Fusion,Gold,1,Golden Kernel,Silver Kernel,Coins
+Fusion,Gold,1,Golden Garlic,Silver Garlic,Coins
+Fusion,Gold,1,Golden Umbrella,Silver Umbrella,Coins
+Fusion,Gold,1,Golden Melon,Silver Melon,Coins
+Fusion,Gold,1,Golden Sunflower,Silver Sunflower,Coins
+Fusion,Gold,1,Golden Doom-shroom,Silver Doom-shroom,Coins
+Fusion,Advanced,1,Explod-o-shooter,Cherry Bomb,Cherryshooter
+Fusion,Advanced,1,Chompzilla,Peashooter,Wall-nut,Chomper
+Fusion,Advanced,1,Charm-shroom,Fume-shroom,Scaredy-shroom,Hypno-shroom
+Fusion,Advanced,1,Doomspike-shroom,Fume-shroom,Ice-shroom,Doom-shroom
+Fusion,Advanced,1,Infernowood,Jalapeno,Scorchwood
+Fusion,Advanced,1,Krakerberus,Squash,Kelp-spreader
+Fusion,Advanced,1,Stardrop,Plantern,Starfruit,Magnet-shroom
+Fusion,Advanced,1,Pump-karrier,Pumpkin,Cactus,Blover
+Fusion,Advanced,1,Salad-pult,Cabbage-pult,Kernel-pult,Melon-pult
+Fusion,Advanced,1,Alchemist Umbrella,Golden Garlic,Golden Umbrella
+Fusion,Advanced,1,Spruce Supershooter,Saw-me-not,Spruce Sharpshooter,Aloe Aqua
+Fusion,Advanced,1,Firnurse,Firnace,Aloe Alba
+Fusion,Titan,1,Melon Mortar,Kernel-pult,Melon-pult,Jicamagic
+Fusion,Titan,1,Pumpkin Bunker,Joker Pumpkin,Magnet-shroom,Cherry Pumpkin,Jicamagic
+Fusion,Titan,1,Chomper Maw,Chomper,Jicamagic
+Fusion,Titan,1,Titan Pea Turret,Repeater,Threepeater,Jicamagic
+Fusion,Titan,1,Leviathan-shroom,Tangle Kelp,Sea-shroom,Jicamagic
+Fusion,Weak Odyssey,1,Gatling Doom,Gatling Pea,Doom-shroom
+Fusion,Weak Odyssey,1,Gatling Frenzy-shroom,Scaredy-shroom,Gatling Doom
+Fusion,Weak Odyssey,1,Twin Solar-nut,Wall-nut,Solar-nut
+Fusion,Weak Odyssey,1,Gatling Icicle-shroom,Puff-shroom,Gatling Snow
+Fusion,Weak Odyssey,1,Gatling Sunburst-shroom,Sunflower,Gatling Icicle-shroom
+Fusion,Weak Odyssey,1,Empress-shroom,Hypno-shroom
+Fusion,Weak Odyssey,1,Enchantress-shroom,Cherry Bomb,Empress-shroom
+Fusion,Weak Odyssey,1,Calamity-shroom,Doom-shroom,Curse-shroom
+Fusion,Weak Odyssey,1,Avarice-shroom,Marigold,Calamity-shroom
+Fusion,Weak Odyssey,1,Ashen Threepeater,Jalapeno,Scorched Threepeater
+Fusion,Weak Odyssey,1,Pheonix Threepeater,Jalapeno,Ashen Threepeater
+Fusion,Weak Odyssey,1,Spike-rock,Spike-ice,Spike-hearth
+Fusion,Weak Odyssey,1,Obsidian Spike-nut,Wall-nut,Spike-rock
+Fusion,Weak Odyssey,1,Magicat Nettle,Cattail,Nyan Squash
+Fusion,Weak Odyssey,1,Pharos Umbrella,Lumos Cactus,Lumos Umbrella
+Fusion,Weak Odyssey,1,Mechanized Pumpkin,Magnet-shroom,Pumpkin Morph
+Fusion,Weak Odyssey,1,Radiant Pad/Radiant Pot,Sunflower,Golden Pot
+Fusion,Weak Odyssey,1,Midas Umbrella,Umbrella Kale,Alchemist Umbrella
+Fusion,Weak Odyssey,1,Aegis Umbrella,Melon-pult,Midas Umbrella
+Fusion,Weak Odyssey,1,Tycoonwood,Gold Magnet,Torchthree
+Fusion,Weak Odyssey,1,Buck-shroom Squad,Magnet-shroom,Buck-shroom
+Fusion,Weak Odyssey,1,Tesla Magnet,Lumos Magnet,Grenadier Magnet
+Fusion,Strong Odyssey,1,Laser Pumpkin,Magnet Blover,Pump-karrier
+Fusion,Strong Odyssey,1,Wither-pult,Salad-pult,Garlic-pult
+Fusion,Strong Odyssey,1,Gatling Cherrybomber,Gatling Cherry,Explod-o-shooter
+Fusion,Strong Odyssey,1,Cherrybomber Drone,Blover,Gatling Cherrybomber
+Fusion,Strong Odyssey,1,Infernal Squashwood,Infernowood,Spicy Squash
+Fusion,Strong Odyssey,1,Cherrizilla,Chompzilla,Cherry Chomper
+Fusion,Strong Odyssey,1,Garlizilla,Garlic,Cherrizilla
+Fusion,Strong Odyssey,1,Doominator-shroom,Doomspike-shroom,Cryonic-shroom
+Fusion,Strong Odyssey,1,Thornminator,Cactus,Doominator-shroom
+Fusion,Strong Odyssey,1,Magnetar,Stardrop,Magnethorn
+Fusion,Strong Odyssey,1,Gravitron,Blover,Magnetar
+Fusion,Strong Odyssey,1,Shroomageddon,Doomspike-shroom,Frost Gloom-shroom
+Fusion,Strong Odyssey,1,Atomheart Plantern,Plantern,Shroomageddon
+Fusion,Strong Odyssey,1,Obsidian Tall-nut,Frost Tall-nut,Scorch Tall-nut
+Fusion,Strong Odyssey,1,Obsidian-mine,Potato Mine,Obsidian Tall-nut
+Fusion,Strong Odyssey,1,Cob-literation,Cryo Cannon,Doomise-shroom
+Fusion,Strong Odyssey,1,Charmatron-shroom,Charm-shroom,Charm Magnet
+Fusion,Strong Odyssey,1,Titan Apeacalypse Minigun,Unstable Jalapeno,Titan Pea Turret
+Fusion,Strong Odyssey,1,Apeacalypse Railgun,Sniper Pea,Titan Apeacalypse Minigun
+Fusion,Strong Odyssey,1,Helios Cabbage,Solar-pult,Golden Cabbage
+Fusion,Strong Odyssey,1,Napalm-shroom,Summer Melon,Football-shroom
+Fusion,Strong Odyssey,1,Kelptain Dreadhart,Twin Marigold,Krakerberus
+Fusion,Strong Odyssey,1,Quantum McCornics,Portal-pult,Popcorn-pult
+Fusion,Strong Odyssey,1,Astro-nut,Wall-nut,Quantum McCornics
+Fusion,Strong Odyssey,1,Boreal Lifereaver,Spruce Supershooter,Snowbloom Spruce
+Fusion,Strong Odyssey,1,Tyrannoflora Lux,Lumos Angler,Chomper Maw
