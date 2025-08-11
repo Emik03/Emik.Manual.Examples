@@ -10,6 +10,7 @@
   <Project Path="FTL/FTL.csproj" Type="Classic C#" />
   <Project Path="Girl'sNight/Girl'sNight.csproj" Type="Classic C#" />
   <Project Path="InfinityGene/InfinityGene.csproj" Type="Classic C#" />
+  <Project Path="IWannaDestroyTheNeedleverse\IWannaDestroyTheNeedleverse.csproj" Type="Classic C#" />
   <Project Path="PacManChampionshipEditionDXPlus/PacManChampionshipEditionDXPlus.csproj" Type="Classic C#" />
   <Project Path="PlantsVsZombiesFusion/PlantsVsZombiesFusion.csproj" Type="Classic C#" />
   <Project Path="StrawberryLabyrinth/StrawberryLabyrinth.csproj" Type="Classic C#" />
