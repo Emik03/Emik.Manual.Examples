@@ -1,0 +1,68 @@
+r_intro_1,true,Intro Stage Screen 1/4
+r_intro_2,false,Intro Stage Screen 2/4,Right Vines
+r_intro_3,false,Intro Stage Screen 3/4
+r_intro_4,false,Intro Stage Screen 4/4
+r_1,true,Stage 1 Screen 1/5
+r_2,false,Stage 1 Screen 2/5
+r_3,true,Stage 1 Screen 3/5,Platforms
+r_4,false,Stage 1 Screen 4/5,Red Stars,Blue Stars
+r_5,false,Stage 1 Screen 5/5,Red Stars,Green Stars,Blue Stars
+r_6,true,Stage 2 Screen 1/5,Left Vines,Right Vines,Blue Refreshers
+r_7,false,Stage 2 Screen 2/5,Left Vines,Right Vines,Blue Refreshers,Green Stars
+r_8,false,Stage 2 Screen 3/5,Right Vines,Red Stars,Green Stars,Blue Refreshers,Orange Refreshers
+r_9,false,Stage 2 Screen 4/5,Red Stars,Green Stars,Blue Stars,Blue Refreshers,Orange Refreshers,Moving Platforms,Platforms
+r_10,true,Stage 2 Screen 5/5,Pink Stars,Green Stars,Blue Refreshers,Orange Refreshers
+r_11,true,Stage 3 Screen 1/5,Right Vines,Blue Refreshers,Orange Refreshers
+r_12,true,Stage 3 Screen 2/5,Pink Stars,Red Stars,Green Stars,Yellow Stars,Blue Refreshers,Orange Refreshers,Moving Platforms
+r_13,false,Stage 3 Screen 3/5,Pink Stars,Green Stars,Blue Refreshers,Water,Vine Guns
+r_14,false,Stage 3 Screen 4/5,Pink Stars,Red Stars,Blue Stars,Green Stars,Water,Vine Guns,Orange Refreshers
+r_15,false,Stage 3 Screen 5/5,Pink Stars,Red Stars,Green Stars,Blue Refreshers,Orange Refreshers,Platforms,Water,Vine Guns
+r_16,true,Stage 4 Screen 1/5,Pink Stars,Purple Stars,Orange Refreshers
+r_17,false,Stage 4 Screen 2/5,Pink Stars,Purple Stars,Yellow Stars,Green Stars,Blue Refreshers,Orange Refreshers,Left Vines,Right Vines
+r_18,false,Stage 4 Screen 3/5,Pink Stars,Red Stars,Green Stars,Blue Refreshers,Platforms
+r_19,true,Stage 4 Screen 4/5,Orange Refreshers,Crystals
+r_20_final,false,Stage 4 Screen 5/5,Pink Stars,Red Stars,Green Stars,Blue Refreshers,Orange Refreshers,Left Vines,Right Vines,Water,Vine Guns
+r_TheDoor,false,Stage 4 Fake End,Pink Stars,Green Stars
+r_s1_1,true,Secret 1,Yellow Key,Blue Key,Green Key,Red Key,Coins
+r_s2_1,true,Secret 2 Screen 1/4,Shoot Blocks,Numbered Switches,Numbered Blocks,Green Switches,Green Block
+r_s2_2,false,Secret 2 Screen 2/4,Shoot Blocks,Numbered Switches,Numbered Blocks,Green Switches,Yellow Switches,Red Switches,Blue Switches,Green Block,Yellow Block,Red Block,Blue Block
+r_s2_3,false,Secret 2 Screen 3/4,Shoot Blocks,Numbered Switches,Numbered Blocks,Green Switches,Yellow Switches,Red Switches,Blue Switches,Green Block,Yellow Block,Red Block,Blue Block,Platforms
+r_s2_4,false,Secret 2 Screen 4/4,Shoot Blocks,Numbered Switches,Numbered Blocks,Coins
+r_s3_1,true,Secret 3 Screen 1/4
+r_s3_2,false,Secret 3 Screen 2/4
+r_s3_3,false,Secret 3 Screen 3/4
+r_s3_4,false,Secret 3 Screen 4/4,Coins
+r_s4_1,true,Secret 4 Screen 1/2,Up Arrows,Right Arrows,Blue Refreshers
+r_s4_2,false,Secret 4 Screen 2/2,Left Arrows,Blue Refreshers,Right Vines,Coins
+rSkull1,true,Skulldude Stage Screen 1/4,Slowfall
+rSkull2,false,Skulldude Stage Screen 2/4
+rSkull3,false,Skulldude Stage Screen 3/4,Slowfall
+rSkull4,false,Skulldude Stage Screen 4/4,Slowfall
+rDrIntro,true,Dribix Stage Screen 1/14 (Intro)
+rDr1,false,Dribix Stage Screen 2/14 (Stretching),Spinning Switches
+rDr2,false,Dribix Stage Screen 3/14 (Modular),Spinning Switches
+rDr3,false,Dribix Stage Screen 4/14 (Symmetry),Spinning Switches
+rDr4,false,Dribix Stage Screen 5/14 (Motion),Spinning Switches
+rDr5,false,Dribix Stage Screen 6/14 (Mountains),Spinning Switches,Platforms
+rDr6,false,Dribix Stage Screen 7/14 (Gorilla),Spinning Switches,Platforms
+rDr7,false,Dribix Stage Screen 8/14 (Plains),Spinning Switches
+rDr8,false,Dribix Stage Screen 9/14 (Soda Rivers),Spinning Switches,Soda
+rDr9,false,Dribix Stage Screen 10/14 (Box),Spinning Switches
+rDr10,false,Dribix Stage Screen 11/14 (More Rivers),Spinning Switches,Soda
+rDr11,false,Dribix Stage Screen 12/14 (Spilled my coffee and snacks),Spinning Switches,Coffee
+rDr12,false,Dribix Stage Screen 13/14 (Lizardman),Spinning Switches,Soda
+rDrEnd,false,Dribix Stage Screen 14/14 (Thanks!)
+rWolfie1,true,Wolfie Stage Screen 1/7,Dotkit Mode,Kid Mode,Boost Orbs
+rWolfie2,false,Wolfie Stage Screen 2/7,Boost Orbs
+rWolfie3,false,Wolfie Stage Screen 3/7,Dotkit Mode,Boost Orbs
+rWolfie4,false,Wolfie Stage Screen 4/7,Dotkit Mode,Kid Mode,Boost Orbs
+rWolfie5,false,Wolfie Stage Screen 5/7,Dotkit Mode,Boost Orbs
+rWolfie6,false,Wolfie Stage Screen 6/7,Dotkit Mode,Kid Mode,Boost Orbs
+rWolfie7,false,Wolfie Stage Screen 7/7,Kid Mode,Boost Orbs
+rCubetech,false,Core Stage Save 1/7 Clear,Red Stars,Green Stars,Blue Refreshers,Left Vines
+rCubetech,false,Core Stage Save 2/7 Clear,Pink Stars,Blue Refreshers,Left Vines
+rCubetech,false,Core Stage Save 3/7 Clear,Blue Refreshers
+rCubetech,false,Core Stage Save 4/7 Clear,Pink Stars,Green Stars,Blue Refreshers
+rCubetech,false,Core Stage Save 5/7 Clear,Red Stars,Green Stars,Orange Refreshers
+rCubetech,false,Core Stage Save 6/7 Clear,Core Heart,Blue Refreshers,Orange Refreshers
+rCubetech,false,Core Stage Save 7/7 Clear
