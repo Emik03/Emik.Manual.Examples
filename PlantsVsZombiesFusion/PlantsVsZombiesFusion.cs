@@ -26,6 +26,10 @@ static IAsyncEnumerable<SplitMemory<char, char, MatchOne>> Read([Match("^[^<>:\"
     return File.ReadLinesAsync(found ?? throw new FileNotFoundException(null, path)).Select(x => x.SplitOn(','));
 }
 
+const string LongAdventure = "long_adventure";
+
+static bool IsAlwaysPresent(Category x) => x.Yaml.All(x => x.Name.Span is not LongAdventure);
+
 static int SeedSlots(Logic? l) =>
     l switch
     {
@@ -124,7 +128,6 @@ static ImmutableArray<Chars> ToCounteringPlants(ReadOnlyMemory<char> zombie) =>
         _ => throw new FormatException(zombie.ToString()),
     };
 
-const string LongAdventure = "long_adventure";
 Dictionary<string, ImmutableArray<ReadOnlyMemory<char>>> itemRequirements = new(StringComparer.Ordinal);
 HashSet<string> odysseyPlants = new(StringComparer.Ordinal) { "Queen Endoflame", "Snipea" };
 
@@ -163,7 +166,7 @@ HashSet<string> notStrictlyNecessary = new(StringComparer.Ordinal);
 await foreach (var element in Read("NotStrictlyNecessary.csv"))
     notStrictlyNecessary.Add(element.ToString());
 
-await foreach (var (basic, (type, (count, (_, (name, requires))))) in Read("Plants.csv"))
+await foreach (var (basic, (type, (count, (version, (name, requires))))) in Read("Plants.csv"))
 {
     var nameStr = name.ToString();
 
@@ -178,11 +181,15 @@ await foreach (var (basic, (type, (count, (_, (name, requires))))) in Read("Plan
         _ => notStrictlyNecessary.Contains(name.ToString()) ? Priority.Useful : Priority.Progression,
     };
 
-    ImmutableArray<Yaml> yaml = type.Span is not ("Tools" or "Traps" or "Pickups" or "Weak Odyssey" or "Strong Odyssey")
-        ? [LongAdventure]
-        : [];
+    var yaml = ImmutableArray.CreateBuilder<Yaml>(2);
 
-    world.Item(nameStr, priority, world.Category($"{basic} ({type})", yaml), int.Parse(count.Span));
+    if (type.Span is not ("Tools" or "Traps" or "Pickups" or "Weak Odyssey" or "Strong Odyssey"))
+        yaml.Add(LongAdventure);
+
+    if (version.Span is "2.8")
+        yaml.Add("is_version_2_8");
+
+    world.Item(nameStr, priority, world.Category($"{basic} ({type})", yaml.DrainToImmutable()), int.Parse(count.Span));
     itemRequirements[nameStr] = [..requires];
 
     if (type.Span is "Weak Odyssey" or "Strong Odyssey")
@@ -258,8 +265,8 @@ world.Location("Odyssey Survival - Goal", goal.And().Opt(), goalCategory, goalRe
 //         world.AllRegions.All(x => !Contains(x.SelfLogic, item)))
 //         Console.WriteLine(item);
 
-var odysseyLocationCount = world.AllLocations.Count(x => x.Categories.All(x => x.Yaml.IsDefaultOrEmpty));
-var odysseyItemCount = world.AllItems.Sum(x => (x.Categories.All(x => x.Yaml.IsDefaultOrEmpty) ? 1 : 0) * x.Count);
+var odysseyLocationCount = world.AllLocations.Count(x => x.Categories.All(IsAlwaysPresent));
+var odysseyItemCount = world.AllItems.Sum(x => (x.Categories.All(IsAlwaysPresent) ? 1 : 0) * x.Count);
 Console.WriteLine($"Odyssey only: {odysseyLocationCount}/{odysseyItemCount}");
 
 await world.Game("PlantsVsZombiesFusion", "Emik", "Shovel 1 Plant", [])
