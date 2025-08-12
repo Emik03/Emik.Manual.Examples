@@ -181,15 +181,16 @@ await foreach (var (basic, (type, (count, (version, (name, requires))))) in Read
         _ => notStrictlyNecessary.Contains(name.ToString()) ? Priority.Useful : Priority.Progression,
     };
 
-    var yaml = ImmutableArray.CreateBuilder<Yaml>(2);
+    ImmutableArray<Yaml> yaml = type.Span is not ("Tools" or "Traps" or "Pickups" or "Weak Odyssey" or "Strong Odyssey")
+        ? [LongAdventure]
+        : [];
 
-    if (type.Span is not ("Tools" or "Traps" or "Pickups" or "Weak Odyssey" or "Strong Odyssey"))
-        yaml.Add(LongAdventure);
+    ArchipelagoArrayBuilder<Category> categories = world.Category($"{basic} ({type})", yaml);
 
     if (version.Span is "2.8")
-        yaml.Add("is_version_2_8");
+        categories.Add(world.Category("2.8", true, ["version_2_8"]));
 
-    world.Item(nameStr, priority, world.Category($"{basic} ({type})", yaml.DrainToImmutable()), int.Parse(count.Span));
+    world.Item(nameStr, priority, categories, int.Parse(count.Span));
     itemRequirements[nameStr] = [..requires];
 
     if (type.Span is "Weak Odyssey" or "Strong Odyssey")
