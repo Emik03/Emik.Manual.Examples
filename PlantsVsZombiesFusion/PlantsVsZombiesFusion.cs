@@ -41,10 +41,10 @@ static ImmutableArray<Chars> ToCounteringPlants(ReadOnlyMemory<char> zombie) =>
     zombie.Span switch
     {
         // ReSharper disable DuplicatedSwitchExpressionArms
-        "Armored Gargantuar" => ["Cob-literation"],
+        "Armored Gargantuar" => ["Cob-literator"],
         "Balloon Zombie" => ["Blover", "Cactus"],
         "Bobsled Zomboni" => ["Spikeweed"],
-        "Buck-nut Zombie" => ["Gatling Cherry", "Blazer Pea"],
+        "Buck-nut Zombie" => ["Gatling Cherry", "Blazer Snipea"],
         "Buckethead Zombie" => ["Magnet-shroom", "Split Pea"],
         "Bucknut-copter Zombie" => ["Cob Cannon", "Melon Mortar"],
         "Buckshoot-copter Zombie" => ["Cob Cannon", "Melon Mortar"],
@@ -52,7 +52,7 @@ static ImmutableArray<Chars> ToCounteringPlants(ReadOnlyMemory<char> zombie) =>
         "Buckshooter Zombie" => ["Chompzilla"],
         "Bungee Zombie" => ["Umbrella Leaf"],
         "Catapult Zombie" => ["Umbrella Leaf"],
-        "Cherry-nut Zombie" => ["Gatling Cherry", "Blazer Pea"],
+        "Cherry-nut Zombie" => ["Gatling Cherry", "Blazer Snipea"],
         "Cherryshooter Newspaper Zombie" => ["Cherry-nut", "Cherry Pumpkin"],
         "Cherryshooter Zombie" => ["Cherry-nut", "Cherry Pumpkin"],
         "Chronoporter Zombie" => ["Chrono-nut"],
@@ -67,32 +67,32 @@ static ImmutableArray<Chars> ToCounteringPlants(ReadOnlyMemory<char> zombie) =>
         "Explod-o-pult Zombie" => ["Umbrella Leaf"],
         "Explod-o-shooter Zombie" => ["Cherry-nut", "Cherry Pumpkin"],
         "Football Zombie" => ["Gatling Pea"],
-        "Football-nut Zombie" => ["Gatling Cherry", "Blazer Pea"],
+        "Football-nut Zombie" => ["Gatling Cherry", "Blazer Snipea"],
         "Frost Legion Blockhead Zombie" => ["Spruce Sharpshooter"],
         "Frost Legion Shieldbearer" => ["Spruce Sharpshooter"],
         "Frost Legion Snowball Launcher" => ["Snow Lotus", "Umbrella Rind"],
         "Frost Legion Trident Thrower" => ["Chompzilla"],
-        "Frost-nut Zombie" => ["Gatling Cherry", "Blazer Pea"],
+        "Frost-nut Zombie" => ["Gatling Cherry", "Blazer Snipea"],
         "Furling" => ["Saw-me-not"],
         "Gargantuar" => ["Titan Pea Turret"],
         "Gatling Cherry Newspaper Zombie" => ["Cherry-nut", "Cherry Pumpkin"],
         "Gatling Explod-o-rider Zombie" => ["Cherry-nut", "Cherry Pumpkin"],
         "Giga Buckshot Commando" => ["Obsidian Tall-nut", "Cherrizilla"],
-        "Giga Football-nut Zombie" => ["Gatling Cherry", "Blazer Pea"],
+        "Giga Football-nut Zombie" => ["Gatling Cherry", "Blazer Snipea"],
         "Giga Mecha-nut" => ["Umbrella Rind"],
-        "Giga Trident-nut Zombie" => ["Gatling Cherry", "Blazer Pea"],
+        "Giga Trident-nut Zombie" => ["Gatling Cherry", "Blazer Snipea"],
         "Giga-gargantuar" => ["Titan Pea Turret"],
-        "Grounded Sharkmarine" => ["Gatling Cherry", "Blazer Pea"],
+        "Grounded Sharkmarine" => ["Gatling Cherry", "Blazer Snipea"],
         "Ice-borg Executrix Mk. Alpha" => ["Spruce Supershooter"],
         "Jack-in-the-Box Zombie" => ["Gatling Pea"],
-        "Jackson Worldwide" => ["Cob-literation"],
-        "Jalapeno Zombie" => ["Gatling Cherry", "Blazer Pea"],
-        "Kirov Zomppelin" => ["Cob-literation"],
+        "Jackson Worldwide" => ["Cob-literator"],
+        "Jalapeno Zombie" => ["Gatling Cherry", "Blazer Snipea"],
+        "Kirov Zomppelin" => ["Cob-literator"],
         "Ladder Zombie" => ["Magnet-shroom"],
         "Mecha Gargantuar" => ["Magnet-shroom", "Titan Pea Turret"],
         "Mecha Giga-gargantuar" => ["Magnet-shroom", "Titan Pea Turret"],
         "Mecha-nut Zombie" => ["Umbrella Leaf"],
-        "Michael Zombie" => ["Gatling Cherry", "Blazer Pea"],
+        "Michael Zombie" => ["Gatling Cherry", "Blazer Snipea"],
         "Michael Zomboni" => ["Titan Pea Turret", "Chomper Maw"],
         "Newspaper Zombie" => ["Split Pea"],
         "Nian Zombie" => ["Bamboom"],
@@ -102,31 +102,31 @@ static ImmutableArray<Chars> ToCounteringPlants(ReadOnlyMemory<char> zombie) =>
         "Pogo Zombie" => ["Magnet-shroom", "Umbrella Leaf"],
         "Pole Vaulting Zombie" => ["Repeater"],
         "Professor Cherryz" => ["Obsidian Spike-nut"],
-        "Queen Jill-in-the-Box" => ["Unstable Jalapeno"],
+        "Queen Jill-in-the-Box" => ["Spicicle"],
         "Scholar Zombie" => ["Gatling Pea"],
         "Screen Door Buckshooter Zombie" => ["Magnet Blover"],
         "Screen Door Zombie" => ["Magnet-shroom"],
-        "Skystrider Mecha" => ["Unstable Jalapeno"],
+        "Skystrider Mecha" => ["Spicicle"],
         "Snorkel Zombie" => ["Squash", "Nyan Squash"],
         "Snowfur" => ["Saw-me-not"],
-        "Superstar Zombie" => ["Unstable Jalapeno"],
+        "Superstar Zombie" => ["Spicicle"],
         "Trident Hwacha" => ["Umbrella Leaf"],
         "Trident Zombie" => ["Chompzilla"],
         "Ultra Mecha-nut" => ["Aegis Umbrella"],
         "Undying Wraith" => ["Titan Pea Turret"],
-        "Wall-nut Zombie" => ["Gatling Cherry", "Blazer Pea"],
+        "Wall-nut Zombie" => ["Gatling Cherry", "Blazer Snipea"],
         "Whale Rider Yeti" => ["Kelp-spreader", "Leviathan-shroom"],
         "Yeti Zombie" => ["Jalapeno"],
         "Zombarine" => ["Kelp-spreader", "Leviathan-shroom"],
         "Zombie" => ["Peashooter"],
         "Zomboni" => ["Spikeweed"],
-        "Zomppelin" => ["Blover", "Cob-literation"],
+        "Zomppelin" => ["Blover", "Cob-literator"],
         _ => throw new FormatException(zombie.ToString()),
     };
 
 const string LongAdventure = "long_adventure";
 Dictionary<string, ImmutableArray<ReadOnlyMemory<char>>> itemRequirements = new(StringComparer.Ordinal);
-HashSet<string> odysseyPlants = new(StringComparer.Ordinal);
+HashSet<string> odysseyPlants = new(StringComparer.Ordinal) { "Queen Endoflame", "Snipea" };
 
 bool CanPlaceOn(ReadOnlyMemory<char> plant, Terrain terrain, bool isOdyssey) =>
     Expand(plant)
@@ -163,7 +163,7 @@ HashSet<string> notStrictlyNecessary = new(StringComparer.Ordinal);
 await foreach (var element in Read("NotStrictlyNecessary.csv"))
     notStrictlyNecessary.Add(element.ToString());
 
-await foreach (var (basic, (type, (count, (name, requires)))) in Read("Plants.csv"))
+await foreach (var (basic, (type, (count, (_, (name, requires))))) in Read("Plants.csv"))
 {
     var nameStr = name.ToString();
 
@@ -228,10 +228,7 @@ await foreach (var (category, (level, (terrain, (waves, (zombies, (plants, _))))
 Console.WriteLine("Odyssey Survival");
 
 ImmutableArray<Chars> goalPlants =
-[
-    "Twin Solar-nut", "Titan Apeacalypse Minigun", "Cob-literation",
-    "Obsidian Tall-nut", "Cherrizilla", "Laser Pumpkin",
-];
+    ["Twin Solar-nut", "Apeacalypse Minigun", "Cob-literator", "Obsidian Tall-nut", "Cherrizilla"];
 
 ImmutableArray<Logic?> goal =
     [..goalPlants.Select(Expand).Select(x => x.Select(x => world.AllItems[x]).Distinct().And())];
@@ -265,7 +262,7 @@ var odysseyLocationCount = world.AllLocations.Count(x => x.Categories.All(x => x
 var odysseyItemCount = world.AllItems.Sum(x => (x.Categories.All(x => x.Yaml.IsDefaultOrEmpty) ? 1 : 0) * x.Count);
 Console.WriteLine($"Odyssey only: {odysseyLocationCount}/{odysseyItemCount}");
 
-await world.Game("PlantsVsZombiesFusion", "Emik", "Take care of your Zen Garden, again!", [])
+await world.Game("PlantsVsZombiesFusion", "Emik", "Shovel 1 Plant", [])
    .DisplayExported(Console.WriteLine)
    .ZipAsync(Path.GetTempPath(), listChecks: true);
 
