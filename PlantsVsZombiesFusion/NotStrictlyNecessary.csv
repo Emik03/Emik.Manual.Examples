@@ -1,42 +1,44 @@
 Progressive Lawnmowers
 Slow Mode
-Shovel 1 Plant
+Shovel 5 Plants
+Hammer the weakest zombie
 Increase Difficulty for the rest of the level
 Increase Game Speed for the rest of the level
-Move the leftmost plant to the rightmost column
 Pickaxe
 Mecha Fragments
 Football Helmet
 Giga Mecha Fragments
 Endoflame
-Barley/Obsidian Barley
-Cattail Girl
-Queen Endoflame
-Burger Blaster
-Imitater
-Amp-nion
-Coldsnap Bean
 Grave Buster
-Swordsage Starfruit/Swordmaster Starfruit
-Doubleblast Passionfruit
-Pearmafrost
-Icetip Lily
+Barley
+Obsidian Barley
+Imitater
+Cattail Girl
+Swordsage Starfruit
+Swordmaster Starfruit
+Burger Blaster
+Coldsnap Bean
+Amp-nion
 Chrysanctum
+Icetip Lily
+Pearmafrost
+Doubleblast Passionfruit
 Diamond-mine
 Pea-nut
 Pea Mine
 Twin Sunflower
 Solar Bomb
 Solar Mine
-Giant wall-nut
+Giant Wall-nut
 Mine-nut
+Roasted Wall-nut
 Sun-shroom
 Gnome-shroom
 Nut-shroom
 Hail-shroom
 Boom-shroom
 Perfume-shroom
-Gusty-shroom
+Gutsy-shroom
 Frost-shroom
 Soot-shroom
 Trippy-shroom
@@ -51,9 +53,16 @@ Doom Pea
 Frozen Cherry
 Hypno Mine
 Doom-nut
-Bright-shroom
+Sunrise-shroom
 Sunny-shroom
 Doomflower
+Doom-spore
+Frost Gloom-shroom
+Hypno Pea
+Hypno Repeater
+Split Hypno
+Gatling Hypno
+Blasty-shroom
 Squash-spreader
 Spicy Squash
 Squashweed
@@ -61,30 +70,35 @@ Squashwood
 Weed-spreader
 Spicy Kelp
 Torch-kelp
+Roasted Spikeweed
+Roasted Kelp
 Scorchweed
 Frostweed
+Torch-nut
 Torchweed
 Chili Mine
 Frostburn-wood
 Flame-shroom
 Doomwood
+Roasted Squash
 Icy Squash
 Hypno Squash
 Tangle Mine
 Kelp Mine
-Scorch Wall-nut
+Flame Wall-nut
 Spike-kelp
 Tangle Weed
-Potato Spreader
+Potato-spreader
 Squash-nut
+Flame Gloom-shroom
+Nutwood
 Sunset-shroom
 Beacon-shroom
-Sea Thorn-shroom
+Urchin-shroom
 Tide-shroom
 Sea Star
 Anchor-shroom
 Glowver
-Starglow
 Cactus Drone
 Starthorn
 Magnethorn
@@ -92,14 +106,14 @@ Starblover
 Windy Pumpkin
 Starry Pumpkin
 Starmorph
-Charm Magnet
-Lure-shroom
+Hypno Magnet
+Morph-shroom
 Twinkle-shroom
 Pumpkin Mine
 Doom Cactus
 Sparkwood
 Spicy Starfruit
-Scarless Pumpkin
+Scareless Pumpkin
 Starry-shroom
 Squash Pumpkin
 Hypno Pumpkin
@@ -110,6 +124,16 @@ Cherry Drone
 Drone-nut
 Thorn-nut
 Star-nut
+Frost Cattail
+Flame Cattail
+Camo-shroom
+Mag-nut
+Fallout Blover
+Breeze Blover
+Death Star
+Pumpkin Brazier
+Roasted Pumpkin
+Shark-shroom
 Solar-pult
 Cabbage Pot
 Taco-pult
@@ -130,19 +154,31 @@ Silver Sunflower
 Silver Melon
 Winter Melon
 Summer Melon
+Drifty-shroom
 Disguster
 Sunflower Pot
 Umbrella Thorn
 Lumos Pot
 Spring Melon
 Popcorn-pult
-Umbrella Hoverleaf
+Hoverleaf
 Umbrella Shell
 Bombrella
 Kernel Morph
 Hypno Garlic
 Cherry Pot
 Silver Doom-shroom
+Pyro Cannon
+Melon-nut
+Cabbage-nut
+Butter-nut
+Foul-nut
+Slice-pult
+Sprout-pult
+Silver-nut
+Golden-nut
+Hypno Melon
+Ice Pot
 Spruce Sawshooter
 Soak-me-not
 Spruce Sprayshooter
@@ -155,14 +191,17 @@ Lotus Firnace
 Aloe Firnace
 Bamblotus
 Bambloe
-Frost Gloom-shroom
-Frost Cattail
-Flame Gloom-shroom
-Flame Cattail
-Pyro Cannon
-Pea Commando
-Blizzard Commando
 Atlantis Ballista
+Bamboo Firnace
+Bamboo Shooter
+Bamblade
+Berserker Pea
+Pea-storm Commando
+Blizzard Commando
+Threepeater Commando
+Reaper Snipea
+Snipea-shroom Squad
+Brainstorm Commando
 Cherrypeater
 Split Cherry
 Snow Repeater
@@ -174,7 +213,7 @@ Buckshooter
 Starsteel
 Starjoker
 Starpick
-Back-nut
+Buck-nut
 Miner Pumpkin
 Mecha-nut
 Football-nut
@@ -195,15 +234,23 @@ Golden Melon
 Golden Sunflower
 Golden Doom-shroom
 Firnurse
+Jugger-nut
+Queen Endoflame
 Gatling Frenzy-shroom
+Giant Solar-nut
 Gatling Sunburst-shroom
 Enchantress-shroom
 Avarice-shroom
-Radiant Pad/Radiant Pot
+Radiant Pot
+Radiant Pad
+Laser Pumpkin
+Laser Drone
+Blast Pumpkin
 Wither-pult
 Gatling Cherrybomber
 Cherrybomber Drone
 Infernal Squashwood
+Infernal Sparkwood
 Garlizilla
 Doominator-shroom
 Thornminator
@@ -221,3 +268,4 @@ Quantum McCornics
 Astro-nut
 Boreal Lifereaver
 Tyrannoflora Lux
+Rot-pult
