@@ -33,7 +33,6 @@ const int MinimumGates = 4, MaximumGates = 8;
 const int A = 5, Ab = 7, Abc = 10, Abcd = 13;
 
 // 1 excludes 'A01' as a potential starting location, change it to 0 to include it.
-// The upper bound can be 12 to include Voltic Citadel as a starting location.
 var startingLocationIndex = Random.Shared.Next(1, A);
 
 ImmutableArray<string> gates =
@@ -54,7 +53,7 @@ Logic? ParseSpan(ReadOnlyMemory<char> memory) =>
     memory.Span switch
     {
         "null" => null,
-        "Precise Movement" => new Yaml("PreciseMovement").Enabled,
+        "Precise Movement" => new Yaml("precise_movement").Enabled,
         _ when gates.Any(x => memory.Span.Equals(x, StringComparison.Ordinal))
             => world.AllItems[$"{memory} ({MinimumGates})"][MinimumGates],
         _ => new(world.AllItems[memory]),
