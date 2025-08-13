@@ -24,9 +24,9 @@ r_19,true,Stage 4 Screen 4/5,Orange Refreshers,Crystals
 r_20_final,false,Stage 4 Screen 5/5,Pink Stars,Red Stars,Green Stars,Blue Refreshers,Orange Refreshers,Left Vines,Right Vines,Water,Vine Guns
 r_TheDoor,false,Stage 4 Fake End,Pink Stars,Green Stars
 r_s1_1,true,Secret 1,Yellow Key,Blue Key,Green Key,Red Key,Coins
-r_s2_1,true,Secret 2 Screen 1/4,Shoot Blocks,Numbered Switches,Numbered Blocks,Green Switches,Green Block
-r_s2_2,false,Secret 2 Screen 2/4,Shoot Blocks,Numbered Switches,Numbered Blocks,Green Switches,Yellow Switches,Red Switches,Blue Switches,Green Block,Yellow Block,Red Block,Blue Block
-r_s2_3,false,Secret 2 Screen 3/4,Shoot Blocks,Numbered Switches,Numbered Blocks,Green Switches,Yellow Switches,Red Switches,Blue Switches,Green Block,Yellow Block,Red Block,Blue Block,Platforms
+r_s2_1,true,Secret 2 Screen 1/4,Shoot Blocks,Numbered Switches,Numbered Blocks,Green Switches,Green Blocks
+r_s2_2,false,Secret 2 Screen 2/4,Shoot Blocks,Numbered Switches,Numbered Blocks,Green Switches,Yellow Switches,Red Switches,Blue Switches,Green Blocks,Yellow Blocks,Red Blocks,Blue Blocks
+r_s2_3,false,Secret 2 Screen 3/4,Shoot Blocks,Numbered Switches,Numbered Blocks,Green Switches,Yellow Switches,Red Switches,Blue Switches,Green Blocks,Yellow Blocks,Red Blocks,Blue Blocks,Platforms
 r_s2_4,false,Secret 2 Screen 4/4,Shoot Blocks,Numbered Switches,Numbered Blocks,Coins
 r_s3_1,true,Secret 3 Screen 1/4
 r_s3_2,false,Secret 3 Screen 2/4
