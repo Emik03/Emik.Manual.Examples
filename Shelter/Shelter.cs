@@ -115,11 +115,11 @@ world.Location(
 ImmutableArray<StartingItemBlock> startingItems =
 [
     world.AllItems["Node"],
-    new(world.AllItems["Node2D"], Yaml: ["2D"]),
-    new(world.AllItems["Node3D"], Yaml: ["3D"]),
-    new(world.AllItems["Sprite3D"], Yaml: ["3D"]),
+    new(world.AllItems["Node2D"], Yaml: ["two_dimensional"]),
+    new(world.AllItems["Node3D"], Yaml: ["three_dimensional"]),
+    new(world.AllItems["Sprite3D"], Yaml: ["three_dimensional"]),
 ];
 
-await world.Game("Shelter", "KAUTARUMAAndEmik", "25$ Pay Check", startingItems)
+await world.Game("Shelter", "KAUTARUMAAndEmik", "10$ Pay Check", startingItems)
    .DisplayExported(Console.WriteLine)
    .ZipAsync(Path.GetTempPath(), listChecks: true);
