@@ -291,7 +291,6 @@ Fusion,Roof,1,2.8,Foul-nut,Wall-nut,Garlic
 Fusion,Roof,1,2.8,Slice-pult,Puff-shroom,Melon-pult
 Fusion,Roof,1,2.8,Sprout-pult,Puff-shroom,Cabbage-pult
 Fusion,Roof,1,2.8,Silver-nut,Wall-nut,Marigold
-Fusion,Roof,1,2.8,Golden-nut,Silver-nut,Coins
 Fusion,Roof,1,2.8,Hypno Melon,Hypno-shroom,Melon-pult
 Fusion,Roof,1,2.8,Ice Pot,Ice-shroom,Flower Pot
 Fusion,Snow,1,2.7,Twin Saw-me-not,Saw-me-not
@@ -361,6 +360,7 @@ Fusion,Gold,1,2.7,Golden Umbrella,Silver Umbrella,Coins
 Fusion,Gold,1,2.7,Golden Melon,Silver Melon,Coins
 Fusion,Gold,1,2.7,Golden Sunflower,Silver Sunflower,Coins
 Fusion,Gold,1,2.7,Golden Doom-shroom,Silver Doom-shroom,Coins
+Fusion,Gold,1,2.8,Golden-nut,Silver-nut,Coins
 Fusion,Advanced,1,2.7,Explod-o-shooter,Cherry Bomb,Cherryshooter
 Fusion,Advanced,1,2.7,Chompzilla,Pea-nut,Chomper
 Fusion,Advanced,1,2.7,Charm-shroom,Gutsy-shroom,Hypno-shroom
