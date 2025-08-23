@@ -33,11 +33,12 @@ static bool IsAlwaysPresent(Category x) => x.Yaml.All(x => x.Name.Span is not Lo
 static int SeedSlots(Logic? l) =>
     l switch
     {
+        null => 0,
+        { Type: Logic.Kind.Item } => 1,
         { Type: Logic.Kind.Or } => SeedSlots(l.Left).Max(SeedSlots(l.Right)),
         { Type: Logic.Kind.And } => SeedSlots(l.Left) + SeedSlots(l.Right),
-        { Type: Logic.Kind.Item } => 1,
         { Type: Logic.Kind.OptOne or Logic.Kind.OptAll } => SeedSlots(l.Left),
-        _ => throw new UnreachableException(l?.ToString()),
+        _ => throw new UnreachableException(l.ToString()),
     };
 #pragma warning disable MA0051
 static ImmutableArray<Chars> ToCounteringPlants(ReadOnlyMemory<char> zombie) =>
@@ -148,19 +149,6 @@ IEnumerable<Chars> Expand(Chars c) => itemRequirements[c.ToString()].SelectMany(
 
 World world = new();
 
-world.Location(
-    "Take care of your Zen Garden!",
-    categories: [world.Category("Mini-games"), world.Category("Start", [LongAdventure])]
-);
-
-ImmutableArray<string> minigames = ["Beghouled", "Vasebreaker", "Vasebreaker 2", "Chain Reaction"];
-
-foreach (var minigame in minigames)
-{
-    world.Location($"{minigame} - Clear", categories: world.Category("Mini-games"));
-    world.Location($"{minigame} - Trophy", categories: world.Category("Mini-games"));
-}
-
 HashSet<string> notStrictlyNecessary = new(StringComparer.Ordinal);
 
 await foreach (var element in Read("NotStrictlyNecessary.csv"))
@@ -187,7 +175,7 @@ await foreach (var (basic, (type, (count, (version, (name, requires))))) in Read
 
     ArchipelagoArrayBuilder<Category> categories = world.Category($"{basic} ({type})", yaml);
 
-    if (version.Span is "2.8")
+    if (version.Span is "2.8" or "2.8.2")
         categories.Add(world.Category("2.8", true, ["version_2_8"]));
 
     world.Item(nameStr, priority, categories, int.Parse(count.Span));
@@ -197,6 +185,7 @@ await foreach (var (basic, (type, (count, (version, (name, requires))))) in Read
         odysseyPlants.Add(nameStr);
 }
 
+world.Category("Garden Defense");
 world.Category("Odyssey Adventure");
 
 await foreach (var (category, (level, (terrain, (waves, (zombies, (plants, _)))))) in Read("Levels.csv"))
@@ -206,7 +195,7 @@ await foreach (var (category, (level, (terrain, (waves, (zombies, (plants, _))))
     var count = int.Parse(waves.Span);
     var t = Enum.Parse<Terrain>(terrain.Span);
 
-    var plantLogic = (level.Span is "Level 10"
+    var plantLogic = (category.Span is "Odyssey Adventure" && level.Span is "Level 10"
             ? [["Alchemist Umbrella"]]
             : plants.SplitOn('&').Select(x => ImmutableArray.Create<Chars>(x)))
        .Concat(zombies.SplitOn('&').Select(ToCounteringPlants))
@@ -217,7 +206,9 @@ await foreach (var (category, (level, (terrain, (waves, (zombies, (plants, _))))
         ((t is Terrain.Snow ? (Logic)"Firnace" : null) &
             (t is Terrain.Pool or Terrain.Fog ? (Logic)"Lily Pad" : null) &
             (t is Terrain.Roof && level.Span is not "Level 37" ? (Logic)"Flower Pot" : null) &
-            (category.Span is "Adventure Mode (Classic)" && level.Span is "Level 1" ? null : (Logic)"Sunflower"));
+            (category.Span is "Adventure Mode (Classic)" && level.Span is "Level 1" || category.Span is "Garden Defense"
+                ? null
+                : (Logic)"Sunflower"));
 
     var logic = plantLogic &
         (t is Terrain.Fog ? (Logic)"Show Plant HP" & "Show Zombie HP" : null) &

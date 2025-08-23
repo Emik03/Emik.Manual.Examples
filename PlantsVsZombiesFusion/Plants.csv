@@ -7,10 +7,10 @@ Basic,Tools,1,2.7,Show Plant HP
 Basic,Tools,1,2.7,Show Zombie HP
 Basic,Tools,1,2.7,Hammer
 Basic,Tools,1,2.7,Shovel
-Basic,Traps,2,2.7,Shovel 5 Plants
-Basic,Traps,2,2.7,Hammer the weakest zombie
-Basic,Traps,5,2.7,Increase Difficulty for the rest of the level
-Basic,Traps,5,2.7,Increase Game Speed for the rest of the level
+Basic,Traps,5,2.7,Shovel 5 Plants
+Basic,Traps,8,2.7,Increase Difficulty for the rest of the level
+Basic,Traps,8,2.7,Increase Game Speed for the rest of the level
+Basic,Traps,12,2.7,Hammer the weakest zombie
 Basic,Pickups,1,2.7,Fertilizer
 Basic,Pickups,1,2.7,Bucket
 Basic,Pickups,1,2.7,Jack-in-the-box
