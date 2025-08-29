@@ -1,25 +1,21 @@
-Basic,Slots,14,2.7,Progressive Seed Slots
-Basic,Tools,6,2.7,Progressive Lawnmowers
 Basic,Tools,1,2.7,Plant Gloves
 Basic,Tools,1,2.7,Zombie Gloves
-Basic,Tools,1,2.7,Slow Mode
-Basic,Tools,1,2.7,Show Plant HP
-Basic,Tools,1,2.7,Show Zombie HP
 Basic,Tools,1,2.7,Hammer
 Basic,Tools,1,2.7,Shovel
-Basic,Traps,5,2.7,Shovel 5 Plants
-Basic,Traps,8,2.7,Increase Difficulty for the rest of the level
-Basic,Traps,8,2.7,Increase Game Speed for the rest of the level
-Basic,Traps,12,2.7,Hammer the weakest zombie
-Basic,Pickups,1,2.7,Fertilizer
-Basic,Pickups,1,2.7,Bucket
-Basic,Pickups,1,2.7,Jack-in-the-box
-Basic,Pickups,1,2.7,Pickaxe
-Basic,Pickups,1,2.7,Mecha Fragments
-Basic,Pickups,1,2.7,Football Helmet
-Basic,Pickups,1,2.7,Giga Mecha Fragments
-Basic,Pickups,1,2.7,Chrono Core
-Basic,Pickups,1,2.7,Coins
+Basic,Tools,1,2.7,Fertilizer
+Basic,Tools,1,2.7,Bucket
+Basic,Tools,1,2.7,Jack-in-the-box
+Basic,Tools,1,2.7,Pickaxe
+Basic,Tools,1,2.7,Mecha Fragments
+Basic,Tools,1,2.7,Football Helmet
+Basic,Tools,1,2.7,Giga Mecha Fragments
+Basic,Tools,1,2.7,Chrono Core
+Basic,Tools,1,2.7,Coins
+Basic,Traps,9,2.7,Shovel 1 Plant
+Basic,Traps,9,2.7,Hammer the weakest zombie
+Basic,Traps,9,2.7,Move the leftmost plant to the rightmost column
+Basic,Traps,18,2.7,Increase Difficulty for the rest of the level
+Basic,Traps,18,2.7,Increase Game Speed for the rest of the level
 Basic,Day,2,2.7,Peashooter
 Basic,Day,2,2.7,Sunflower
 Basic,Day,2,2.7,Cherry Bomb
