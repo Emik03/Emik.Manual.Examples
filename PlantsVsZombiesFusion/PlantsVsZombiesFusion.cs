@@ -158,7 +158,8 @@ await foreach (var (basic, (type, (count, (version, (name, requires))))) in Read
     if (version.Span is "2.8" or "2.8.2")
         categories.Add(w.Category("2.8", true, ["version_2_8"]));
 
-    w.Item(nameStr, priority, categories, int.Parse(count.Span), early: early.Contains(name.ToString()) ? 1 : 0);
+    var c = int.Parse(count.Span);
+    w.Item(nameStr, priority, categories, c, early: early.Contains(name.ToString()) ? c : 0);
     itemRequirements[nameStr] = [..requires];
 
     if (type.Span is "Weak Odyssey" or "Strong Odyssey")
