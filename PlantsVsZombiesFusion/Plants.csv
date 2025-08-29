@@ -117,7 +117,7 @@ Fusion,Night,1,2.7,Cryonic-shroom,Hypno-shroom,Ice-shroom
 Fusion,Night,1,2.7,Curse-shroom,Hypno-shroom,Doom-shroom
 Fusion,Night,1,2.7,Shivery-shroom,Scaredy-shroom,Ice-shroom
 Fusion,Night,1,2.7,Frenzy-shroom,Scaredy-shroom,Doom-shroom
-Fusion,Night,1,2.7,Doomise-shroom,Ice-shroom,Doom-shroom
+Fusion,Night,1,2.7,Demise-shroom,Ice-shroom,Doom-shroom
 Fusion,Night,1,2.7,Snow Pea,Peashooter,Ice-shroom
 Fusion,Night,1,2.7,Hypno-nut,Wall-nut,Hypno-shroom
 Fusion,Night,1,2.7,Nugget-shroom,Potato Mine,Puff-shroom
@@ -362,7 +362,7 @@ Fusion,Advanced,1,2.7,Chompzilla,Pea-nut,Chomper
 Fusion,Advanced,1,2.7,Charm-shroom,Gutsy-shroom,Hypno-shroom
 Fusion,Advanced,1,2.7,Doomspike-shroom,Frost-shroom,Doom-shroom
 Fusion,Advanced,1,2.7,Infernowood,Jalapeno,Scorchwood
-Fusion,Advanced,1,2.7,Krakerberus,Squash,Kelp-spreader
+Fusion,Advanced,1,2.7,Hydra Kelp,Squash,Kelp-spreader
 Fusion,Advanced,1,2.7,Stardrop,Starglow,Magnet-shroom
 Fusion,Advanced,1,2.7,Pump-karrier,Thorny Pumpkin,Blover
 Fusion,Advanced,1,2.7,Salad-pult,Taco-pult,Melon-pult
@@ -373,32 +373,32 @@ Fusion,Titan,1,2.7,Melon Mortar,Kernel-pult,Melon-pult,Jicamagic
 Fusion,Titan,1,2.7,Pumpkin Bunker,Joker Pumpkin,Magnet-shroom,Cherry Pumpkin,Jicamagic
 Fusion,Titan,1,2.7,Chomper Maw,Chomper,Jicamagic
 Fusion,Titan,1,2.7,Titan Pea Turret,Repeater,Threepeater,Jicamagic
-Fusion,Titan,1,2.7,Leviathan-shroom,Tangle Kelp,Sea-shroom,Jicamagic
+Fusion,Titan,1,2.7,Kraken-shroom,Tangle Kelp,Sea-shroom,Jicamagic
 Fusion,Titan,1,2.8,Jugger-nut,Wall-nut,Tall-nut,Jicamagic
-Fusion,Weak Odyssey,1,2.7,Gatling Doom,Gatling Pea,Doom-shroom
-Fusion,Weak Odyssey,1,2.7,Gatling Frenzy-shroom,Scaredy-shroom,Gatling Doom
-Fusion,Weak Odyssey,1,2.7,Twin Solar-nut,Wall-nut,Solar-nut
-Fusion,Weak Odyssey,1,2.7,Giant Solar-nut,Twin Solar-nut
-Fusion,Weak Odyssey,1,2.7,Gatling Icicle-shroom,Puff-shroom,Gatling Snow
-Fusion,Weak Odyssey,1,2.7,Gatling Sunburst-shroom,Sunflower,Gatling Icicle-shroom
-Fusion,Weak Odyssey,1,2.7,Empress-shroom,Hypno-shroom
-Fusion,Weak Odyssey,1,2.7,Enchantress-shroom,Cherry Bomb,Empress-shroom
-Fusion,Weak Odyssey,1,2.7,Calamity-shroom,Doom-shroom,Curse-shroom
-Fusion,Weak Odyssey,1,2.7,Avarice-shroom,Marigold,Calamity-shroom
-Fusion,Weak Odyssey,1,2.7,Ashen Threepeater,Jalapeno,Scorched Threepeater
-Fusion,Weak Odyssey,1,2.7,Phoenix Threepeater,Jalapeno,Ashen Threepeater
-Fusion,Weak Odyssey,1,2.7,Spike-obsidian,Spike-ice,Spike-hearth
-Fusion,Weak Odyssey,1,2.7,Obsidian Spike-nut,Wall-nut,Spike-obsidian
-Fusion,Weak Odyssey,1,2.7,Aristocattail,Cattail,Nyan Squash
-Fusion,Weak Odyssey,1,2.7,Pharos Umbrella,Lumos Cactus,Lumos Umbrella
-Fusion,Weak Odyssey,1,2.7,Mechanized Pumpkin,Magnet-shroom,Pumpkin Morph
-Fusion,Weak Odyssey,1,2.7,Radiant Pot,Sunflower,Golden Pot
-Fusion,Weak Odyssey,1,2.7,Radiant Pad,Radiant Pot
-Fusion,Weak Odyssey,1,2.7,Midas Umbrella,Umbrella Kale,Alchemist Umbrella
-Fusion,Weak Odyssey,1,2.7,Aegis Umbrella,Melon-pult,Midas Umbrella
-Fusion,Weak Odyssey,1,2.7,Tycoonwood,Gold Magnet,Torchthree
-Fusion,Weak Odyssey,1,2.7,Buck-shroom Squad,Magnet-shroom,Buck-shroom
-Fusion,Weak Odyssey,1,2.7,Tesla Magnet,Lumos Magnet,Grenadier Magnet
+Fusion,Regular Odyssey,1,2.7,Gatling Doom,Gatling Pea,Doom-shroom
+Fusion,Regular Odyssey,1,2.7,Gatling Frenzy-shroom,Scaredy-shroom,Gatling Doom
+Fusion,Regular Odyssey,1,2.7,Twin Solar-nut,Wall-nut,Solar-nut
+Fusion,Regular Odyssey,1,2.7,Giant Solar-nut,Twin Solar-nut
+Fusion,Regular Odyssey,1,2.7,Gatling Icicle-shroom,Puff-shroom,Gatling Snow
+Fusion,Regular Odyssey,1,2.7,Gatling Sunburst-shroom,Sunflower,Gatling Icicle-shroom
+Fusion,Regular Odyssey,1,2.7,Empress-shroom,Hypno-shroom
+Fusion,Regular Odyssey,1,2.7,Enchantress-shroom,Cherry Bomb,Empress-shroom
+Fusion,Regular Odyssey,1,2.7,Calamity-shroom,Doom-shroom,Curse-shroom
+Fusion,Regular Odyssey,1,2.7,Avarice-shroom,Marigold,Calamity-shroom
+Fusion,Regular Odyssey,1,2.7,Ashen Threepeater,Jalapeno,Scorched Threepeater
+Fusion,Regular Odyssey,1,2.7,Phoenix Threepeater,Jalapeno,Ashen Threepeater
+Fusion,Regular Odyssey,1,2.7,Spike-obsidian,Spike-ice,Spike-hearth
+Fusion,Regular Odyssey,1,2.7,Obsidian Spike-nut,Wall-nut,Spike-obsidian
+Fusion,Regular Odyssey,1,2.7,Aristocattail,Cattail,Nyan Squash
+Fusion,Regular Odyssey,1,2.7,Pharos Umbrella,Lumos Cactus,Lumos Umbrella
+Fusion,Regular Odyssey,1,2.7,Mechanized Pumpkin,Magnet-shroom,Pumpkin Morph
+Fusion,Regular Odyssey,1,2.7,Radiant Pot,Sunflower,Golden Pot
+Fusion,Regular Odyssey,1,2.7,Radiant Pad,Radiant Pot
+Fusion,Regular Odyssey,1,2.7,Midas Umbrella,Umbrella Kale,Alchemist Umbrella
+Fusion,Regular Odyssey,1,2.7,Aegis Umbrella,Melon-pult,Midas Umbrella
+Fusion,Regular Odyssey,1,2.7,Tycoonwood,Gold Magnet,Torchthree
+Fusion,Regular Odyssey,1,2.7,Buck-shroom Squad,Magnet-shroom,Buck-shroom
+Fusion,Regular Odyssey,1,2.7,Tesla Magnet,Lumos Magnet,Grenadier Magnet
 Fusion,Strong Odyssey,1,2.7,Laser Pumpkin,Magnet Blover,Pump-karrier
 Fusion,Strong Odyssey,1,2.7,Laser Drone,Laser Pumpkin
 Fusion,Strong Odyssey,1,2.7,Blast Pumpkin,Cherry Bomb,Laser Pumpkin
@@ -409,21 +409,21 @@ Fusion,Strong Odyssey,1,2.7,Infernal Squashwood,Infernowood,Spicy Squash
 Fusion,Strong Odyssey,1,2.7,Infernal Sparkwood,Infernal Squashwood,Starfruit
 Fusion,Strong Odyssey,1,2.7,Cherrizilla,Chompzilla,Cherry Chomper
 Fusion,Strong Odyssey,1,2.7,Garlizilla,Garlic,Cherrizilla
-Fusion,Strong Odyssey,1,2.7,Doominator-shroom,Doomspike-shroom,Cryonic-shroom
-Fusion,Strong Odyssey,1,2.7,Thornminator,Cactus,Doominator-shroom
+Fusion,Strong Odyssey,1,2.7,Doominator,Doomspike-shroom,Cryonic-shroom
+Fusion,Strong Odyssey,1,2.7,Thornminator,Cactus,Doominator
 Fusion,Strong Odyssey,1,2.7,Magnetar,Stardrop,Magnethorn
 Fusion,Strong Odyssey,1,2.7,Gravitron,Blover,Magnetar
 Fusion,Strong Odyssey,1,2.7,Shroomageddon,Doomspike-shroom,Frost Gloom-shroom
 Fusion,Strong Odyssey,1,2.7,Atomheart Plantern,Plantern,Shroomageddon
 Fusion,Strong Odyssey,1,2.7,Obsidian Tall-nut,Frost Tall-nut,Flame Tall-nut
 Fusion,Strong Odyssey,1,2.7,Obsidian-mine,Potato Mine,Obsidian Tall-nut
-Fusion,Strong Odyssey,1,2.7,Cob-literator,Cryo Cannon,Doomise-shroom
-Fusion,Strong Odyssey,1,2.7,Charmatron-shroom,Charm-shroom,Charm Magnet
+Fusion,Strong Odyssey,1,2.7,Cob-literator,Cryo Cannon,Demise-shroom
+Fusion,Strong Odyssey,1,2.7,Charmatron,Charm-shroom,Charm Magnet
 Fusion,Strong Odyssey,1,2.7,Apeacalypse Minigun,Spicicle,Titan Pea Turret
 Fusion,Strong Odyssey,1,2.7,Apeacalypse Railgun,Snipea,Apeacalypse Minigun
 Fusion,Strong Odyssey,1,2.7,Helios Cabbage,Solar-pult,Golden Cabbage
 Fusion,Strong Odyssey,1,2.7,Napalm-shroom,Summer Melon,Football-shroom
-Fusion,Strong Odyssey,1,2.7,Kelptain Dreadhart,Twin Marigold,Krakerberus
+Fusion,Strong Odyssey,1,2.7,Kelptain Goldbeard,Twin Marigold,Hydra Kelp
 Fusion,Strong Odyssey,1,2.7,Quantum McCornics,Portal-pult,Popcorn-pult
 Fusion,Strong Odyssey,1,2.7,Astro-nut,Wall-nut,Quantum McCornics
 Fusion,Strong Odyssey,1,2.7,Boreal Lifereaver,Spruce Supershooter,Snowbloom Spruce

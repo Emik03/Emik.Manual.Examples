@@ -56,7 +56,7 @@ static HashSet<string> ToCounteringPlants(ReadOnlyMemory<char> zombie) =>
         "Diamond-box Zombie" => ["Gatling Pea"],
         "Digger Zombie" => ["Split Pea", "Starfruit"],
         "Dolphin Rider Zombie" => ["Tangle Kelp"],
-        "Dolphinhead Football Zombie" => ["Kelp-spreader", "Leviathan-shroom"],
+        "Dolphinhead Football Zombie" => ["Kelp-spreader", "Kraken-shroom"],
         "Elder Snowfur" => ["Twin Saw-me-not"],
         "Explod-o-pult Zombie" => ["Umbrella Leaf"],
         "Explod-o-shooter Zombie" => ["Cherry-nut", "Cherry Pumpkin"],
@@ -109,9 +109,9 @@ static HashSet<string> ToCounteringPlants(ReadOnlyMemory<char> zombie) =>
         "Ultra Mecha-nut" => ["Aegis Umbrella"],
         "Undying Wraith" => ["Titan Pea Turret"],
         "Wall-nut Zombie" => ["Gatling Cherry", "Blazer Snipea"],
-        "Whale Rider Yeti" => ["Kelp-spreader", "Leviathan-shroom"],
+        "Whale Rider Yeti" => ["Kelp-spreader", "Kraken-shroom"],
         "Yeti Zombie" => ["Jalapeno"],
-        "Zombarine" => ["Kelp-spreader", "Leviathan-shroom"],
+        "Zombarine" => ["Kelp-spreader", "Kraken-shroom"],
         "Zombie" => ["Peashooter"],
         "Zomboni" => ["Spikeweed"],
         "Zomppelin" => ["Blover", "Cob-literator"],
@@ -149,7 +149,7 @@ await foreach (var (basic, (type, (count, (version, (name, requires))))) in Read
         _ => Priority.Progression,
     };
 
-    ImmutableArray<Yaml> yaml = type.Span is not ("Tools" or "Traps" or "Weak Odyssey" or "Strong Odyssey")
+    ImmutableArray<Yaml> yaml = type.Span is not ("Tools" or "Traps" or "Regular Odyssey" or "Strong Odyssey")
         ? [LongAdventure]
         : [];
 
@@ -162,7 +162,7 @@ await foreach (var (basic, (type, (count, (version, (name, requires))))) in Read
     w.Item(nameStr, priority, categories, c, early: early.Contains(name.ToString()) ? c : 0);
     itemRequirements[nameStr] = [..requires];
 
-    if (type.Span is "Weak Odyssey" or "Strong Odyssey")
+    if (type.Span is "Regular Odyssey" or "Strong Odyssey")
         odysseyPlants.Add(nameStr);
 }
 
