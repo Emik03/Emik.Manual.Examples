@@ -206,9 +206,7 @@ await foreach (var (category, (level, (terrain, (waves, (zombies, (plants, _))))
         ((t is Terrain.Snow ? (Logic)"Firnace" : null) &
             (t is Terrain.Pool or Terrain.Fog ? (Logic)"Lily Pad" : null) &
             (t is Terrain.Roof && level.Span is not "Level 37" ? (Logic)"Flower Pot" : null) &
-            (category.Span is "Adventure Mode (Classic)" && level.Span is "Level 1" || category.Span is "Garden Defense"
-                ? null
-                : (Logic)"Sunflower"));
+            (category.Span is "Garden Defense" ? null : (Logic)"Sunflower"));
 
     var logic = plantLogic &
         (t is Terrain.Fog ? (Logic)"Show Plant HP" & "Show Zombie HP" : null) &
