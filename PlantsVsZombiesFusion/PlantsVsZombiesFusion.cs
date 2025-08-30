@@ -2,6 +2,7 @@
 #pragma warning disable GlobalUsingsAnalyzer, MA0047, RCS1110
 using Emik.Manual;
 using Emik.Manual.Domains;
+using static Emik.Manual.Domains.Priority;
 
 // ReSharper disable HeuristicUnreachableCode RedundantLogicalConditionalExpressionOperand
 #pragma warning disable CS0162
@@ -144,9 +145,9 @@ await foreach (var (basic, (type, (count, (version, (name, requires))))) in Read
 
     var priority = nameStr switch
     {
-        _ when type.Span is "Traps" => Priority.Trap,
-        _ when basic.Span is "Basic" && type.Span is not "Tools" => Priority.ProgressionUseful,
-        _ => Priority.Progression,
+        _ when type.Span is "Traps" => Trap,
+        _ when basic.Span is "Basic" && type.Span is not "Tools" => ProgressionUseful,
+        _ => Progression,
     };
 
     ImmutableArray<Yaml> yaml = type.Span is not ("Tools" or "Traps" or "Regular Odyssey" or "Strong Odyssey")
@@ -206,25 +207,35 @@ ImmutableArray<Logic?> goal =
 
 Console.WriteLine("Odyssey Rush Mode");
 var odysseyRushMode = w.Category("Odyssey Rush Mode");
-var odyssey = w.Region("Odyssey", (Logic)"Shovel" & "Plant Gloves", true);
-var odysseyGoal = w.Region("Odyssey", goal.And().Opt() & "Shovel" & "Plant Gloves", true);
+var odysseyGoal = w.Region("Odyssey", goal.And().Opt());
+var odyssey = w.Region("Odyssey", (Logic)"Shovel" & "Plant Gloves", odysseyGoal, true);
 
-for (var i = 0; i < 7; i++)
-    w.Location($"Odyssey Rush Mode - {Ordinal(i + 1)} Wave", goal.And().Opt(), odysseyRushMode, odyssey);
+for (var i = 0; i < 7 && i / 3 <= goal.Length is var reuseOdysseyGoal; i++)
+    w.Location(
+        $"Odyssey Rush Mode - {Ordinal(i + 1)} Wave",
+        reuseOdysseyGoal ? null : goal.Take(i).And().Opt(),
+        odysseyRushMode,
+        reuseOdysseyGoal ? odysseyGoal : odyssey
+    );
 
-w.Location("Odyssey Rush Mode - Trophy", odysseyGoal, odysseyRushMode, odyssey);
-w.Location("Odyssey Rush Mode - Clear", odysseyGoal, odysseyRushMode, odyssey);
-w.Location("Odyssey Rush Mode - Goal", odysseyGoal, odysseyRushMode, odyssey, LocationOptions.Victory);
+w.Location("Odyssey Rush Mode - Trophy", null, odysseyRushMode, odysseyGoal);
+w.Location("Odyssey Rush Mode - Clear", null, odysseyRushMode, odysseyGoal);
+w.Location("Odyssey Rush Mode - Goal", null, odysseyRushMode, odysseyGoal, LocationOptions.Victory);
 
 Console.WriteLine("Odyssey Survival");
 var odysseySurvival = w.Category("Odyssey Survival");
 
-for (var i = 0; i < 21; i++)
-    w.Location($"Odyssey Survival - {Ordinal(i + 1)} Wave", goal.Take(i / 3).And().Opt(), odysseySurvival, odyssey);
+for (var i = 0; i < 21 && i / 3 <= goal.Length is var reuseOdysseyGoal; i++)
+    w.Location(
+        $"Odyssey Survival - {Ordinal(i + 1)} Wave",
+        reuseOdysseyGoal ? null : goal.Take(i / 3).And().Opt(),
+        odysseySurvival,
+        reuseOdysseyGoal ? odysseyGoal : odyssey
+    );
 
-w.Location("Odyssey Survival - Trophy", odysseyGoal, odysseySurvival, odyssey);
-w.Location("Odyssey Survival - Clear", odysseyGoal, odysseySurvival, odyssey);
-w.Location("Odyssey Survival - Goal", odysseyGoal, odysseySurvival, odyssey, LocationOptions.Victory);
+w.Location("Odyssey Survival - Trophy", null, odysseySurvival, odysseyGoal);
+w.Location("Odyssey Survival - Clear", null, odysseySurvival, odysseyGoal);
+w.Location("Odyssey Survival - Goal", null, odysseySurvival, odysseyGoal, LocationOptions.Victory);
 
 static bool Has(Logic? logic, Item item) =>
     logic is not null && (logic.Name.Equals(item.Name) || Has(logic.Left, item) || Has(logic.Right, item));
@@ -236,7 +247,7 @@ bool AddItemWithInferredPriority(Item x) =>
         x with
         {
             Priority = w.AllLocations.All(y => !Has(y.SelfLogic, x)) && w.AllRegions.All(y => !Has(y.SelfLogic, x))
-                ? x.Priority | Priority.Useful & ~Priority.Progression
+                ? x.Priority | (x.Priority.Has(Progression) ? Useful : default) & ~Progression
                 : x.Priority,
         }
     );
