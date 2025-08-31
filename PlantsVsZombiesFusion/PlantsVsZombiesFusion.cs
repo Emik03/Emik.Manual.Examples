@@ -139,6 +139,11 @@ bool CanPlaceOn(string plant, Terrain terrain, bool isOdyssey) =>
 
 IEnumerable<Chars> Expand(string c) => itemRequirements[c].SelectMany(x => Expand(x.ToString())).Prepend(c);
 
+IEnumerable<Item> WithModifiers(Chars x) =>
+    x.Span is "Cob-literator"
+        ? [w.AllItems[x], w.AllItems["Cob-literator; Reload Time > 12 Seconds"]]
+        : [w.AllItems[x]];
+
 await foreach (var (basic, (type, (count, (version, (name, requires))))) in Read("Plants.csv"))
 {
     var nameStr = name.ToString();
@@ -202,15 +207,14 @@ await foreach (var (category, (level, (terrain, (waves, (zombies, (plants, _))))
 ImmutableArray<string> goalPlants =
     ["Twin Solar-nut", "Apeacalypse Minigun", "Cob-literator", "Obsidian Tall-nut", "Cherrizilla"];
 
-ImmutableArray<Logic?> goal =
-    [..goalPlants.Select(Expand).Select(x => x.Select(x => w.AllItems[x]).Distinct().And())];
+ImmutableArray<Logic?> goal = [..goalPlants.Select(Expand).Select(x => x.SelectMany(WithModifiers).Distinct().And())];
 
 Console.WriteLine("Odyssey Rush Mode");
-var odysseyGoal = w.Region("Odyssey", goal.And().Opt());
+var odysseyGoal = w.Region("Odyssey Goal", goal.And().Opt());
 var odysseyRushMode = w.Category("Odyssey Rush Mode", [LongAdventure]);
 var odyssey = w.Region("Odyssey", (Logic)"Shovel" & "Plant Gloves", odysseyGoal, true);
 
-for (var i = 0; i < 7 && i / 3 <= goal.Length is var reuseOdysseyGoal; i++)
+for (var i = 0; i < 7 && i / 3 >= goal.Length is var reuseOdysseyGoal; i++)
     w.Location(
         $"Odyssey Rush Mode - {Ordinal(i + 1)} Wave",
         reuseOdysseyGoal ? null : goal.Take(i).And().Opt(),
@@ -225,7 +229,7 @@ w.Location("Odyssey Rush Mode - Goal", null, odysseyRushMode, odysseyGoal, Locat
 Console.WriteLine("Odyssey Survival");
 var odysseySurvival = w.Category("Odyssey Survival");
 
-for (var i = 0; i < 21 && i / 3 <= goal.Length is var reuseOdysseyGoal; i++)
+for (var i = 0; i < 21 && i / 3 >= goal.Length is var reuseOdysseyGoal; i++)
     w.Location(
         $"Odyssey Survival - {Ordinal(i + 1)} Wave",
         reuseOdysseyGoal ? null : goal.Take(i / 3).And().Opt(),
