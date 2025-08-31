@@ -2,19 +2,19 @@ Basic,Tools,1,2.7,Plant Gloves
 Basic,Tools,1,2.7,Zombie Gloves
 Basic,Tools,1,2.7,Hammer
 Basic,Tools,1,2.7,Shovel
-Basic,Tools,1,2.7,Fertilizer
-Basic,Tools,1,2.7,Bucket
-Basic,Tools,1,2.7,Jack-in-the-box
-Basic,Tools,1,2.7,Pickaxe
-Basic,Tools,1,2.7,Mecha Fragments
-Basic,Tools,1,2.7,Football Helmet
-Basic,Tools,1,2.7,Giga Mecha Fragments
-Basic,Tools,1,2.7,Chrono Core
-Basic,Tools,1,2.7,Coins
+Basic,Drops,1,2.7,Fertilizer
+Basic,Drops,1,2.7,Bucket
+Basic,Drops,1,2.7,Jack-in-the-box
+Basic,Drops,1,2.7,Pickaxe
+Basic,Drops,1,2.7,Mecha Fragments
+Basic,Drops,1,2.7,Football Helmet
+Basic,Drops,1,2.7,Giga Mecha Fragments
+Basic,Drops,1,2.7,Chrono Core
+Basic,Drops,1,2.7,Coins
 Basic,Traps,2,2.7,Shovel 5 Plants
 Basic,Traps,7,2.7,Hammer the Weakest Zombie
-Basic,Traps,15,2.7,Temporary Difficulty Increase
-Basic,Traps,15,2.7,Temporary Game Speed Increase
+Basic,Traps,14,2.7,Temporary Difficulty Increase
+Basic,Traps,14,2.7,Temporary Game Speed Increase
 Basic,Day,2,2.7,Peashooter
 Basic,Day,2,2.7,Sunflower
 Basic,Day,2,2.7,Cherry Bomb

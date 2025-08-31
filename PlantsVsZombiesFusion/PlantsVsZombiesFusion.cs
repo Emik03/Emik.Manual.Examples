@@ -155,7 +155,7 @@ await foreach (var (basic, (type, (count, (version, (name, requires))))) in Read
         _ => Progression,
     };
 
-    ImmutableArray<Yaml> yaml = type.Span is not ("Traps" or "Regular Odyssey" or "Strong Odyssey")
+    ImmutableArray<Yaml> yaml = type.Span is not ("Tools" or "Traps" or "Regular Odyssey" or "Strong Odyssey")
         ? [LongAdventure]
         : [];
 
