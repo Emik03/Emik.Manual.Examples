@@ -11,11 +11,10 @@ Basic,Tools,1,2.7,Football Helmet
 Basic,Tools,1,2.7,Giga Mecha Fragments
 Basic,Tools,1,2.7,Chrono Core
 Basic,Tools,1,2.7,Coins
-Basic,Traps,9,2.7,Shovel 1 Plant
-Basic,Traps,9,2.7,Hammer the weakest zombie
-Basic,Traps,9,2.7,Move the leftmost plant to the rightmost column
-Basic,Traps,18,2.7,Increase Difficulty for the rest of the level
-Basic,Traps,18,2.7,Increase Game Speed for the rest of the level
+Basic,Traps,2,2.7,Shovel 5 Plants
+Basic,Traps,7,2.7,Hammer the Weakest Zombie
+Basic,Traps,15,2.7,Temporary Difficulty Increase
+Basic,Traps,15,2.7,Temporary Game Speed Increase
 Basic,Day,2,2.7,Peashooter
 Basic,Day,2,2.7,Sunflower
 Basic,Day,2,2.7,Cherry Bomb
@@ -430,3 +429,29 @@ Fusion,Strong Odyssey,1,2.7,Boreal Lifereaver,Spruce Supershooter,Snowbloom Spru
 Fusion,Strong Odyssey,1,2.7,Tyrannoflora Lux,Lumos Angler,Chomper Maw
 Fusion,Strong Odyssey,1,2.8,Rot-pult,Wither-pult,Puff-shroom
 Fusion,Strong Odyssey,1,2.8.2,Vulcannon,Bamboom,Pyro Cannon
+Modifier,Strong Odyssey,1,2.7,Calamity-shroom; ALL Doom-shroom explosions no longer leave a crater
+Modifier,Strong Odyssey,1,2.7,Calamity-shroom; Now spawns extra Hypnotized Gargantuars and Zombonis when it explodes
+Modifier,Strong Odyssey,1,2.7,Cherrizilla; Can now kill zombies with less health than itself
+Modifier,Strong Odyssey,1,2.7,Cherrizilla; 200% healing bonus and zombie damage is capped at 500
+Modifier,Strong Odyssey,1,2.7,Gatling Cherrybomber; Cherry bomb bullets now deal 3x more DMG
+Modifier,Strong Odyssey,1,2.7,Gatling Cherrybomber; Attack Interval > 1 Second
+Modifier,Strong Odyssey,1,2.7,Doominator; Fumes now deal 3x more DMG
+Modifier,Strong Odyssey,1,2.7,Doominator; Increased freezing speed by 3 times
+Modifier,Strong Odyssey,1,2.7,Infernal Squashwood; Bullets required to spawn a Spicy Squash > 10
+Modifier,Strong Odyssey,1,2.7,Infernal Squashwood; Now spawns two Spicy Squash at a time
+Modifier,Strong Odyssey,1,2.7,Magnetar; Attack Interval > 0.5 Seconds
+Modifier,Strong Odyssey,1,2.7,Magnetar; Base damage is doubled and limiter (120) is removed
+Modifier,Strong Odyssey,1,2.7,Shroomageddon; Shroomageddon damage on death > 1M Atomheart Plantern Lumos addition on death ×3
+Modifier,Strong Odyssey,1,2.7,Shroomageddon; Now immune to Cherry and Jack-in-the-Box explosions. After resisting 10k points of explosive damage triggers a Doom-shroom explosion
+Modifier,Strong Odyssey,1,2.7,Wither-pult; Spread-fire is now a 100% chance
+Modifier,Strong Odyssey,1,2.7,Wither-pult; Melon Pot's traits are now inherited
+Modifier,Strong Odyssey,1,2.7,Cob-literator; Main Blast damage ×4
+Modifier,Strong Odyssey,1,2.7,Cob-literator; Reload Time > 12 Seconds
+Modifier,Strong Odyssey,1,2.7,Obsidian Tall-nut; Recovers 10000 HP when affected by Ice-shrooms and recover full HP when affected by Jalapeno
+Modifier,Strong Odyssey,1,2.7,Obsidian Tall-nut; Can now absorb the damage directed to the two plants on its left and right
+Modifier,Strong Odyssey,1,2.7,Charmatron; Hypnotization HP threshold increased from 50% to 100%
+Modifier,Strong Odyssey,1,2.7,Charmatron; Now always in a fully-charged state - Attack Interval > 1 Second
+Modifier,Strong Odyssey,1,2.7,Apeacalypse Minigun; Attack Power and Knockback Massively Increased
+Modifier,Strong Odyssey,1,2.7,Apeacalypse Minigun; Lower Health > Higher Defense - Immune to damage below 100
+Modifier,Strong Odyssey,1,2.8.2,Vulcannon; Volcanic Bombs Damage x5
+Modifier,Strong Odyssey,1,2.8.2,Vulcannon; Now triggers Thermonuclear Detonations when main blasts strike Cherry Bombs or Jalapenos

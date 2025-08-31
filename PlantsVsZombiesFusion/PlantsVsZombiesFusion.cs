@@ -150,7 +150,7 @@ await foreach (var (basic, (type, (count, (version, (name, requires))))) in Read
         _ => Progression,
     };
 
-    ImmutableArray<Yaml> yaml = type.Span is not ("Tools" or "Traps" or "Regular Odyssey" or "Strong Odyssey")
+    ImmutableArray<Yaml> yaml = type.Span is not ("Traps" or "Regular Odyssey" or "Strong Odyssey")
         ? [LongAdventure]
         : [];
 
@@ -163,7 +163,7 @@ await foreach (var (basic, (type, (count, (version, (name, requires))))) in Read
     w.Item(nameStr, priority, categories, c, early: early.Contains(name.ToString()) ? c : 0);
     itemRequirements[nameStr] = [..requires];
 
-    if (type.Span is "Regular Odyssey" or "Strong Odyssey")
+    if (basic.Span is "Fusion" && type.Span is "Regular Odyssey" or "Strong Odyssey")
         odysseyPlants.Add(nameStr);
 }
 
@@ -206,8 +206,8 @@ ImmutableArray<Logic?> goal =
     [..goalPlants.Select(Expand).Select(x => x.Select(x => w.AllItems[x]).Distinct().And())];
 
 Console.WriteLine("Odyssey Rush Mode");
-var odysseyRushMode = w.Category("Odyssey Rush Mode");
 var odysseyGoal = w.Region("Odyssey", goal.And().Opt());
+var odysseyRushMode = w.Category("Odyssey Rush Mode", [LongAdventure]);
 var odyssey = w.Region("Odyssey", (Logic)"Shovel" & "Plant Gloves", odysseyGoal, true);
 
 for (var i = 0; i < 7 && i / 3 <= goal.Length is var reuseOdysseyGoal; i++)
@@ -240,6 +240,7 @@ w.Location("Odyssey Survival - Goal", null, odysseySurvival, odysseyGoal, Locati
 static bool Has(Logic? logic, Item item) =>
     logic is not null && (logic.Name.Equals(item.Name) || Has(logic.Left, item) || Has(logic.Right, item));
 
+Console.WriteLine("Balancing priorities...");
 World world = new();
 
 bool AddItemWithInferredPriority(Item x) =>
@@ -247,7 +248,7 @@ bool AddItemWithInferredPriority(Item x) =>
         x with
         {
             Priority = w.AllLocations.All(y => !Has(y.SelfLogic, x)) && w.AllRegions.All(y => !Has(y.SelfLogic, x))
-                ? x.Priority | (x.Priority.Has(Progression) ? Useful : default) & ~Progression
+                ? (x.Priority.Has(Progression) ? Useful : default) | ~Progression & x.Priority
                 : x.Priority,
         }
     );
@@ -262,7 +263,7 @@ var odysseyLocationCount = world.AllLocations.Count(x => x.Categories.All(IsAlwa
 var odysseyItemCount = world.AllItems.Sum(x => (x.Categories.All(IsAlwaysPresent) ? 1 : 0) * x.Count);
 Console.WriteLine($"Odyssey only: {odysseyLocationCount}/{odysseyItemCount}");
 
-await world.Game("PlantsVsZombiesFusion", "Emik", "Shovel 5 Plants", [])
+await world.Game("PlantsVsZombiesFusion", "Emik", "Shovel 1 Plant", [])
    .DisplayExported(Console.WriteLine)
    .ZipAsync(Path.GetTempPath(), listChecks: true);
 
