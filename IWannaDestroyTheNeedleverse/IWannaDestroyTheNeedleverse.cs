@@ -31,7 +31,7 @@ static async IAsyncEnumerable<(SplitMemory<char, char, MatchOne>, SplitMemory<ch
 
 World world = new();
 
-Logic? ToItem(ReadOnlyMemory<char> next) => world.Item(next, null, world.Category(next.SplitWhitespace().Last), 2)[^0];
+Logic? ToItem(ReadOnlyMemory<char> next) => world.Item(next, null, world.Category(next.SplitWhitespace().Last), 2)[1];
 
 await foreach (var ((_, (starts, (name, items))), (_, (nStarts, (nName, _)))) in W(Read("Rooms.csv")).Skip(1).Reverse())
     world.Location(
