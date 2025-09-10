@@ -29,6 +29,11 @@ static IAsyncEnumerable<SplitMemory<char, char, MatchOne>> Read([Match("^[^<>:\"
 
 const string LongAdventure = "long_adventure";
 
+static bool HasCobLiterator(Logic logic) =>
+    logic.Left is { } left && HasCobLiterator(left) ||
+    logic.Right is { } right && HasCobLiterator(right) ||
+    logic.Name.Span is "Cob-literator";
+
 static bool IsAlwaysPresent(Category x) => x.Yaml.All(x => x.Name.Span is not LongAdventure);
 #pragma warning disable MA0051
 static HashSet<string> ToCounteringPlants(ReadOnlyMemory<char> zombie) =>
@@ -36,7 +41,7 @@ static HashSet<string> ToCounteringPlants(ReadOnlyMemory<char> zombie) =>
     zombie.Span switch
     {
         // ReSharper disable DuplicatedSwitchExpressionArms
-        "Armored Gargantuar" => ["Cob-literator"],
+        "Armored Gargantuar" => ["Cherrizilla"],
         "Balloon Zombie" => ["Blover", "Cactus"],
         "Bobsled Zomboni" => ["Spikeweed"],
         "Buck-nut Zombie" => ["Gatling Cherry", "Blazer Snipea"],
@@ -120,33 +125,47 @@ static HashSet<string> ToCounteringPlants(ReadOnlyMemory<char> zombie) =>
     };
 
 HashSet<string> early = ["Plant Gloves", "Zombie Gloves", "Hammer", "Shovel", "Peashooter", "Sunflower"];
-Dictionary<string, ImmutableArray<ReadOnlyMemory<char>>> itemRequirements = new(StringComparer.Ordinal);
+Dictionary<string, ReadOnlyMemory<char>> itemRequirements = new(StringComparer.Ordinal);
 HashSet<string> odysseyPlants = ["Queen Endoflame", "Snipea"];
 World w = new();
 
-bool CanPlaceOn(string plant, Terrain terrain, bool isOdyssey) =>
-    Expand(plant)
-       .All(
-            x => x.Span switch
-            {
-                "Potato Mine" => terrain is not Terrain.Pool and not Terrain.Fog,
-                "Cattail Girl" or "Nyan Squash" or "Lily Pad" or "Tangle Kelp" or "Sea-shroom"
-                    => terrain is Terrain.Pool or Terrain.Fog,
-                _ when !isOdyssey => !odysseyPlants.Contains(plant),
-                _ => true,
-            }
-        );
+bool CanPlaceOn(Logic? plant, Terrain terrain, bool isOdyssey) =>
+    plant is null ||
+    CanPlaceOn(plant.Left, terrain, isOdyssey) ||
+    CanPlaceOn(plant.Right, terrain, isOdyssey) ||
+    plant.Name.Span switch
+    {
+        "Potato Mine" => terrain is not Terrain.Pool and not Terrain.Fog,
+        "Cattail Girl" or "Nyan Squash" or "Lily Pad" or "Tangle Kelp" or "Sea-shroom"
+            => terrain is Terrain.Pool or Terrain.Fog,
+        var x when !isOdyssey => !odysseyPlants.Contains(x.ToString()),
+        _ => true,
+    };
 
-IEnumerable<Chars> Expand(string c) => itemRequirements[c].SelectMany(x => Expand(x.ToString())).Prepend(c);
+Logic Expand(string c) =>
+    c &
+    itemRequirements[c]
+       .SplitOn('|')
+       .Select(x => x.SplitOn('&').Select(x => Expand(x.ToString())).And())
+       .Or();
 
-IEnumerable<Item> WithModifiers(Chars x) =>
-    x.Span is "Cob-literator"
-        ? [w.AllItems[x], w.AllItems["Cob-literator; Reload Time > 12 Seconds"]]
-        : [w.AllItems[x]];
+Logic WithModifiers(Logic x) =>
+    HasCobLiterator(x)
+        ? x &
+        w.AllItems["Cob-literator; Reload Time > 12 Seconds"] &
+        w.AllItems["Cob-literator; Main Blast damage ×4"]
+        : x;
 
-await foreach (var (basic, (type, (count, (version, (name, requires))))) in Read("Plants.csv"))
+IEnumerable<string> Recurse(string x) =>
+    itemRequirements[x].SplitOnAny("|&").SelectMany(x => Recurse(x.ToString())).Prepend(x);
+
+await foreach (var (basic, (type, (count, (version, (name, (requires, rest)))))) in Read("Plants.csv"))
 {
+    if (!rest.Body.IsEmpty)
+        throw new UnreachableException($"Unexpected parameter: {rest}");
+
     var nameStr = name.ToString();
+    itemRequirements[nameStr] = requires;
 
     var priority = nameStr switch
     {
@@ -166,7 +185,6 @@ await foreach (var (basic, (type, (count, (version, (name, requires))))) in Read
 
     var c = int.Parse(count.Span);
     w.Item(nameStr, priority, categories, c, early: early.Contains(name.ToString()) ? c : 0);
-    itemRequirements[nameStr] = [..requires];
 
     if (basic.Span is "Fusion" && type.Span is "Regular Odyssey" or "Strong Odyssey")
         odysseyPlants.Add(nameStr);
@@ -186,13 +204,13 @@ await foreach (var (category, (level, (terrain, (waves, (zombies, (plants, _))))
            .Select(x => (HashSet<string>)[x.ToString()])
            .Concat(zombies.SplitOn('&').Select(ToCounteringPlants))
            .Distinct(Equating<HashSet<string>>((x, y) => x is null ? y is null : y is not null && x.SetEquals(y)))
-           .Where(x => x.All(x => CanPlaceOn(x, t, category.Span is "Odyssey Adventure")))
-           .Select(x => x.Select(Expand).Select(x => x.Select(x => w.AllItems[x]).ToHashSet().And()).Or())
+           .Where(x => x.All(x => CanPlaceOn(Expand(x), t, category.Span is "Odyssey Adventure")))
+           .Select(x => x.Select(Expand).Or())
            .And() &
         ((t is Terrain.Snow ? (Logic)"Firnace" : null) &
             (t is Terrain.Pool or Terrain.Fog ? (Logic)"Lily Pad" : null) &
             (t is Terrain.Roof && level.Span is not "Level 37" ? (Logic)"Flower Pot" : null) &
-            (category.Span is "Garden Defense" ? null : (Logic)"Sunflower")) &
+            (category.Span is "Garden Defense" or "Garden Defense (Long)" ? null : (Logic)"Sunflower")) &
         (category.Span is "Odyssey Adventure" ? (Logic)"Plant Gloves" : null);
 
     var region = w.Region($"{category}, {level}", logic.Opt(), true);
@@ -204,27 +222,26 @@ await foreach (var (category, (level, (terrain, (waves, (zombies, (plants, _))))
     w.Location($"{category}, {level} - Clear", null, c, region);
 }
 
-ImmutableArray<string> goalPlants =
-    ["Twin Solar-nut", "Apeacalypse Minigun", "Cob-literator", "Obsidian Tall-nut", "Cherrizilla"];
-
-ImmutableArray<Logic?> goal = [..goalPlants.Select(Expand).Select(x => x.SelectMany(WithModifiers).Distinct().And())];
+ImmutableArray<string> goalPlants = ["Twin Solar-nut", "Gatling Icicle-shroom", "Cherrizilla", "Cob-literator"];
+ImmutableArray<Logic?> goal = [..goalPlants.Select(Expand).Select(WithModifiers)];
 
 Console.WriteLine("Odyssey Rush Mode");
+var goals = w.Category("Goals");
 var odysseyGoal = w.Region("Odyssey Goal", goal.And().Opt());
-var odysseyRushMode = w.Category("Odyssey Rush Mode", [LongAdventure]);
 var odyssey = w.Region("Odyssey", (Logic)"Shovel" & "Plant Gloves", odysseyGoal, true);
+// var odysseyRushMode = w.Category("Odyssey Rush Mode", [LongAdventure]);
 
-for (var i = 0; i < 7 && i / 3 >= goal.Length is var reuseOdysseyGoal; i++)
-    w.Location(
-        $"Odyssey Rush Mode - {Ordinal(i + 1)} Wave",
-        reuseOdysseyGoal ? null : goal.Take(i).And().Opt(),
-        odysseyRushMode,
-        reuseOdysseyGoal ? odysseyGoal : odyssey
-    );
-
-w.Location("Odyssey Rush Mode - Trophy", null, odysseyRushMode, odysseyGoal);
-w.Location("Odyssey Rush Mode - Clear", null, odysseyRushMode, odysseyGoal);
-w.Location("Odyssey Rush Mode - Goal", null, odysseyRushMode, odysseyGoal, LocationOptions.Victory);
+// for (var i = 0; i < 7 && i >= goal.Length is var reuseOdysseyGoal; i++)
+//     w.Location(
+//         $"Odyssey Rush Mode - {Ordinal(i + 1)} Wave",
+//         reuseOdysseyGoal ? null : goal.Take(i).And().Opt(),
+//         odysseyRushMode,
+//         reuseOdysseyGoal ? odysseyGoal : odyssey
+//     );
+//
+// w.Location("Odyssey Rush Mode - Trophy", null, odysseyRushMode, odysseyGoal);
+// w.Location("Odyssey Rush Mode - Clear", null, odysseyRushMode, odysseyGoal);
+// w.Location("Odyssey Rush Mode - Goal", null, goals, odysseyGoal, LocationOptions.Victory);
 
 Console.WriteLine("Odyssey Survival");
 var odysseySurvival = w.Category("Odyssey Survival");
@@ -239,7 +256,7 @@ for (var i = 0; i < 21 && i / 3 >= goal.Length is var reuseOdysseyGoal; i++)
 
 w.Location("Odyssey Survival - Trophy", null, odysseySurvival, odysseyGoal);
 w.Location("Odyssey Survival - Clear", null, odysseySurvival, odysseyGoal);
-w.Location("Odyssey Survival - Goal", null, odysseySurvival, odysseyGoal, LocationOptions.Victory);
+w.Location("Odyssey Survival - Goal", null, goals, odysseyGoal, LocationOptions.Victory);
 
 static bool Has(Logic? logic, Item item) =>
     logic is not null && (logic.Name.Equals(item.Name) || Has(logic.Left, item) || Has(logic.Right, item));
@@ -247,13 +264,28 @@ static bool Has(Logic? logic, Item item) =>
 Console.WriteLine("Balancing priorities...");
 World world = new();
 
-bool AddItemWithInferredPriority(Item x) =>
+bool AddItemWithInferredPriority(Item i) =>
     world.AllItems.TryAdd(
-        x with
+        i with
         {
-            Priority = w.AllLocations.All(y => !Has(y.SelfLogic, x)) && w.AllRegions.All(y => !Has(y.SelfLogic, x))
-                ? (x.Priority.Has(Progression) ? Useful : default) | ~Progression & x.Priority
-                : x.Priority,
+            Categories =
+            [
+                ..itemRequirements.Keys.Select(x => (Key: x, Value: Recurse(x).ToHashSet(StringComparer.Ordinal)))
+                   .Where(x => x.Value.Count > 1 && x.Value.Contains(i.Name.ToString()))
+                   .Select(
+                        x => world.Category(
+                            $"{w.AllItems[x.Key].Categories[0].Name} - {x.Key} ({
+                                (x.Value.Intersect(odysseyPlants, StringComparer.Ordinal).Count() is var odysseyCount &&
+                                    odysseyCount is 0 || x.Value.Count == odysseyCount
+                                        ? x.Value.Count
+                                        : $"{odysseyCount}-{x.Value.Count}")})"
+                        )
+                    ),
+                ..i.Categories,
+            ],
+            Priority = w.AllLocations.All(y => !Has(y.SelfLogic, i)) && w.AllRegions.All(y => !Has(y.SelfLogic, i))
+                ? (i.Priority.Has(Progression) ? Useful : default) | ~Progression & i.Priority
+                : i.Priority,
         }
     );
 
