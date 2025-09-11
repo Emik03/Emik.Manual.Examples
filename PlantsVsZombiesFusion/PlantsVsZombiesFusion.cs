@@ -169,8 +169,8 @@ await foreach (var (basic, (type, (count, (version, (name, (requires, rest))))))
 
     var priority = nameStr switch
     {
-        _ when type.Span is "Traps" => Trap,
         _ when basic.Span is "Basic" && type.Span is not "Tools" => ProgressionUseful,
+        _ when type.Span is "Traps" => Trap,
         _ => Progression,
     };
 
@@ -178,7 +178,7 @@ await foreach (var (basic, (type, (count, (version, (name, (requires, rest))))))
         ? [LongAdventure]
         : [];
 
-    ArchipelagoArrayBuilder<Category> categories = w.Category($"{basic} ({type})", yaml);
+    ArchipelagoArrayBuilder<Category> categories = w.Category($"{basic} ({type})", true, yaml);
 
     if (version.Span is "2.8" or "2.8.2")
         categories.Add(w.Category("2.8", true, ["version_2_8"]));
@@ -264,23 +264,27 @@ static bool Has(Logic? logic, Item item) =>
 Console.WriteLine("Balancing priorities...");
 World world = new();
 
-bool AddItemWithInferredPriority(Item i) =>
-    world.AllItems.TryAdd(
+bool AddItemWithInferredPriority(Item i)
+{
+    string Count((string Key, HashSet<string> Value) x) =>
+        x.Value.Intersect(odysseyPlants, StringComparer.Ordinal).Count() is var odysseyCount &&
+        odysseyCount is 0 ||
+        odysseyCount == x.Value.Count
+            ? x.Value.Count.ToString()
+            : $"{odysseyCount}/{x.Value.Count}";
+
+    string CategoryCounter((string Key, HashSet<string> Value) x) =>
+        $"{w.AllItems[x.Key].Categories[0].Name} - {x.Key} ({Count(x)})";
+
+    return world.AllItems.TryAdd(
         i with
         {
             Categories =
             [
                 ..itemRequirements.Keys.Select(x => (Key: x, Value: Recurse(x).ToHashSet(StringComparer.Ordinal)))
                    .Where(x => x.Value.Count > 1 && x.Value.Contains(i.Name.ToString()))
-                   .Select(
-                        x => world.Category(
-                            $"{w.AllItems[x.Key].Categories[0].Name} - {x.Key} ({
-                                (x.Value.Intersect(odysseyPlants, StringComparer.Ordinal).Count() is var odysseyCount &&
-                                    odysseyCount is 0 || x.Value.Count == odysseyCount
-                                        ? x.Value.Count
-                                        : $"{odysseyCount}-{x.Value.Count}")})"
-                        )
-                    ),
+                   .Select(CategoryCounter)
+                   .Select(x => world.Category(x)),
                 ..i.Categories,
             ],
             Priority = w.AllLocations.All(y => !Has(y.SelfLogic, i)) && w.AllRegions.All(y => !Has(y.SelfLogic, i))
@@ -288,6 +292,7 @@ bool AddItemWithInferredPriority(Item i) =>
                 : i.Priority,
         }
     );
+}
 
 if (!w.AllCategories.All(world.AllCategories.TryAdd) |
     !w.AllLocations.All(world.AllLocations.TryAdd) |
