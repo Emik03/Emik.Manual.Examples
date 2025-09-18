@@ -15,5 +15,6 @@
   <Project Path="PlantsVsZombiesFusion/PlantsVsZombiesFusion.csproj" Type="Classic C#" />
   <Project Path="Shelter/Shelter.csproj" Type="Classic C#" />
   <Project Path="StrawberryLabyrinth/StrawberryLabyrinth.csproj" Type="Classic C#" />
+  <Project Path="VibRibbon/VibRibbon.csproj" Type="Classic C#" />
   <Project Path="WingsOfViSpeedrun/WingsOfViSpeedrun.csproj" Type="Classic C#" />
 </Solution>
