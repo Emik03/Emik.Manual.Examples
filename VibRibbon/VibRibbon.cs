@@ -33,8 +33,9 @@ await foreach (var (category, (song, _)) in Read("CustomSongs.csv"))
             ? 0
             : 1;
 
-    var i = world.Item(song, null, c, early: early);
-    world.Location(song, category.Span is "Song Link" ? i : world.AllItemsWith(c).And(), c);
+    var item = world.Item(song, null, c, early: early);
+    var logic = category.Span is "Song Link" ? item : world.AllItemsWith(c).And();
+    world.Location(song, logic, c, options: category.Span is "Finale" ? LocationOptions.PreHint : LocationOptions.None);
 }
 
 for (var i = 0; i < varietySongs.Count; i++)
