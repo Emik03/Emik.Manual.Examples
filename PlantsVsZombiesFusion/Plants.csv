@@ -97,6 +97,12 @@ Fusion,Day,1,2.7,Mine-nut,Wall-nut&Potato Mine
 Fusion,Day,1,2.7,Chomp-nut,Wall-nut&Chomper
 Fusion,Day,1,2.7,Chomp-mine,Potato Mine&Chomper
 Fusion,Day,1,2.7,Explod-o-tato Mine,Cherry Bomb&Potato Mine
+Fusion,Day,1,2.7,Repeater,Peashooter
+Fusion,Day,1,2.7,Split Pea,Peashooter&Repeater
+Fusion,Day,1,2.7,Gatling Pea,Repeater
+Fusion,Day,1,2.7,Cherrypeater,Cherry Bomb&Repeater|Cherryshooter&Peashooter
+Fusion,Day,1,2.7,Split Cherry,Cherry Bomb&Split Pea|Cherryshooter&Cherrypeater
+Fusion,Day,1,2.7,Gatling Cherry,Cherry Bomb&Gatling Pea|Cherrypeater
 Fusion,Day,1,2.8,Roasted Wall-nut,Wall-nut
 Fusion,Night,1,2.7,Pea-shroom,Peashooter&Puff-shroom
 Fusion,Night,1,2.7,Sun-shroom,Sunflower&Puff-shroom
@@ -130,6 +136,13 @@ Fusion,Night,1,2.7,Doomflower,Sunflower&Doom-shroom
 Fusion,Night,1,2.7,Doom-spore,Doomflower
 Fusion,Night,1,2.7,Frost Tall-nut,Tall-nut&Ice-shroom
 Fusion,Night,1,2.7,Frost Gloom-shroom,Ice-shroom&Gloom-shroom
+Fusion,Night,1,2.7,Snow Repeater,Ice-shroom&Repeater|Snow Pea&Peashooter
+Fusion,Night,1,2.7,Split Snow,Ice-shroom&Split Pea|Snow Repeater&Peashooter
+Fusion,Night,1,2.7,Gatling Snow,Ice-shroom&Gatling Pea|Snow Repeater&Repeater
+Fusion,Night,1,2.7,Icicle-shroom,Puff-shroom&Snow Pea|Pea-shroom&Ice-shroom
+Fusion,Night,1,2.7,Repeat-shroom,Puff-shroom&Repeater|Pea-shroom&Peashooter
+Fusion,Night,1,2.7,Split Pea-shroom,Puff-shroom&Split Pea|Repeat-shroom&Peashooter|Pea-shroom&Repeater
+Fusion,Night,1,2.7,Gatling Pea-shroom,Puff-shroom&Gatling Pea|Repeat-shroom&Repeater
 Fusion,Night,1,2.8,Hypno Pea,Peashooter&Hypno-shroom
 Fusion,Night,1,2.8,Hypno Repeater,Repeater&Hypno-shroom|Hypno Pea&Peashooter
 Fusion,Night,1,2.8,Split Hypno,Split Pea&Hypno-shroom|Hypno Repeater&Peashooter|Hypno Pea&Repeater
@@ -307,19 +320,6 @@ Fusion,Extra,1,2.8,Threepeater Commando,Threepeater&Pea-storm Commando
 Fusion,Extra,1,2.8,Reaper Snipea,Doom-shroom&Snipea
 Fusion,Extra,1,2.8,Snipea-shroom Squad,Puff-shroom&Snipea
 Fusion,Extra,1,2.8,Brainstorm Commando,Hypno-shroom&Pea-storm Commando
-Fusion,Peas,1,2.7,Repeater,Peashooter
-Fusion,Peas,1,2.7,Split Pea,Peashooter&Repeater
-Fusion,Peas,1,2.7,Gatling Pea,Repeater
-Fusion,Peas,1,2.7,Cherrypeater,Cherry Bomb&Repeater|Cherryshooter&Peashooter
-Fusion,Peas,1,2.7,Split Cherry,Cherry Bomb&Split Pea|Cherryshooter&Cherrypeater
-Fusion,Peas,1,2.7,Gatling Cherry,Cherry Bomb&Gatling Pea|Cherrypeater
-Fusion,Peas,1,2.7,Snow Repeater,Ice-shroom&Repeater|Snow Pea&Peashooter
-Fusion,Peas,1,2.7,Split Snow,Ice-shroom&Split Pea|Snow Repeater&Peashooter
-Fusion,Peas,1,2.7,Gatling Snow,Ice-shroom&Gatling Pea|Snow Repeater&Repeater
-Fusion,Peas,1,2.7,Icicle-shroom,Puff-shroom&Snow Pea|Pea-shroom&Ice-shroom
-Fusion,Peas,1,2.7,Repeat-shroom,Puff-shroom&Repeater|Pea-shroom&Peashooter
-Fusion,Peas,1,2.7,Split Pea-shroom,Puff-shroom&Split Pea|Repeat-shroom&Peashooter|Pea-shroom&Repeater
-Fusion,Peas,1,2.7,Gatling Pea-shroom,Puff-shroom&Gatling Pea|Repeat-shroom&Repeater
 Fusion,Enemy,1,2.7,Buckshooter,Peashooter&Bucket
 Fusion,Enemy,1,2.7,Starsteel,Starmorph&Bucket
 Fusion,Enemy,1,2.7,Starjoker,Starmorph&Jack-in-the-box
