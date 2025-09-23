@@ -150,7 +150,7 @@ Fusion,Pool,1,2.7,Roasted Spikeweed,Spikeweed
 Fusion,Pool,1,2.7,Roasted Kelp,Tangle Kelp
 Fusion,Pool,1,2.7,Scorchweed,Jalapeno&Spikeweed
 Fusion,Pool,1,2.7,Frostweed,Ice-shroom&Spikeweed
-Fusion,Pool,1,2.7,Torch-nut,Wall-nut&Torchwood
+Fusion,Pool,1,2.7,Nutwood,Wall-nut&Torchwood
 Fusion,Pool,1,2.7,Scorchwood,Jalapeno&Torchwood
 Fusion,Pool,1,2.7,Torchweed,Torchwood&Spikeweed
 Fusion,Pool,1,2.7,Boomwood,Cherry Bomb&Torchwood
@@ -175,7 +175,8 @@ Fusion,Pool,1,2.7,Spike-ice,Ice-shroom&Spikerock
 Fusion,Pool,1,2.7,Flame Tall-nut,Tall-nut&Jalapeno
 Fusion,Pool,1,2.7,Flame Gloom-shroom,Gloom-shroom&Jalapeno
 Fusion,Pool,1,2.7,Spike-hearth,Jalapeno&Spikerock
-Fusion,Pool,1,2.8,Nutwood,Wall-nut&Torchwood
+Fusion,Pool,1,2.7,Frost Cattail,Ice-shroom&Cattail
+Fusion,Pool,1,2.7,Flame Cattail,Jalapeno&Cattail
 Fusion,Fog,1,2.7,Sunset-shroom,Sunflower&Sea-shroom
 Fusion,Fog,1,2.7,Beacon-shroom,Sea-shroom&Plantern
 Fusion,Fog,1,2.7,Urchin-shroom,Sea-shroom&Cactus
@@ -219,8 +220,6 @@ Fusion,Fog,1,2.7,Cherry Drone,Cherry Bomb&Blover
 Fusion,Fog,1,2.7,Drone-nut,Wall-nut&Blover
 Fusion,Fog,1,2.7,Thorn-nut,Wall-nut&Cactus
 Fusion,Fog,1,2.7,Star-nut,Wall-nut&Starfruit
-Fusion,Fog,1,2.7,Frost Cattail,Ice-shroom&Cattail
-Fusion,Fog,1,2.7,Flame Cattail,Jalapeno&Cattail
 Fusion,Fog,1,2.8,Camo-shroom,Scaredy-shroom&Blover
 Fusion,Fog,1,2.8,Mag-nut,Wall-nut&Magnet-shroom
 Fusion,Fog,1,2.8,Fallout Blover,Doom-shroom&Blover
