@@ -121,6 +121,13 @@ Fusion,Night,1,2.7,Shivery-shroom,Scaredy-shroom&Ice-shroom
 Fusion,Night,1,2.7,Frenzy-shroom,Scaredy-shroom&Doom-shroom
 Fusion,Night,1,2.7,Demise-shroom,Ice-shroom&Doom-shroom
 Fusion,Night,1,2.7,Snow Pea,Peashooter&Ice-shroom
+Fusion,Night,1,2.7,Snow Repeater,Ice-shroom&Repeater|Snow Pea&Peashooter
+Fusion,Night,1,2.7,Split Snow,Ice-shroom&Split Pea|Snow Repeater&Peashooter
+Fusion,Night,1,2.7,Gatling Snow,Ice-shroom&Gatling Pea|Snow Repeater&Repeater
+Fusion,Night,1,2.7,Icicle-shroom,Puff-shroom&Snow Pea|Pea-shroom&Ice-shroom
+Fusion,Night,1,2.7,Repeat-shroom,Puff-shroom&Repeater|Pea-shroom&Peashooter
+Fusion,Night,1,2.7,Split Pea-shroom,Puff-shroom&Split Pea|Repeat-shroom&Peashooter|Pea-shroom&Repeater
+Fusion,Night,1,2.7,Gatling Pea-shroom,Puff-shroom&Gatling Pea|Repeat-shroom&Repeater
 Fusion,Night,1,2.7,Hypno-nut,Wall-nut&Hypno-shroom
 Fusion,Night,1,2.7,Nugget-shroom,Potato Mine&Puff-shroom
 Fusion,Night,1,2.7,Spuddy-shroom,Potato Mine&Scaredy-shroom
@@ -136,13 +143,6 @@ Fusion,Night,1,2.7,Doomflower,Sunflower&Doom-shroom
 Fusion,Night,1,2.7,Doom-spore,Doomflower
 Fusion,Night,1,2.7,Frost Tall-nut,Tall-nut&Ice-shroom
 Fusion,Night,1,2.7,Frost Gloom-shroom,Ice-shroom&Gloom-shroom
-Fusion,Night,1,2.7,Snow Repeater,Ice-shroom&Repeater|Snow Pea&Peashooter
-Fusion,Night,1,2.7,Split Snow,Ice-shroom&Split Pea|Snow Repeater&Peashooter
-Fusion,Night,1,2.7,Gatling Snow,Ice-shroom&Gatling Pea|Snow Repeater&Repeater
-Fusion,Night,1,2.7,Icicle-shroom,Puff-shroom&Snow Pea|Pea-shroom&Ice-shroom
-Fusion,Night,1,2.7,Repeat-shroom,Puff-shroom&Repeater|Pea-shroom&Peashooter
-Fusion,Night,1,2.7,Split Pea-shroom,Puff-shroom&Split Pea|Repeat-shroom&Peashooter|Pea-shroom&Repeater
-Fusion,Night,1,2.7,Gatling Pea-shroom,Puff-shroom&Gatling Pea|Repeat-shroom&Repeater
 Fusion,Night,1,2.8,Hypno Pea,Peashooter&Hypno-shroom
 Fusion,Night,1,2.8,Hypno Repeater,Repeater&Hypno-shroom|Hypno Pea&Peashooter
 Fusion,Night,1,2.8,Split Hypno,Split Pea&Hypno-shroom|Hypno Repeater&Peashooter|Hypno Pea&Repeater
