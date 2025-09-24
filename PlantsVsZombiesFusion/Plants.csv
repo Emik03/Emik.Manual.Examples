@@ -80,8 +80,14 @@ Basic,Extra,1,2.7,Icetip Lily
 Basic,Extra,1,2.7,Pearmafrost
 Basic,Extra,1,2.7,Doubleblast Passionfruit
 Basic,Extra,1,2.7,Diamond-mine
+Fusion,Day,1,2.7,Repeater,Peashooter
+Fusion,Day,1,2.7,Split Pea,Peashooter&Repeater
+Fusion,Day,1,2.7,Gatling Pea,Repeater
 Fusion,Day,1,2.7,Solar-shooter,Peashooter&Sunflower
 Fusion,Day,1,2.7,Cherryshooter,Peashooter&Cherry Bomb
+Fusion,Day,1,2.7,Cherrypeater,Cherry Bomb&Repeater|Cherryshooter&Peashooter
+Fusion,Day,1,2.7,Split Cherry,Cherry Bomb&Split Pea|Cherryshooter&Cherrypeater
+Fusion,Day,1,2.7,Gatling Cherry,Cherry Bomb&Gatling Pea|Cherrypeater
 Fusion,Day,1,2.7,Pea-nut,Peashooter&Wall-nut
 Fusion,Day,1,2.7,Pea Mine,Peashooter&Potato Mine
 Fusion,Day,1,2.7,Chomp-shooter,Peashooter&Chomper
@@ -97,14 +103,11 @@ Fusion,Day,1,2.7,Mine-nut,Wall-nut&Potato Mine
 Fusion,Day,1,2.7,Chomp-nut,Wall-nut&Chomper
 Fusion,Day,1,2.7,Chomp-mine,Potato Mine&Chomper
 Fusion,Day,1,2.7,Explod-o-tato Mine,Cherry Bomb&Potato Mine
-Fusion,Day,1,2.7,Repeater,Peashooter
-Fusion,Day,1,2.7,Split Pea,Peashooter&Repeater
-Fusion,Day,1,2.7,Gatling Pea,Repeater
-Fusion,Day,1,2.7,Cherrypeater,Cherry Bomb&Repeater|Cherryshooter&Peashooter
-Fusion,Day,1,2.7,Split Cherry,Cherry Bomb&Split Pea|Cherryshooter&Cherrypeater
-Fusion,Day,1,2.7,Gatling Cherry,Cherry Bomb&Gatling Pea|Cherrypeater
 Fusion,Day,1,2.8,Roasted Wall-nut,Wall-nut
 Fusion,Night,1,2.7,Pea-shroom,Peashooter&Puff-shroom
+Fusion,Night,1,2.7,Repeat-shroom,Puff-shroom&Repeater|Pea-shroom&Peashooter
+Fusion,Night,1,2.7,Split Pea-shroom,Puff-shroom&Split Pea|Repeat-shroom&Peashooter|Pea-shroom&Repeater
+Fusion,Night,1,2.7,Gatling Pea-shroom,Puff-shroom&Gatling Pea|Repeat-shroom&Repeater7
 Fusion,Night,1,2.7,Sun-shroom,Sunflower&Puff-shroom
 Fusion,Night,1,2.7,Gnome-shroom,Puff-shroom&Hypno-shroom
 Fusion,Night,1,2.7,Nut-shroom,Wall-nut&Puff-shroom
@@ -125,9 +128,6 @@ Fusion,Night,1,2.7,Snow Repeater,Ice-shroom&Repeater|Snow Pea&Peashooter
 Fusion,Night,1,2.7,Split Snow,Ice-shroom&Split Pea|Snow Repeater&Peashooter
 Fusion,Night,1,2.7,Gatling Snow,Ice-shroom&Gatling Pea|Snow Repeater&Repeater
 Fusion,Night,1,2.7,Icicle-shroom,Puff-shroom&Snow Pea|Pea-shroom&Ice-shroom
-Fusion,Night,1,2.7,Repeat-shroom,Puff-shroom&Repeater|Pea-shroom&Peashooter
-Fusion,Night,1,2.7,Split Pea-shroom,Puff-shroom&Split Pea|Repeat-shroom&Peashooter|Pea-shroom&Repeater
-Fusion,Night,1,2.7,Gatling Pea-shroom,Puff-shroom&Gatling Pea|Repeat-shroom&Repeater
 Fusion,Night,1,2.7,Hypno-nut,Wall-nut&Hypno-shroom
 Fusion,Night,1,2.7,Nugget-shroom,Potato Mine&Puff-shroom
 Fusion,Night,1,2.7,Spuddy-shroom,Potato Mine&Scaredy-shroom
@@ -188,8 +188,6 @@ Fusion,Pool,1,2.7,Spike-ice,Ice-shroom&Spikerock
 Fusion,Pool,1,2.7,Flame Tall-nut,Tall-nut&Jalapeno
 Fusion,Pool,1,2.7,Flame Gloom-shroom,Gloom-shroom&Jalapeno
 Fusion,Pool,1,2.7,Spike-hearth,Jalapeno&Spikerock
-Fusion,Pool,1,2.7,Frost Cattail,Ice-shroom&Cattail
-Fusion,Pool,1,2.7,Flame Cattail,Jalapeno&Cattail
 Fusion,Fog,1,2.7,Sunset-shroom,Sunflower&Sea-shroom
 Fusion,Fog,1,2.7,Beacon-shroom,Sea-shroom&Plantern
 Fusion,Fog,1,2.7,Urchin-shroom,Sea-shroom&Cactus
@@ -233,6 +231,8 @@ Fusion,Fog,1,2.7,Cherry Drone,Cherry Bomb&Blover
 Fusion,Fog,1,2.7,Drone-nut,Wall-nut&Blover
 Fusion,Fog,1,2.7,Thorn-nut,Wall-nut&Cactus
 Fusion,Fog,1,2.7,Star-nut,Wall-nut&Starfruit
+Fusion,Fog,1,2.7,Frost Cattail,Ice-shroom&Cattail
+Fusion,Fog,1,2.7,Flame Cattail,Jalapeno&Cattail
 Fusion,Fog,1,2.8,Camo-shroom,Scaredy-shroom&Blover
 Fusion,Fog,1,2.8,Mag-nut,Wall-nut&Magnet-shroom
 Fusion,Fog,1,2.8,Fallout Blover,Doom-shroom&Blover
