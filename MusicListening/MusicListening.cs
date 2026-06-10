@@ -24,13 +24,13 @@ await foreach (var all in Read("July2026APList.tsv").OrderByDescending(x => x.La
     (track, album, artist, goal) = (track.Trim(), album.Trim(), artist.Trim(), goal.Trim());
     Console.WriteLine(track);
     var priority = goal.Span is "GOAL" ? Priority.ProgressionUseful : Priority.Progression;
-    var albumItem = world.Item(album, priority, goal.Span is "GOAL" ? [albums, goals] : albums, count: 12);
+    var albumItem = world.Item(album, priority, goal.Span is "GOAL" ? [albums, goals] : albums, count: 10);
 
     var artistItem = artist.Span is "[Starter]"
         ? (Item?)null
-        : world.Item(artist, priority, goal.Span is "GOAL" ? [artists, goals] : artists, count: 12);
+        : world.Item(artist, priority, goal.Span is "GOAL" ? [artists, goals] : artists, count: 10);
 
-    world.Location(track, albumItem[8] & (artistItem is { } a ? a[8] : null), world.Category(album));
+    world.Location(track, albumItem[7] & (artistItem is { } a ? a[7] : null), world.Category(album));
 }
 
 await foreach (var all in Read("one wayne g").Take(10))
