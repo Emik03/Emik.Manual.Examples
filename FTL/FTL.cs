@@ -68,7 +68,7 @@ await foreach (var line in Read("FTL-Ships.csv"))
                         ("Progressive Crew Teleporter", 1) |
                         ("Progressive Hacking", 1) |
                         ("Progressive Cloaking", 1)),
-                _ => throw Unreachable,
+                _ => throw new UnreachableException(),
             };
 
             world.Location($"{ships[j]} Reach Sector {i}", logic, [category]);
@@ -110,7 +110,7 @@ foreach (var difficulty in (ImmutableArray<string>)["Normal", "Hard"])
                 ("Progressive Shield", 3) &
                 ("Progressive Weapon Control", 4) &
                 (new Logic("Progressive Cloaking", 1) | ("Progressive Hacking", 1)),
-            _ => throw Unreachable,
+            _ => throw new UnreachableException(),
         };
 
         world.Location($"{difficulty} Mode Reach Sector {i}", logic, [hardProgression]);

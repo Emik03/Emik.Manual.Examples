@@ -170,7 +170,7 @@ readonly partial record struct Night(
                 "DTurtle" => DTurtle,
                 "Hadal Fortune" => HadalFortune,
                 "Bowt and Turtlebot" => BowtAndTurtlebot,
-                _ => throw Unreachable,
+                _ => throw new UnreachableException(),
             } is > 0 and var amount)
                 ret &= world.AllItemsWith(character).Single()[amount / 5];
 

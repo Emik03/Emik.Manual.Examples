@@ -4,6 +4,7 @@
         <TargetFramework>net10.0</TargetFramework>
     </PropertyGroup>
     <ItemGroup>
+        <Compile Include="$(Morsels)/Compile/**/*.cs"/>
         <ProjectReference Include="../../Emik.Manual/*.csproj"/>
         <Compile Include="../GlobalUsings.cs" Link="Source/GlobalUsings.cs"/>
     </ItemGroup>
