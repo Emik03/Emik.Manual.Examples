@@ -1,21 +1,22 @@
 ﻿<Solution>
-  <Project Path="../Emik.Manual/Emik.Manual.csproj" Type="Classic C#" />
-  <Project Path="Azada/Azada.csproj" Type="Classic C#" />
-  <Project Path="BLUEREVOLVER/BLUEREVOLVER.csproj" Type="Classic C#" />
-  <Project Path="Bombe/Bombe.csproj" Type="Classic C#" />
-  <Project Path="CookServeDelicious3/CookServeDelicious3.csproj" Type="Classic C#" />
-  <Project Path="DeadCells/DeadCells.csproj" Type="Classic C#" />
-  <Project Path="DeepRockGalactic/DeepRockGalactic.csproj" Type="Classic C#" />
-  <Project Path="Employment/Employment.csproj" Type="Classic C#" />
-  <Project Path="FTL/FTL.csproj" Type="Classic C#" />
-  <Project Path="Girl'sNight/Girl'sNight.csproj" Type="Classic C#" />
-  <Project Path="InfinityGene/InfinityGene.csproj" Type="Classic C#" />
-  <Project Path="IWannaDestroyTheNeedleverse/IWannaDestroyTheNeedleverse.csproj" Type="Classic C#" />
-  <Project Path="MusicListening/MusicListening.csproj" Type="Classic C#" />
-  <Project Path="PacManChampionshipEditionDXPlus/PacManChampionshipEditionDXPlus.csproj" Type="Classic C#" />
-  <Project Path="PlantsVsZombiesFusion/PlantsVsZombiesFusion.csproj" Type="Classic C#" />
-  <Project Path="Shelter/Shelter.csproj" Type="Classic C#" />
-  <Project Path="StrawberryLabyrinth/StrawberryLabyrinth.csproj" Type="Classic C#" />
-  <Project Path="VibRibbon/VibRibbon.csproj" Type="Classic C#" />
-  <Project Path="WingsOfViSpeedrun/WingsOfViSpeedrun.csproj" Type="Classic C#" />
+  <Project Path="../Emik.Manual/Emik.Manual.csproj" Type="C#" />
+  <Project Path="Azada/Azada.csproj" Type="C#" />
+  <Project Path="BLUEREVOLVER/BLUEREVOLVER.csproj" Type="C#" />
+  <Project Path="Bombe/Bombe.csproj" Type="C#" />
+  <Project Path="CookServeDelicious3/CookServeDelicious3.csproj" Type="C#" />
+  <Project Path="DeadCells/DeadCells.csproj" Type="C#" />
+  <Project Path="DeepRockGalactic/DeepRockGalactic.csproj" Type="C#" />
+  <Project Path="Employment/Employment.csproj" Type="C#" />
+  <Project Path="FTL/FTL.csproj" Type="C#" />
+  <Project Path="Girl'sNight/Girl'sNight.csproj" Type="C#" />
+  <Project Path="InfinityGene/InfinityGene.csproj" Type="C#" />
+  <Project Path="IWannaDestroyTheNeedleverse/IWannaDestroyTheNeedleverse.csproj" Type="C#" />
+  <Project Path="MusicListening/MusicListening.csproj" Type="C#" />
+  <Project Path="PacManChampionshipEditionDXPlus/PacManChampionshipEditionDXPlus.csproj" Type="C#" />
+  <Project Path="PlantsVsZombiesFusion/PlantsVsZombiesFusion.csproj" Type="C#" />
+  <Project Path="Shelter/Shelter.csproj" Type="C#" />
+  <Project Path="StrawberryLabyrinth/StrawberryLabyrinth.csproj" Type="C#" />
+  <Project Path="VibRibbon/VibRibbon.csproj" Type="C#" />
+  <Project Path="WingsOfViSpeedrun/WingsOfViSpeedrun.csproj" Type="C#" />
+  <Project Path="ZeroRangerScoring/ZeroRangerScoring.csproj" Type="C#" />
 </Solution>
